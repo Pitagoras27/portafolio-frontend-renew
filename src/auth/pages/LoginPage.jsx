@@ -1,65 +1,62 @@
-import {
-  Button,
-  Grid,
-  Link,
-  TextField,
-  Typography
-} from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { useState } from "react";
+import { AuthLayout, Buttons, InputField } from "../";
 import { useForm } from "../../hooks/useForm";
-import { AuthLayout } from "./AuthLayout";
+
+const validatedData = {
+  email: [
+    (value) => !value && !value.includes('@'),
+    'the mail is not correct'
+  ],
+  password: [
+    (value) => value.length <= 5,
+    'password should have 5 characters minimum'
+  ]
+}
 
 const formLoginData = {
-  email: "",
-  password: "",
+  email: '',
+  password: '',
 };
 
 export const LoginPage = () => {
-  const { email, password, handleChange } = useForm(formLoginData);
+  const { email, password, handleChange, emailValid, passwordValid } = useForm(formLoginData, validatedData);
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('in onSubmit!')
-  }
 
+    setInitialValidation(true);
+  }
+  const [initialValidation, setInitialValidation] = useState(false);
   return (
     <AuthLayout title="Login">
       <form
-        aria-label="submit-form"
         onSubmit={onSubmit}
         className="animate__animated animate__fadeIn animate__faster"
       >
-        <Grid container>
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField
-              label="Correo"
-              name="email"
-              type="email"
-              value={email}
-              placeholder="correo@google.com"
-              autoComplete="off"
-              onChange={handleChange}
-              fullWidth
-            />
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={2} sx={{ mb: 2 }}>
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField
-              label="Password"
-              name="password"
-              type="password"
-              inputProps={{
-                'data-testid': 'password'
-              }}
-              value={password}
-              placeholder="Password"
-              autoComplete="off"
-              onChange={handleChange}
-              fullWidth
-            />
-          </Grid>
-        </Grid>
+        <InputField
+          label="Correo"
+          name="email"
+          type="email"
+          value={email}
+          placeholder="correo@google.com"
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && emailValid}
+          error={!!emailValid && initialValidation}
+          fullWidth
+        />
+  
+        <InputField
+          label="Password"
+          name="password"
+          type="password"
+          value={password}
+          placeholder="Password"
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && passwordValid}
+          error={!!passwordValid && initialValidation}
+          fullWidth
+        />
 
         {/* <Grid// TODO: Errors management 
           item
@@ -70,24 +67,11 @@ export const LoginPage = () => {
           <Alert severity="error">{errorMessage}</Alert>
         </Grid> */}
 
-        <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-          <Grid item xs={12} sm={6}>
-            <Button
-              type="submit"
-              variant="contained"
-              // disabled={isAuthenticated} // TODO: state of button
-              fullWidth
-            >
-              Login
-            </Button>
-          </Grid>
-
-          <Grid container direction="row" justifyContent="end">
-            <Link component={RouterLink} color="inherit" to="/auth/register">
-              <Typography sx={{ mt: 2 }}>Create Account</Typography>
-            </Link>
-          </Grid>
-        </Grid>
+        <Buttons
+          title="Login"
+          linkTitle="Create Account"
+          path="/auth/register"
+        />
       </form>
     </AuthLayout>
   )

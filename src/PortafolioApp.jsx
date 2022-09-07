@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { RouterApp } from "./router/RouterApp";
 import { store } from "./store/store";
+import "./styles/styles.css";
 import { AppTheme } from "./theme";
 
 const PortafolioApp = () => {

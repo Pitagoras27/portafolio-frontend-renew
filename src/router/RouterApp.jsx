@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { LoginPage, RegisterPage } from "../auth/pages";
+import { LoginPage, RegisterPage } from "../auth";
 import { useAuthStore } from "../hooks/useAuthStore";
-import { PortafolioPage } from "../portafolio/pages";
+import { PortafolioPage } from "../portafolio";
 
 
 export const RouterApp = () => {

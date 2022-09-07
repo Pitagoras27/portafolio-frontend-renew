@@ -33,7 +33,6 @@ export const useForm = (initialState, validatedFields = {}) => {
 
   const validationFields = () => {
     const helper = {};
-
     for (let field of Object.keys(validatedFields)) {
       const [fn, errorMessage] = validatedFields[field];
       helper[`${field}Valid`] = fn(inputValue[field]) ? errorMessage : null;

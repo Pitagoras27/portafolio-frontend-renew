@@ -1,29 +1,22 @@
-import {
-  Button,
-  Grid,
-  Link,
-  TextField,
-  Typography
-} from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { useState } from "react";
+import { AuthLayout, Buttons, InputField } from "../";
 import { useForm } from "../../hooks/useForm";
-import { AuthLayout } from "./AuthLayout";
 
 const dataFormRegister = {
-  displayName: "",
-  email: "",
-  password: "",
+  displayName: '',
+  email: '',
+  password: '',
 };
 
 const validatedFields = {
   displayName: [
     (value, b) => !value.length >= 1,
-    "The full name don't have empty",
+    'The full name don\'t have empty',
   ],
-  email: [(value) => !value.includes("@"), "The email is not valid"],
+  email: [(value) => !value.includes('@'), 'The email is not valid'],
   password: [
     (value) => !(value.length >= 6),
-    "The password must have 6 characters minimun",
+    'The password must have 6 characters minimun',
   ],
 };
 
@@ -40,93 +33,73 @@ export const RegisterPage = () => {
     isFormValid,
   } = useForm(dataFormRegister, validatedFields);
 
+  const [ initialValidation, setInitialValidation ] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // TODO: Validation form
+    setInitialValidation(true);
 
     // TODO: if all is correct update store
   };
   return (
     <AuthLayout title="Register">
-      {/* <h4>The form is {isFormValid ? "valid" : "incorrect"}</h4> */}
+      { initialValidation && 
+        <h4 className="text-align-right mb-0">The form is {(isFormValid) ? "valid" : "incorrect"} </h4> }
       <form
         onSubmit={handleSubmit}
         className="animate__animated animate__fadeIn animate__faster"
       >
-        <Grid container>
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField
-              label="Full Name"
-              type="text"
-              placeholder="Full Name"
-              autoComplete="off"
-              fullWidth
-              value={displayName}
-              onChange={handleChange}
-              name="displayName"
-              // error={!!displayNameValid && helpWithState if is neccesary}
-              helperText={displayNameValid}
-            />
-          </Grid>
-        </Grid>
 
-        <Grid container>
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField
-              label="Correo"
-              type="email"
-              placeholder="correo@google.com"
-              autoComplete="off"
-              fullWidth
-              value={email}
-              onChange={handleChange}
-              name="email"
-              // error={!!emailValid && helpWithState if is neccesary}
-              helperText={emailValid}
-            />
-          </Grid>
-        </Grid>
+        <InputField
+          label="Full Name"
+          name="displayName"
+          type="text"
+          value={displayName}
+          placeholder="correo@google.com"
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && displayNameValid}
+          error={!!displayNameValid && initialValidation}
+          fullWidth
+          />
 
-        <Grid container spacing={2} sx={{ mb: 2 }}>
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField
-              label="Password"
-              type="password"
-              placeholder="Password"
-              autoComplete="off"
-              fullWidth
-              value={password}
-              onChange={handleChange}
-              name="password"
-              // error={!!passwordValid && helpWithState if is neccesary}
-              helperText={passwordValid}
-            />
-          </Grid>
-        </Grid>
+        <InputField
+          label="Correo"
+          name="email"
+          type="email"
+          value={email}
+          placeholder="correo@google.com"
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && emailValid}
+          error={!!emailValid && initialValidation}
+          fullWidth
+          />
 
-        {/* <Grid item xs={12} display={!!errorMessage ? "" : "none"}> // TODO: Errors managment
+        <InputField
+          label="Password"
+          name="password"
+          type="password"
+          value={password}
+          placeholder="Password"
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && passwordValid}
+          error={!!passwordValid && initialValidation}
+          fullWidth
+        />
+
+        {/* <Grid item xs={12} display={!!errorMessage ? "" : "none"}> // TODO: Errors managment via store and backend
           <Alert severity="error">{errorMessage}</Alert>
         </Grid> */}
 
-        <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-          <Grid item xs={12} sm={6}>
-            <Button
-              variant="contained"
-              fullWidth
-              type="submit"
-              // disabled // TODO Controls this attribute
-            >
-              <Typography>Register</Typography>
-            </Button>
-          </Grid>
-
-          <Grid container direction="row" justifyContent="end">
-            <Link component={RouterLink} color="inherit" to="/auth/login">
-              <Typography sx={{ mt: 2 }}>You have an Account</Typography>
-            </Link>
-          </Grid>
-        </Grid>
+        <Buttons
+          title="Register"
+          linkTitle="You have an Account"
+          path="/auth/login"
+        />
       </form>
     </AuthLayout>
   );
