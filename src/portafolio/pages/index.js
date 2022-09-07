@@ -1,0 +1,2 @@
+export { PortafolioPage } from "./PortafolioPage";
+
