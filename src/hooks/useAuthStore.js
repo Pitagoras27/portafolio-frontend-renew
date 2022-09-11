@@ -3,8 +3,8 @@ import axiosFetch from '../api/axiosFetch';
 import { onChecking, onLogin, onLogout } from '../store/auth/authSlice';
 
 export const useAuthStore = () => {
-  const dispatch = useDispatch();
   const { status, user, errorMessage } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
 
   const startCheckingToken = async () => {
     const token = localStorage.getItem('token');
@@ -47,7 +47,7 @@ export const useAuthStore = () => {
       const { name, uid, token } = data;
       dispatch(onLogin({ name, uid }));
 
-      localStorage.setItem('token', JSON.stringify(token));
+      localStorage.setItem('token', token);
       localStorage.setItem('token-init-date', new Date().getTime() );
 
     } catch ( error ) {
