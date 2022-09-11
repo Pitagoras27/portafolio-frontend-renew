@@ -1,5 +1,7 @@
+import { Alert, Grid } from "@mui/material";
 import { useState } from "react";
 import { AuthLayout, Buttons, InputField } from "../";
+import { useAuthStore } from "../../hooks/useAuthStore";
 import { useForm } from "../../hooks/useForm";
 
 const validatedData = {
@@ -19,13 +21,26 @@ const formLoginData = {
 };
 
 export const LoginPage = () => {
-  const { email, password, handleChange, emailValid, passwordValid } = useForm(formLoginData, validatedData);
+  const {
+    email,
+    password,
+    handleChange,
+    emailValid,
+    passwordValid,
+    isFormValid
+  } = useForm(formLoginData, validatedData);
+
+  const { startLoginUser, errorMessage } = useAuthStore();
+  const [ initialValidation, setInitialValidation ] = useState(false);
+  
   const onSubmit = (e) => {
     e.preventDefault();
-
     setInitialValidation(true);
+    if (isFormValid) {
+      startLoginUser({ email, password });
+    }
   }
-  const [initialValidation, setInitialValidation] = useState(false);
+
   return (
     <AuthLayout title="Login">
       <form
@@ -58,14 +73,14 @@ export const LoginPage = () => {
           fullWidth
         />
 
-        {/* <Grid// TODO: Errors management 
+        <Grid
           item
           xs={12}
           sx={{ mb: 2, mt: 1 }}
           display={!!errorMessage ? "" : "none"}
         >
           <Alert severity="error">{errorMessage}</Alert>
-        </Grid> */}
+        </Grid>
 
         <Buttons
           title="Login"

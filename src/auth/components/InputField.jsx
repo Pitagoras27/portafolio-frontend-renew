@@ -20,7 +20,6 @@ export const InputField = ({
           name={name}
           type={type}
           value={value}
-          placeholder="correo@google.com"
           autoComplete="off"
           onChange={handleChange}
           helperText={helperText}
