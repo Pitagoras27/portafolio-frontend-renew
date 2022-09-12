@@ -1,8 +1,9 @@
-// import { Alert, Grid } from "@mui/material";
-import { Typography } from '@mui/material';
+import { Alert, Grid, Typography } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { useState } from "react";
 import { AuthLayout, Buttons, InputField } from "../";
+import { validateEmail } from "../../helpers";
+import { useAuthStore } from '../../hooks/useAuthStore';
 import { useForm } from "../../hooks/useForm";
 
 const useStyles = makeStyles({
@@ -28,7 +29,7 @@ export const RegisterPage = () => {
       (value, b) => !value.length >= 1,
       'The full name don\'t have empty',
     ],
-    email: [(value) => !value.includes('@'), 'The email is not valid'],
+    email: [(value) => !validateEmail(value), 'The email is not valid'],
     password: [
       (value) => !(value.length >= 5),
       'The password must have 5 characters minimun',
@@ -53,13 +54,16 @@ export const RegisterPage = () => {
   } = useForm(dataFormRegister, validatedFields);
 
   const [ initialValidation, setInitialValidation ] = useState(false);
+  const { startRegisterUser, errorMessage } = useAuthStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setInitialValidation(true);
 
-    if(isFormValid) console.log('All is correct, update store')
+    if(isFormValid) {
+      startRegisterUser({ displayName, email, password, password2 })
+    }
 
   };
   return (
@@ -124,9 +128,9 @@ export const RegisterPage = () => {
           fullWidth
         />
 
-        {/* <Grid item xs={12} display={!!errorMessage ? "" : "none"}>
+        <Grid item xs={12} sx={{ mt: 2 }} display={!!errorMessage ? "" : "none"}>
           <Alert severity="error">{errorMessage}</Alert>
-        </Grid> */}
+        </Grid>
 
         <Buttons
           title="Register"

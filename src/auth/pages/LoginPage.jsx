@@ -1,12 +1,13 @@
 import { Alert, Grid } from "@mui/material";
 import { useState } from "react";
 import { AuthLayout, Buttons, InputField } from "../";
+import { validateEmail } from "../../helpers";
 import { useAuthStore } from "../../hooks/useAuthStore";
 import { useForm } from "../../hooks/useForm";
 
 const validatedData = {
   email: [
-    (value) => !value && !value.includes('@'),
+    (value) => !validateEmail(value),
     'the mail is not correct'
   ],
   password: [
@@ -76,7 +77,7 @@ export const LoginPage = () => {
         <Grid
           item
           xs={12}
-          sx={{ mb: 2, mt: 1 }}
+          sx={{ mb: 2, mt: 2 }}
           display={!!errorMessage ? "" : "none"}
         >
           <Alert severity="error">{errorMessage}</Alert>

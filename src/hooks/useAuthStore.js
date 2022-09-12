@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import axiosFetch from '../api/axiosFetch';
+import { getLocalStorage, setLocalStorage } from '../helpers/';
 import { clearErrorMessage, onChecking, onLogin, onLogout } from '../store';
 
 export const useAuthStore = () => {
@@ -7,13 +8,13 @@ export const useAuthStore = () => {
   const dispatch = useDispatch();
 
   const startCheckingToken = async () => {
-    const token = localStorage.getItem('token');
+    const token = getLocalStorage('token');
     if(!token) return dispatch(onLogout())
 
     try {
       const { data } = await axiosFetch.get('/auth/renew');
-      localStorage.setItem('token', data.token );
-      localStorage.setItem('token-init-date', new Date().getTime() );
+      setLocalStorage('token', data.token );
+      setLocalStorage('token-init-date', new Date().getTime() );
       dispatch( onLogin({ name: data.name, uid: data.uid }) );
     } catch (error) {
       localStorage.clear();
@@ -26,8 +27,9 @@ export const useAuthStore = () => {
     try {
       const { data } = await axiosFetch.post('/auth', { email, password });
       const { name, uid, token } = data;
-      localStorage.setItem('token', token);
-      localStorage.setItem('token-init-date', new Date().getTime() );
+      setLocalStorage('token', token);
+      setLocalStorage('token-init-date', new Date().getTime() );
+
       dispatch(onLogin({ name, uid }));
       dispatch( clearErrorMessage() );
     } catch ( error ) {
@@ -44,8 +46,27 @@ export const useAuthStore = () => {
     }
   }
 
-  const startRegisterUser = async() => {
+  const startRegisterUser = async({ displayName: name, email, password, password2  }) => {
+    dispatch(onChecking());
 
+    try {
+      const { data } = await axiosFetch.post('/auth/newUser', { name, email, password, password2 });
+      const { token, uid } = data;
+
+      setLocalStorage('token', token);
+      setLocalStorage('token-init-date', new Date().getTime() );
+
+      dispatch(onLogin({ name, uid }));
+    } catch (error) {
+      const { data } = error.response;
+
+      if(typeof data.msg === 'string') {
+        dispatch(onLogout(data.msg));
+        return;
+      }
+
+      dispatch(onLogout(data.msg?.password2?.msg));
+    }
   }
 
   return {
