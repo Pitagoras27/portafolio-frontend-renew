@@ -44,11 +44,16 @@ export const useAuthStore = () => {
     }
   }
 
+  const startRegisterUser = async() => {
+
+  }
+
   return {
     user,
     status,
     errorMessage,
     startCheckingToken,
     startLoginUser,
+    startRegisterUser
   }
 }

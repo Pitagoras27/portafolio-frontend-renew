@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { LoginPage } from "../auth";
+import { LoginPage, RegisterPage } from "../auth";
 import { useAuthStore } from "../hooks/useAuthStore";
 import { PortafolioPage } from "../portafolio";
 import { Loader } from "../ui/components/Loader";
@@ -21,7 +21,9 @@ export const RouterApp = () => {
         status === 'non-authenticated' ?
         (
           <>          
-            <Route path="/auth/*" element={ <LoginPage /> } />
+            <Route path="/auth/login" element={ <LoginPage /> } />
+            <Route path="/auth/register" element={ <RegisterPage /> } />
+            <Route path="/auth/*" element={ <Navigate to="/auth/login" /> } />
             <Route path="/*" element={ <Navigate to="/auth/login" /> } />
           </>
 

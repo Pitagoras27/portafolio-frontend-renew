@@ -1,35 +1,54 @@
+// import { Alert, Grid } from "@mui/material";
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useState } from "react";
 import { AuthLayout, Buttons, InputField } from "../";
 import { useForm } from "../../hooks/useForm";
+
+const useStyles = makeStyles({
+  styleHeader: {
+    textAlign: 'center',
+    marginBottom: 0,
+    fontStyle: 'italic',
+  }
+});
 
 const dataFormRegister = {
   displayName: '',
   email: '',
   password: '',
-};
-
-const validatedFields = {
-  displayName: [
-    (value, b) => !value.length >= 1,
-    'The full name don\'t have empty',
-  ],
-  email: [(value) => !value.includes('@'), 'The email is not valid'],
-  password: [
-    (value) => !(value.length >= 6),
-    'The password must have 6 characters minimun',
-  ],
+  password2: ''
 };
 
 export const RegisterPage = () => {
+  const classes = useStyles();
+
+  const validatedFields = {
+    displayName: [
+      (value, b) => !value.length >= 1,
+      'The full name don\'t have empty',
+    ],
+    email: [(value) => !value.includes('@'), 'The email is not valid'],
+    password: [
+      (value) => !(value.length >= 5),
+      'The password must have 5 characters minimun',
+    ],
+    password2: [
+      (value) => !(value === password && value.length >= 5),
+      'The password must be the same',
+    ],
+  };
+
   const {
-    inputValue,
     displayName,
     email,
     password,
+    password2,
     handleChange,
     displayNameValid,
     emailValid,
     passwordValid,
+    password2Valid,
     isFormValid,
   } = useForm(dataFormRegister, validatedFields);
 
@@ -38,15 +57,20 @@ export const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // TODO: Validation form
     setInitialValidation(true);
 
-    // TODO: if all is correct update store
+    if(isFormValid) console.log('All is correct, update store')
+
   };
   return (
     <AuthLayout title="Register">
       { initialValidation && 
-        <h4 className="text-align-right mb-0">The form is {(isFormValid) ? "valid" : "incorrect"} </h4> }
+        <Typography
+          variant="subtitle1"
+          className={classes.styleHeader}
+        >
+          The form is {(isFormValid) ? "valid" : "incorrect"}
+        </Typography> }
       <form
         onSubmit={handleSubmit}
         className="animate__animated animate__fadeIn animate__faster"
@@ -57,7 +81,6 @@ export const RegisterPage = () => {
           name="displayName"
           type="text"
           value={displayName}
-          placeholder="correo@google.com"
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && displayNameValid}
@@ -70,7 +93,6 @@ export const RegisterPage = () => {
           name="email"
           type="email"
           value={email}
-          placeholder="correo@google.com"
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && emailValid}
@@ -83,7 +105,6 @@ export const RegisterPage = () => {
           name="password"
           type="password"
           value={password}
-          placeholder="Password"
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && passwordValid}
@@ -91,7 +112,19 @@ export const RegisterPage = () => {
           fullWidth
         />
 
-        {/* <Grid item xs={12} display={!!errorMessage ? "" : "none"}> // TODO: Errors managment via store and backend
+        <InputField
+          label="Repeat your password"
+          name="password2"
+          type="password"
+          value={password2}
+          autoComplete="off"
+          handleChange={handleChange}
+          helperText={initialValidation && password2Valid}
+          error={!!password2Valid && initialValidation}
+          fullWidth
+        />
+
+        {/* <Grid item xs={12} display={!!errorMessage ? "" : "none"}>
           <Alert severity="error">{errorMessage}</Alert>
         </Grid> */}
 
