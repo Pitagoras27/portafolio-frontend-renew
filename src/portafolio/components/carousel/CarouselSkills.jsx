@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 const bgImages = [devSft1, devSft2, devSft3];
 
-export const CarouselSkills = (props) => {
+export const CarouselSkills = ({ handleOpen }) => {
   const classes = useStyles();
   var items = [
     {
@@ -50,7 +50,14 @@ export const CarouselSkills = (props) => {
         }}
       >
         {
-          items.map( (item, i) => <CarouselItem key={i} item={item} image={bgImages[i]} /> )
+          items.map( (item, i) => (
+            <CarouselItem
+              key={i}
+              item={item}
+              image={bgImages[i]}
+              handleOpen={handleOpen}
+            />
+          ) )
         }
       </Carousel>
     )

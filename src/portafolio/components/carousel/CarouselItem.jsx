@@ -1,6 +1,7 @@
 import { Box, Button, Container, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
+
 const useStyles = makeStyles({
   heading: {
     color: 'red',
@@ -34,7 +35,7 @@ const stylePaper = (image) => ({
   backgroundPosition: '0% 100%'
 })
 
-export const CarouselItem = ({ item, image }) => {
+export const CarouselItem = ({ item, image, handleOpen }) => {
   const classes = useStyles();
   return (
     <Paper
@@ -49,7 +50,10 @@ export const CarouselItem = ({ item, image }) => {
           <h2 className={ classes.heading }>{ item.name }</h2>
           <p>{item.description}</p>
 
-          <Button className={ classes.checkButton }> Check it out! </Button>
+          <Button
+            className={ classes.checkButton }
+            onClick={() => handleOpen(true)}
+          > Check it out! </Button>
         </Box>
       </Container>
     </Paper>

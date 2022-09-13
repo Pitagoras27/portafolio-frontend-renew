@@ -1,10 +1,17 @@
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-import { useState } from 'react';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  hrStyle: {
+    border: 0,
+    height: '1px',
+    backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))'
+  }
+});
 
 const style = {
   position: 'absolute',
@@ -12,20 +19,21 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+  bgcolor: '#f1f6f9',
   border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+  boxShadow:524,
+  p: 3,
+  '&:hr': {
+    height: '10px'
+  }
+}
 
-export function ModalContact() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
+
+export function ModalContact({ open, handleClose }) {
+  const classes = useStyles();
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -39,11 +47,27 @@ export function ModalContact() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
+            <Typography id="transition-modal-title" variant="h6" component="h6">
+              Contacto
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            <hr className={classes.hrStyle}/>
+            <Typography
+              id="transition-modal-description"
+              variant="h5"
+              sx={{ mt: 2, textAlign: 'center' }}>
+                Write a Message
+            </Typography>
+            <Typography
+              variant="body1"
+              display="block"
+              align="center"
+              gutterBottom
+              sx={{
+                lineHeight: '20px', marginTop: '15px'
+              }}
+            >
+              Gracias por tomarte el tiempo de comunicarte.
+              ¿Cómo puedo ayudarte?
             </Typography>
           </Box>
         </Fade>
