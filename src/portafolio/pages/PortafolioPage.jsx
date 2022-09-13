@@ -1,5 +1,12 @@
+import { CarouselSkills } from "../";
+import { NavigationBar } from "../../ui";
+
 export const PortafolioPage = () => {
   return (
-    <h1>PortafolioPage</h1>
+    <>
+      <NavigationBar />
+      <CarouselSkills />
+    </>
+
   )
 }

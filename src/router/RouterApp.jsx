@@ -18,7 +18,7 @@ export const RouterApp = () => {
   return (
     <Routes>
       {
-        status === 'non-authenticated' ?
+        status !== 'non-authenticated' ?
         (
           <>          
             <Route path="/auth/login" element={ <LoginPage /> } />
