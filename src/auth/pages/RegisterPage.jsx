@@ -1,10 +1,11 @@
 import { Alert, Grid, Typography } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { useState } from "react";
-import { AuthLayout, Buttons, InputField } from "../";
+import { AuthLayout } from "../";
 import { validateEmail } from "../../helpers";
 import { useAuthStore } from '../../hooks/useAuthStore';
 import { useForm } from "../../hooks/useForm";
+import { Buttons, InputField } from "../../ui";
 
 const useStyles = makeStyles({
   styleHeader: {
@@ -85,6 +86,7 @@ export const RegisterPage = () => {
           name="displayName"
           type="text"
           value={displayName}
+          multiline={false}
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && displayNameValid}
@@ -97,6 +99,7 @@ export const RegisterPage = () => {
           name="email"
           type="email"
           value={email}
+          multiline={false}
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && emailValid}
@@ -109,6 +112,7 @@ export const RegisterPage = () => {
           name="password"
           type="password"
           value={password}
+          multiline={false}
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && passwordValid}

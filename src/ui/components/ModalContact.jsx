@@ -4,6 +4,7 @@ import Fade from '@mui/material/Fade';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
+import { ContactForm } from '../';
 
 const useStyles = makeStyles({
   hrStyle: {
@@ -18,11 +19,11 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 500,
   bgcolor: '#f1f6f9',
   border: '2px solid #000',
   boxShadow:524,
-  p: 3,
+  p: 4,
   '&:hr': {
     height: '10px'
   }
@@ -54,7 +55,7 @@ export function ModalContact({ open, handleClose }) {
             <Typography
               id="transition-modal-description"
               variant="h5"
-              sx={{ mt: 2, textAlign: 'center' }}>
+              sx={{ mt: 2, textAlign: 'center', color: '#004b6e', fontWeight: 700 }}>
                 Write a Message
             </Typography>
             <Typography
@@ -66,9 +67,10 @@ export function ModalContact({ open, handleClose }) {
                 lineHeight: '20px', marginTop: '15px'
               }}
             >
-              Gracias por tomarte el tiempo de comunicarte.
+              Gracias por tomarte el tiempo de comunicarte.<br />
               ¿Cómo puedo ayudarte?
             </Typography>
+            <ContactForm />
           </Box>
         </Fade>
       </Modal>

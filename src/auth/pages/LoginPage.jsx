@@ -1,9 +1,10 @@
 import { Alert, Grid } from "@mui/material";
 import { useState } from "react";
-import { AuthLayout, Buttons, InputField } from "../";
+import { AuthLayout } from "../";
 import { validateEmail } from "../../helpers";
 import { useAuthStore } from "../../hooks/useAuthStore";
 import { useForm } from "../../hooks/useForm";
+import { Buttons, InputField } from "../../ui/";
 
 const validatedData = {
   email: [
@@ -53,7 +54,7 @@ export const LoginPage = () => {
           name="email"
           type="email"
           value={email}
-          placeholder="correo@google.com"
+          multiline={false}
           autoComplete="off"
           handleChange={handleChange}
           helperText={initialValidation && emailValid}
@@ -66,6 +67,7 @@ export const LoginPage = () => {
           name="password"
           type="password"
           value={password}
+          multiline={false}
           placeholder="Password"
           autoComplete="off"
           handleChange={handleChange}

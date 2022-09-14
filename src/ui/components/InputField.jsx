@@ -8,10 +8,12 @@ export const InputField = ({
   name,
   type,
   value,
+  multiline,
+  minRows,
   handleChange,
   helperText,
   error
-}) => {
+} = {}) => {
   return (
     <Grid container>
       <Grid item xs={12} sx={{ mt: 2 }}>
@@ -24,6 +26,8 @@ export const InputField = ({
           onChange={handleChange}
           helperText={helperText}
           error={error}
+          multiline={multiline}
+          minRows={minRows}
           fullWidth
         />
       </Grid>
