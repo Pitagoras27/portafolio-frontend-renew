@@ -38,7 +38,7 @@ export const LoginPage = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setInitialValidation(true);
-    if (isFormValid) {
+    if (isFormValid) { // TODO: this is a function, but memorized, already call it whit updated state.
       startLoginUser({ email, password });
     }
   }

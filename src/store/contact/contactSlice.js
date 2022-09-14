@@ -12,6 +12,11 @@ export const contactSlice = createSlice({
       state.errorMessage = undefined;
     },
 
+    onErrorSending: (state, { payload }) => {
+      state.interests = [];
+      state.errorMessage = payload;
+    },
+
     onClearSendingState: (state) => {
       state.interests = [];
       state.errorMessage = undefined;
@@ -19,4 +24,4 @@ export const contactSlice = createSlice({
   }
 });
 
-export const { onSending, onClearSendingState } = contactSlice.actions;
+export const { onSending, onErrorSending, onClearSendingState } = contactSlice.actions;

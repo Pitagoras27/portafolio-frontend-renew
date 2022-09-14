@@ -62,7 +62,7 @@ export const RegisterPage = () => {
 
     setInitialValidation(true);
 
-    if(isFormValid) {
+    if(isFormValid) { // TODO: this is a function, review if works properly
       startRegisterUser({ displayName, email, password, password2 })
     }
 
