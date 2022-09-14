@@ -1,35 +1,38 @@
+import { useState } from "react";
 import { Buttons, InputField } from "../";
-import { validateEmail } from "../../helpers";
 import { useForm } from "../../hooks/useForm";
 
 const initialStateForm = {
-  email: '',
-  userName: '',
+  interests: '',
   message: ''
 }
 
 const validatedData = {
-  email: [
-    (value) => !validateEmail(value),
-    'the mail is not correct'
+  interests: [
+    (value) => value.length <= 1,
+    'What is your interest in me'
   ],
-  userName: [
-    (value) => value.length <= 5,
-    'password should have 5 characters minimum'
+  message: [
+    (value) => value.length <= 1,
+    'Write a short message'
   ]
 }
 
 export const ContactForm = () => {
   const {
-    email,
-    userName,
+    interests,
     message,
-    emailValid,
-    userNameValid,
+    interestsValid,
+    messageValid,
     handleChange
   } = useForm(initialStateForm, validatedData);
 
-  const onSubmit = () => {}
+  const [initialValue, setInitialValue] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setInitialValue(true)
+  }
 
   return (
     <form
@@ -37,28 +40,15 @@ export const ContactForm = () => {
       className="animate__animated animate__fadeIn animate__faster"
     >
       <InputField
-        label="Name"
-        name="userName"
+        label="Subject"
+        name="interests"
         type="text"
         multiline={false}
-        value={userName}
+        value={interests}
         autoComplete="off"
         handleChange={handleChange}
-        // helperText={initialValidation && textValid}
-        // error={!!emailValid && initialValidation}
-        fullWidth
-      />
-
-      <InputField
-        label="Email"
-        name="email"
-        type="email"
-        multiline={false}
-        value={email}
-        autoComplete="off"
-        handleChange={handleChange}
-        // helperText={initialValidation && textValid}
-        // error={!!emailValid && initialValidation}
+        helperText={initialValue && interestsValid}
+        error={!!interestsValid && initialValue}
         fullWidth
       />
 
@@ -66,11 +56,11 @@ export const ContactForm = () => {
         label="Message"
         name="message"
         multiline={true}
-        value={email}
+        value={message}
         autoComplete="off"
         handleChange={handleChange}
-        // helperText={initialValidation && textValid}
-        // error={!!emailValid && initialValidation}
+        helperText={initialValue && messageValid}
+        error={!!messageValid && initialValue}
         fullWidth
         minRows={3}
       />

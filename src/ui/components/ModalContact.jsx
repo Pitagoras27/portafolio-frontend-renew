@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import { ContactForm } from '../';
+import { useAuthStore } from '../../hooks/useAuthStore';
 
 const useStyles = makeStyles({
   hrStyle: {
@@ -33,6 +34,7 @@ const style = {
 
 export function ModalContact({ open, handleClose }) {
   const classes = useStyles();
+  const { user } = useAuthStore();
   return (
     <div>
       <Modal
@@ -49,7 +51,7 @@ export function ModalContact({ open, handleClose }) {
         <Fade in={open}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h6">
-              Contacto
+              Hi { user.name }
             </Typography>
             <hr className={classes.hrStyle}/>
             <Typography
@@ -67,7 +69,7 @@ export function ModalContact({ open, handleClose }) {
                 lineHeight: '20px', marginTop: '15px'
               }}
             >
-              Gracias por tomarte el tiempo de comunicarte.<br />
+              Gracias por tomarte el tiempo de comunicarte conmigo<br />
               ¿Cómo puedo ayudarte?
             </Typography>
             <ContactForm />
