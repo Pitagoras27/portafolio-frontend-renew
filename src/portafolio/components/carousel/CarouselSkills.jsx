@@ -1,4 +1,3 @@
-import { makeStyles } from '@mui/styles';
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import devSft1 from '../../../assets/imgs/carousel/devSft.jpg';
@@ -6,16 +5,9 @@ import devSft2 from '../../../assets/imgs/carousel/sftDev.png';
 import devSft3 from '../../../assets/imgs/carousel/sftDev2.png';
 import { CarouselItem } from './CarouselItem';
 
-const useStyles = makeStyles({
-  testClass: {
-    backgroundColor: 'red'
-  }
-})
-
 const bgImages = [devSft1, devSft2, devSft3];
 
 export const CarouselSkills = ({ handleOpen }) => {
-  const classes = useStyles();
   var items = [
     {
       name: "Programming",

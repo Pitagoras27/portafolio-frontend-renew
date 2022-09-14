@@ -4,7 +4,8 @@ import Fade from '@mui/material/Fade';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
-import { ContactForm } from '../';
+import { Contact, Notification } from '../';
+import { useContactStore } from '../../hooks';
 import { useAuthStore } from '../../hooks/useAuthStore';
 
 const useStyles = makeStyles({
@@ -30,9 +31,8 @@ const style = {
   }
 }
 
-
-
 export function ModalContact({ open, handleClose }) {
+  const { status } = useContactStore();
   const classes = useStyles();
   const { user } = useAuthStore();
   return (
@@ -54,25 +54,35 @@ export function ModalContact({ open, handleClose }) {
               Hi { user.name }
             </Typography>
             <hr className={classes.hrStyle}/>
-            <Typography
-              id="transition-modal-description"
-              variant="h5"
-              sx={{ mt: 2, textAlign: 'center', color: '#004b6e', fontWeight: 700 }}>
-                Write a Message
-            </Typography>
-            <Typography
-              variant="body1"
-              display="block"
-              align="center"
-              gutterBottom
-              sx={{
-                lineHeight: '20px', marginTop: '15px'
-              }}
-            >
-              Gracias por tomarte el tiempo de comunicarte conmigo<br />
-              ¿Cómo puedo ayudarte?
-            </Typography>
-            <ContactForm />
+
+            {
+              (status === 'success' || status === 'fail') ? 
+              (
+                <Notification status={status} />
+              ) : (
+                <>
+                  <Typography
+                    id="transition-modal-description"
+                    variant="h5"
+                    sx={{ mt: 2, textAlign: 'center', color: '#004b6e', fontWeight: 700 }}>
+                      Write a Message
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    display="block"
+                    align="center"
+                    gutterBottom
+                    sx={{
+                      lineHeight: '20px', marginTop: '15px'
+                    }}
+                  >
+                    Gracias por tomarte el tiempo de comunicarte conmigo<br />
+                    ¿Cómo puedo ayudarte?
+                  </Typography>
+                  <Contact />
+                </>
+              )
+            }
           </Box>
         </Fade>
       </Modal>

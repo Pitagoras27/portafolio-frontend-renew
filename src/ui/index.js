@@ -1,6 +1,7 @@
 
 export { Buttons } from "./components/Buttons";
-export { ContactForm } from "./components/ContactForm";
+export { Contact } from "./components/contact/Contact";
+export { Notification } from "./components/contact/Notification";
 export { InputField } from "./components/InputField";
 export { Loader } from "./components/Loader";
 export { ModalContact } from "./components/ModalContact";
