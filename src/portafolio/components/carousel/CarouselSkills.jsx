@@ -3,26 +3,12 @@ import Carousel from 'react-material-ui-carousel';
 import devSft1 from '../../../assets/imgs/carousel/devSft.jpg';
 import devSft2 from '../../../assets/imgs/carousel/sftDev.png';
 import devSft3 from '../../../assets/imgs/carousel/sftDev2.png';
+import { carouselData } from '../../../data';
 import { CarouselItem } from './CarouselItem';
 
 const bgImages = [devSft1, devSft2, devSft3];
 
 export const CarouselSkills = ({ handleOpen }) => {
-  var items = [
-    {
-      name: "Programming",
-      description: "Soy un web developer apasionado con lo que hago, diseño, programo y continuamente estoy evolucionando"
-    },
-    {
-      name: "Design Interfaces",
-      description: "Una de mis grandes sentirme orgulloso de mi trabajo, un reto dificil ante tanto tanlento y mejora entre mis colegas"
-    },
-    {
-      name: "Growing Continuos",
-      description: "Busco afanosamente todo lo que signifique la mejora continua de mi propia persona, ya que si no pudiera tenerme de mi lado, nada puedira lograr con satisfacción"
-    }
-  ]
-
     {/* // TODO: Remove autoPlay PROP is default */}
     return (
       <Carousel
@@ -30,6 +16,7 @@ export const CarouselSkills = ({ handleOpen }) => {
         prev={ (prev, active) => console.log(``) }
         fullHeightHover={true}
         animation='fade'
+        indicators={false}
         autoPlay={false}
         navButtonsProps={{
           style: { backgroundColor: "cornflowerblue", width: '50px', height: '50px'}
@@ -42,9 +29,10 @@ export const CarouselSkills = ({ handleOpen }) => {
         }}
       >
         {
-          items.map( (item, i) => (
+          carouselData.map( (item, i) => (
             <CarouselItem
               key={i}
+              type={i}
               item={item}
               image={bgImages[i]}
               handleOpen={handleOpen}
