@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CarouselSkills, TechnologySkills } from "../";
+import { AboutMe, CarouselSkills, TechnologySkills } from "../";
 import { ModalContact, NavigationBar } from "../../ui";
 
 export const PortafolioPage = () => {
@@ -12,6 +12,7 @@ export const PortafolioPage = () => {
       <CarouselSkills handleOpen={handleOpen} />
 
       <TechnologySkills />
+      <AboutMe />
       <ModalContact
         open={open}
         handleClose={handleClose}
