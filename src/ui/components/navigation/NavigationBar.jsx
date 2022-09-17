@@ -38,10 +38,11 @@ export const NavigationBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      background: 'linear-gradient( #1c3643, #273b47 25%, #1e5372)',
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
 
           { !isMobile && <Brand mobileDisplay="none" deskDisplay="flex" /> }
 

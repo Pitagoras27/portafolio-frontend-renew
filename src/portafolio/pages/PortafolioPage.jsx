@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AboutMe, CarouselSkills, TechnologySkills } from "../";
-import { ModalContact, NavigationBar } from "../../ui";
+import { Footer, ModalContact, NavigationBar } from "../../ui";
 
 export const PortafolioPage = () => {
   const [open, setOpen] = useState(false)
@@ -13,6 +13,8 @@ export const PortafolioPage = () => {
 
       <TechnologySkills />
       <AboutMe />
+
+      <Footer />
       <ModalContact
         open={open}
         handleClose={handleClose}

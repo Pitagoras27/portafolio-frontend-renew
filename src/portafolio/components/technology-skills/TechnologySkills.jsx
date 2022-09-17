@@ -5,7 +5,6 @@ import { generateId } from '../../../helpers';
 import { Cards } from "./Cards";
 
 const useStyles = makeStyles({
-  backgroundImage: 'linear-gradient(#1c3643, white 2%)',
   marginHeader: {
     paddingTop: '40px',
     paddingBottom: '40px',
@@ -24,7 +23,6 @@ export const TechnologySkills = () => {
   return (
     <Box sx={{
       backgroundColor: 'white',
-      backgroundImage: 'linear-gradient(#1c3643, white 2%)',
       width: '100%'
     }}>
       <Container maxWidth="lg">

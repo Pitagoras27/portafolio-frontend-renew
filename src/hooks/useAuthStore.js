@@ -43,6 +43,8 @@ export const useAuthStore = () => {
       setTimeout(() => {
         dispatch( clearErrorMessage() );
     }, 10);
+    } finally {
+      return true
     }
   }
 

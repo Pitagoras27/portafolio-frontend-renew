@@ -27,8 +27,8 @@ export const AboutMe = () => {
   return (
     <Box sx={{
       backgroundColor: 'white',
-      backgroundImage: 'linear-gradient(#1c3643, white 2%)',
-      width: '100%'
+      width: '100%',
+      paddingBottom: "50px"
     }}>
       <Container maxWidth="lg">
         <Typography

@@ -1,3 +1,24 @@
 body {
   background-color: #1c3643 !important;
 }
+
+.shape-bottom:not([class*="shape-blur"]) {
+  overflow: hidden;
+}
+
+.shape-bottom:not([class*="shape-blur"]) > * {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+.shape-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.shape-bottom > * {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
