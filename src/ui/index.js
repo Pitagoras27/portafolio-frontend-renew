@@ -5,5 +5,6 @@ export { Notification } from "./components/contact/Notification";
 export { InputField } from "./components/InputField";
 export { Loader } from "./components/Loader";
 export { ModalContact } from "./components/ModalContact";
-export { NavigationBar } from "./components/NavigationBar";
+export { Brand } from "./components/navigation/Brand";
+export { NavigationBar } from "./components/navigation/NavigationBar";
 

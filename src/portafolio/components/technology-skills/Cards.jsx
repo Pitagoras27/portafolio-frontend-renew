@@ -4,11 +4,26 @@ import {
   CardActions,
   CardContent,
   CardMedia, Typography
-} from '@mui/material'
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
+const useStyles = makeStyles({
+  lift: {
+    '-webkit-transition': 'box-shadow .25s ease,-webkit-transform .25s ease',
+    
+    transition: 'box-shadow .25s ease, transform .25s ease',
+    '&:hover': {
+      '-webkitTransform': 'translate3d(0,-3px,0)',
+      transform: 'translate3d(0,-4px,0)'
+    }
+  }
+})
 export const Cards = ({ title, text, image }) => {
+  const classes = useStyles();
+
+  // animate__animated animate__pulse
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className={classes.lift}>
       <CardMedia
         component="img"
         alt={title}

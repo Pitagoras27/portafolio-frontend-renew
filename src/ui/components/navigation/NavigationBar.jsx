@@ -1,4 +1,3 @@
-import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
@@ -11,14 +10,17 @@ import {
   Typography
 } from '@mui/material';
 import { useState } from 'react';
+import useDeviceDetect from '../../../hooks/useDetectDevice';
+import { Brand } from './Brand';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Skills', 'About of me', 'Contact', 'Proyects', 'Curriculum'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const NavigationBar = () => {
   
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+  const isMobile = useDeviceDetect();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -39,24 +41,9 @@ export const NavigationBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          
+
+          { !isMobile && <Brand mobileDisplay="none" deskDisplay="flex" /> }
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -67,7 +54,7 @@ export const NavigationBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-             <MenuIcon />
+            <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -94,25 +81,13 @@ export const NavigationBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+
+
+          { isMobile && <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} /> }
+
+
+
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
