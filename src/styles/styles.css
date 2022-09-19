@@ -2,6 +2,10 @@ body {
   background-color: #1c3643 !important;
 }
 
+.pNav {
+  padding: 6px 8px;
+}
+
 .shape-bottom:not([class*="shape-blur"]) {
   overflow: hidden;
 }

@@ -1,7 +1,6 @@
-import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
-  Avatar, Box, Button,
+  Avatar, Box,
   Container,
   IconButton,
   Menu, MenuItem,
@@ -9,10 +8,35 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
-import { Link } from "react-scroll";
 import useDeviceDetect from '../../../hooks/useDetectDevice';
 import { Brand } from './Brand';
+import { NavigationDesk } from './NavigationDesk';
+import { NavigationMobile } from './NavigationMobile';
+
+const useStyles = makeStyles({
+  pAll: {
+    padding: '0 !important',
+    justifyContent: 'left',
+    textAlign: 'left',
+    '& p': {
+      padding: '5px 10px',
+      width: '100%',
+      textAlign: 'left',
+      '& a': {
+        display: 'block'
+      },
+    },
+    '& span': {
+      width: '100%'
+    },
+    '& > a': {
+      padding: '8px 10px',
+      display: 'block !important'
+    }
+  }
+});
 
 const pages = [
   { page: 'Skills', section: 'skills' },
@@ -24,7 +48,7 @@ const pages = [
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const NavigationBar = () => {
-  
+  const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const isMobile = useDeviceDetect();
@@ -54,78 +78,31 @@ export const NavigationBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          { !isMobile && <Brand mobileDisplay="none" deskDisplay="flex" /> }
+          { !isMobile && (
+              <>
+                <Brand mobileDisplay="none" deskDisplay="flex" />
+                <NavigationDesk
+                  classes={classes.pAll}
+                  pages={pages}
+                  handleCloseNavMenu={handleCloseNavMenu} 
+                />
+              </>
+            )
+          }
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-            <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map(({page, section}) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                  <Link
-                    activeClass="active"
-                    to={section}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    {page}
-                  </Link>
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
-          { isMobile && <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} /> }
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({page, section}) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <Link
-                  activeClass="active"
-                  to={section}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  {page}
-                </Link>
-              </Button>
-            ))}
-          </Box>
+          { isMobile && (
+              <>
+                <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} />
+                <NavigationMobile
+                  pages={pages}
+                  classes={classes.pAll}
+                  anchorElNav={anchorElNav}
+                  handleOpenNavMenu={handleOpenNavMenu}
+                  handleCloseNavMenu={handleCloseNavMenu}
+                />
+              </>
+            )
+          }
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
