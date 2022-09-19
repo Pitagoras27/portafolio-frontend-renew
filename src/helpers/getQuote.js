@@ -1,0 +1,1 @@
+export const getQuote = (data) => data[Math.floor(Math.random() * data?.length)]

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import PortafolioApp from './PortafolioApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <PortafolioApp />
-  </React.StrictMode>
+  // </React.StrictMode>
 )
