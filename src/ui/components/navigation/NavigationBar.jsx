@@ -10,10 +10,17 @@ import {
   Typography
 } from '@mui/material';
 import { useState } from 'react';
+import { Link } from "react-scroll";
 import useDeviceDetect from '../../../hooks/useDetectDevice';
 import { Brand } from './Brand';
 
-const pages = ['Skills', 'About of me', 'Contact', 'Proyects', 'Curriculum'];
+const pages = [
+  { page: 'Skills', section: 'skills' },
+  { page: 'About of me', section: 'about' },
+  { page: 'Contact', section: 'contact' },
+  { page: 'Proyects', section: 'proyects' },
+  { page: 'Curriculum', section: '#' }
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const NavigationBar = () => {
@@ -38,9 +45,12 @@ export const NavigationBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{
-      background: 'linear-gradient( #1c3643, #273b47 25%, #1e5372)',
-    }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        background: 'linear-gradient( #1c3643, #273b47 25%, #1e5372)',
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -75,28 +85,44 @@ export const NavigationBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {pages.map(({page, section}) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                  <Link
+                    activeClass="active"
+                    to={section}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    {page}
+                  </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-
           { isMobile && <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} /> }
 
-
-
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map(({page, section}) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link
+                  activeClass="active"
+                  to={section}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {page}
+                </Link>
               </Button>
             ))}
           </Box>

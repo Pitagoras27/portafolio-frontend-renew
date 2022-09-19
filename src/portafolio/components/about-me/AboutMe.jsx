@@ -29,7 +29,9 @@ export const AboutMe = () => {
       backgroundColor: 'white',
       width: '100%',
       paddingBottom: "50px"
-    }}>
+    }}
+      id="about"
+    >
       <Container maxWidth="lg">
         <Typography
           gutterBottom

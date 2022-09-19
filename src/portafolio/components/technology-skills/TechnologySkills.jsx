@@ -21,10 +21,13 @@ const useStyles = makeStyles({
 export const TechnologySkills = () => {
   const classes = useStyles();
   return (
-    <Box sx={{
-      backgroundColor: 'white',
-      width: '100%'
-    }}>
+    <Box
+      id="skills"
+      sx={{
+        backgroundColor: 'white',
+        width: '100%'
+      }}
+    >
       <Container maxWidth="lg">
         <Typography
           gutterBottom
