@@ -39,7 +39,6 @@ export const Cards = ({ title, text, image }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>

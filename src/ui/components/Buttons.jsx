@@ -1,3 +1,4 @@
+import SendIcon from '@mui/icons-material/Send';
 import {
   Button,
   Grid,
@@ -13,6 +14,7 @@ export const Buttons = ({ title, linkTitle, path } = {}) => {
           variant="contained"
           fullWidth
           type="submit"
+          endIcon={<SendIcon />}
           // disabled // TODO Controls this attribute
         >
           <Typography>{ title }</Typography>

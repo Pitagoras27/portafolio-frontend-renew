@@ -42,7 +42,7 @@ export const AboutMe = () => {
             About Me
         </Typography>
         <Grid container spacing={1}>          
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Item>
               <img src={customImage} alt='Tech devices' style={{
                 width: '100%',
@@ -50,7 +50,7 @@ export const AboutMe = () => {
               }}/>
             </Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Item>
               <Typography variant="body2" paragraph align="left">
                 Soy una persona que se considera normal, pero con cualidades bien definidas, soy estudioso y detallista. Me gusta ahondar en la problemática a resolver.

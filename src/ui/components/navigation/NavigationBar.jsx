@@ -72,7 +72,7 @@ export const NavigationBar = () => {
     <AppBar
       position="fixed"
       sx={{
-        background: 'linear-gradient( #1c3643, #273b47 25%, #1e5372)',
+        background: 'linear-gradient( #19303b, #153347 40%, #1c4763 48%, #0079C0)',
       }}
     >
       <Container maxWidth="xl">

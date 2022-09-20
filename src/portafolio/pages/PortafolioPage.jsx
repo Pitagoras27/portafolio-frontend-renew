@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import { useState } from 'react';
 import { AboutMe, CarouselSkills, TechnologySkills } from "../";
 import { Footer, ModalContact, NavigationBar } from "../../ui";
@@ -9,12 +10,12 @@ export const PortafolioPage = () => {
   return (
     <>
       <NavigationBar />
-      <CarouselSkills handleOpen={handleOpen} />
-
-      <TechnologySkills />
-      <AboutMe />
-
-      <Footer />
+      <Box sx={{ position: 'relative', top: '64px' }}>
+        <CarouselSkills handleOpen={handleOpen} />
+        <TechnologySkills />
+        <AboutMe />
+        <Footer />
+      </Box>
       <ModalContact
         open={open}
         handleClose={handleClose}

@@ -1,7 +1,6 @@
 import { Box, Button, Container, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-
 const useStyles = makeStyles({
   overlay: {
     '&::before': {
@@ -28,11 +27,20 @@ const styleBox = {
   '& > div': {
     // backgroundColor: 'rgba(231, 239, 243, 0.5)',
     padding: '20px',
-    borderRadius: '10px 10px'
+    borderRadius: '10px 10px',
+    '& button': {
+      alignItems: 'flexStart',
+      paddingTop: '8px',
+      color: '#f5f7f9',
+      backgroundColor: '#1e5372',
+      float: 'right',
+      marginRight: '20px'
+    }
   },
   '& > :not(style)': {
     m: 1,
-    width: 428
+    width: 428,
+    marginTop: '-30PX'
   }
 }
 
@@ -63,6 +71,8 @@ export const CarouselItem = ({ item, image, handleOpen, type }) => {
             <Button
               className={ classes.checkButton }
               onClick={() => handleOpen(true)}
+              // variant="outlined"
+              variant="contained"
             > Check it out! </Button>
           </div>
         </Box>
