@@ -27,8 +27,9 @@ export const Cards = ({ title, text, image }) => {
       <CardMedia
         component="img"
         alt={title}
-        height="140"
+        height="60px"
         image={image}
+        sx={{ width: '50%' }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

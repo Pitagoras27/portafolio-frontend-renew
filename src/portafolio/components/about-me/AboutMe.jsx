@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   marginHeader: {
     color: 'rgb(43, 93, 115)',
     paddingTop: '40px',
-    paddingBottom: '20px',
+    paddingBottom: '40px',
   }
 });
 
@@ -28,7 +28,6 @@ export const AboutMe = () => {
     <Box sx={{
       backgroundColor: 'white',
       width: '100%',
-      paddingBottom: "50px"
     }}
       id="about"
     >
@@ -37,7 +36,7 @@ export const AboutMe = () => {
           gutterBottom
           variant="h4"
           align="center"
-          className={classes.marginHeader}
+          className="marginHeaders"
         >
             About Me
         </Typography>

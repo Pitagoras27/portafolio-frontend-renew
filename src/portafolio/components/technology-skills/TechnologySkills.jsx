@@ -5,11 +5,6 @@ import { generateId } from '../../../helpers';
 import { Cards } from "./Cards";
 
 const useStyles = makeStyles({
-  marginHeader: {
-    paddingTop: '40px',
-    paddingBottom: '40px',
-    color: 'rgb(43, 93, 115)'
-  },
   cardsContainer: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -33,7 +28,7 @@ export const TechnologySkills = () => {
           gutterBottom
           variant="h4"
           align="center"
-          className={classes.marginHeader}
+          className="marginHeaders"
         >
           Technology Skills
         </Typography>

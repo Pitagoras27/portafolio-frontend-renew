@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { useState } from 'react';
-import { AboutMe, CarouselSkills, TechnologySkills } from "../";
+import { AboutMe, CarouselSkills, Projects, TechnologySkills } from "../";
 import { Footer, ModalContact, NavigationBar } from "../../ui";
 
 export const PortafolioPage = () => {
@@ -14,6 +14,7 @@ export const PortafolioPage = () => {
         <CarouselSkills handleOpen={handleOpen} />
         <TechnologySkills />
         <AboutMe />
+        <Projects />
         <Footer />
       </Box>
       <ModalContact

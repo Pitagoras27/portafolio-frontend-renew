@@ -11,8 +11,28 @@
   font-display: block;
 }
 
+*::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 1px solid slategrey;
+}
+
 body {
   background-color: #1c3643 !important;
+}
+
+/** Headers sections */
+.marginHeaders {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: rgb(43, 93, 115);
 }
 
 /** Footer styles */
