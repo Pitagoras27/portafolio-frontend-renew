@@ -1,7 +1,8 @@
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Fab } from '@mui/material';
 import { blue } from '@mui/material/colors';
-
+import { makeStyles } from '@mui/styles';
+import { useEffect, useRef, useState } from 'react';
 
 const fabStyle = {
   position: 'fixed',
@@ -18,6 +19,30 @@ const fabGreenStyle = {
 };
 
 export const FloatingActionButton = () => {
+  const fabEl = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const useStyles = makeStyles({
+    showFab: {
+      visibility: isVisible ? 'visible' : 'hidden'
+    }
+  })
+
+  const classes = useStyles();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const distanceToTopFab = window.pageYOffset + fabEl.current.getBoundingClientRect().top;
+      (distanceToTopFab > 1000) ? setIsVisible(true) : setIsVisible(false);
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isVisible])
+  
   const toTop = () => {
     window.scroll({
       top: 0,
@@ -32,8 +57,11 @@ export const FloatingActionButton = () => {
       aria-label="Expand"
       color="inherit"
       onClick={toTop}
+      ref={fabEl}
+      className={classes.showFab}
     >
       <UpIcon />
     </Fab>
   );
+
 }
