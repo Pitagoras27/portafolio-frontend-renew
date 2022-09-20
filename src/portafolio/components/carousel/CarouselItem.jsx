@@ -73,7 +73,7 @@ export const CarouselItem = ({ item, image, handleOpen, type }) => {
               onClick={() => handleOpen(true)}
               // variant="outlined"
               variant="contained"
-            > Check it out! </Button>
+            > Get in touch! </Button>
           </div>
         </Box>
       </Container>

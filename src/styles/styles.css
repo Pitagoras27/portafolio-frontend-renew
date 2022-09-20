@@ -64,3 +64,96 @@ body {
 .icon-freecodecamp-icon:before {
   content: "\e902";
 }
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+.animatedBrand {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(2.25, 1.75, 2);
+    transform: scale3d(2.25, 1.75, 2);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.75, 2.25, 2);
+    transform: scale3d(1.75, 2.25, 2);
+  }
+
+  50% {
+    -webkit-transform: scale3d(2.15, 1.85, 2);
+    transform: scale3d(2.15, 1.85, 2);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.95, 2.05, 2);
+    transform: scale3d(1.95, 2.05, 2);
+  }
+
+  75% {
+    -webkit-transform: scale3d(2.05, 1.95, 2);
+    transform: scale3d(2.05, 1.95, 2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(2, 2, 2);
+    -ms-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+
+  30% {
+    -webkit-transform: scale3d(2.25, 1.75, 2);
+    -ms-transform: scale3d(2.25, 1.75, 2);
+    transform: scale3d(2.25, 1.75, 2);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.75, 2.25, 2);
+    -ms-transform: scale3d(1.75, 2.25, 2);
+    transform: scale3d(1.75, 2.25, 2);
+  }
+
+  50% {
+    -webkit-transform: scale3d(2.15, 1.85, 2);
+    -ms-transform: scale3d(2.15, 1.85, 2);
+    transform: scale3d(2.15, 1.85, 2);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.95, 2.05, 2);
+    -ms-transform: scale3d(1.95, 2.05, 2);
+    transform: scale3d(1.95, 2.05, 2);
+  }
+
+  75% {
+    -webkit-transform: scale3d(2.05, 1.95, 2);
+    -ms-transform: scale3d(2.05, 1.95, 2);
+    transform: scale3d(2.05, 1.95, 2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(2, 2, 2);
+    -ms-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+}

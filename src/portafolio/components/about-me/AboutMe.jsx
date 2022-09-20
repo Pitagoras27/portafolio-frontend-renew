@@ -53,15 +53,15 @@ export const AboutMe = () => {
           <Grid item xs={12} md={6}>
             <Item>
               <Typography variant="body2" paragraph align="left">
-                Soy una persona que se considera normal, pero con cualidades bien definidas, soy estudioso y detallista. Me gusta ahondar en la problemática a resolver.
+                I’m a Front-End Developer located in Mexico City. I have ten years of experience developing UI and features for multiples companies. I'm a serious person when is time to work but I have a good mood of sense in others environments.
+              </Typography>
+
+              <Typography variant="body2" paragraph align="left"> 
+                Well-organised person, problem solver, independent employee with high attention to detail. I like outdoor activities, Musinc, and in this time lern English language. A love family, I'm father of one entuciastic and smart adolecent girl.
               </Typography>
 
               <Typography variant="body2" paragraph align="left">
-                Encuentro en la colaboración crecimiento personal y humano, por lo que ayudar al crecimiento de otros también lo asumo como un crecimiento propio.
-              </Typography>
 
-              <Typography variant="body2" paragraph align="left">
-                Me he ido forjando con esfuerzo en ambitos afines al desarrollo tecnológico, en particular al desarrollo web. Y aunque no he trabajado de tiempo completo con tecnologías de servidor propiamente dichas, si he procurado contar con recursos necesarios para llevar a cabo tareas como tales.
               </Typography>
 
               <Typography variant="body2" paragraph align="left">
