@@ -71,6 +71,7 @@ export const NavigationBar = () => {
   return (
     <AppBar
       position="fixed"
+      id="initial"
       sx={{
         background: 'linear-gradient( #19303b, #153347 40%, #1c4763 48%, #0079C0)',
       }}
@@ -78,7 +79,7 @@ export const NavigationBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          { !isMobile && (
+          { !isMobile ? (
               <>
                 <Brand mobileDisplay="none" deskDisplay="flex" />
                 <NavigationDesk
@@ -87,10 +88,7 @@ export const NavigationBar = () => {
                   handleCloseNavMenu={handleCloseNavMenu} 
                 />
               </>
-            )
-          }
-
-          { isMobile && (
+            ) : (
               <>
                 <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} />
                 <NavigationMobile

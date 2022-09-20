@@ -16,7 +16,7 @@ export const NavigationDesk = ({ classes, pages, handleCloseNavMenu }) => {
             to={section}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-64}
             duration={500}
           >
             {page}

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { useState } from 'react';
 import { AboutMe, CarouselSkills, Projects, TechnologySkills } from "../";
-import { Footer, ModalContact, NavigationBar } from "../../ui";
+import { FloatingActionButton, Footer, ModalContact, NavigationBar } from "../../ui";
 
 export const PortafolioPage = () => {
   const [open, setOpen] = useState(false)
@@ -16,6 +16,7 @@ export const PortafolioPage = () => {
         <AboutMe />
         <Projects />
         <Footer />
+        <FloatingActionButton />
       </Box>
       <ModalContact
         open={open}
