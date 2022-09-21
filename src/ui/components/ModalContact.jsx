@@ -1,20 +1,8 @@
-import Backdrop from '@mui/material/Backdrop';
-import Box from '@mui/material/Box';
-import Fade from '@mui/material/Fade';
-import Modal from '@mui/material/Modal';
-import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles';
+import { Backdrop, Box, Fade, Modal, Typography } from '@mui/material';
 import { Contact, Notification } from '../';
 import { useContactStore } from '../../hooks';
 import { useAuthStore } from '../../hooks/useAuthStore';
-
-const useStyles = makeStyles({
-  hrStyle: {
-    border: 0,
-    height: '1px',
-    backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))'
-  }
-});
+import { Divider } from '../../ui';
 
 const style = {
   position: 'absolute',
@@ -33,7 +21,7 @@ const style = {
 
 export function ModalContact({ open, handleClose }) {
   const { status } = useContactStore();
-  const classes = useStyles();
+  
   const { user } = useAuthStore();
   return (
     <div>
@@ -53,7 +41,8 @@ export function ModalContact({ open, handleClose }) {
             <Typography id="transition-modal-title" variant="h6" component="h6">
               Hi { user.name }
             </Typography>
-            <hr className={classes.hrStyle}/>
+
+            <Divider />
 
             {
               (status === 'success' || status === 'fail') ? 

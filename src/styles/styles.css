@@ -33,6 +33,10 @@ body {
   background-color: #1c3643 !important;
 }
 
+.img-responsive {
+  width: 100%;
+}
+
 /** Headers sections */
 .marginHeaders {
   padding-top: 40px;

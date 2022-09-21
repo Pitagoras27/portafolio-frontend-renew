@@ -1,5 +1,5 @@
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { Fab } from '@mui/material';
+import { Fab, Tooltip } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 import { useEffect, useRef, useState } from 'react';
@@ -52,16 +52,18 @@ export const FloatingActionButton = () => {
   }
 
   return (
-    <Fab
-      sx={{ ...fabStyle, ...fabGreenStyle }}
-      aria-label="Expand"
-      color="inherit"
-      onClick={toTop}
-      ref={fabEl}
-      className={classes.showFab}
-    >
-      <UpIcon />
-    </Fab>
+    <Tooltip title="Scroll to top">
+      <Fab
+        sx={{ ...fabStyle, ...fabGreenStyle }}
+        aria-label="Expand"
+        color="inherit"
+        onClick={toTop}
+        ref={fabEl}
+        className={classes.showFab}
+      >
+        <UpIcon />
+      </Fab>
+    </Tooltip>
   );
 
 }

@@ -26,7 +26,7 @@ export const TechnologySkills = () => {
       <Container maxWidth="lg">
         <Typography
           gutterBottom
-          variant="h4"
+          variant="h3"
           align="center"
           className="marginHeaders"
         >

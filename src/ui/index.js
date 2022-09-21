@@ -2,6 +2,7 @@
 export { Buttons } from "./components/Buttons";
 export { Contact } from "./components/contact/Contact";
 export { Notification } from "./components/contact/Notification";
+export { Divider } from "./components/Divider";
 export { FloatingActionButton } from "./components/FloatingActionButton";
 export { Footer } from "./components/footer/Footer";
 export { InputField } from "./components/InputField";
