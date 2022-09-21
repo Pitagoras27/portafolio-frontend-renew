@@ -83,3 +83,11 @@ export const cardsSkillsData = [
     "image": "../src/assets/imgs/skill-cards/angular.png"
   }
 ];
+
+export const pages = [
+  { page: 'Skills', section: 'skills' },
+  { page: 'About of me', section: 'about' },
+  { page: 'Contact', section: 'contact' },
+  { page: 'Projects', section: 'projects' },
+  { page: 'Curriculum', section: '#' }
+];

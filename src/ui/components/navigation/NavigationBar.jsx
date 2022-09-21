@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
+import { pages } from '../../../data';
 import useDeviceDetect from '../../../hooks/useDetectDevice';
 import { Brand } from './Brand';
 import { NavigationDesk } from './NavigationDesk';
@@ -38,13 +39,6 @@ const useStyles = makeStyles({
   }
 });
 
-const pages = [
-  { page: 'Skills', section: 'skills' },
-  { page: 'About of me', section: 'about' },
-  { page: 'Contact', section: 'contact' },
-  { page: 'Proyects', section: 'proyects' },
-  { page: 'Curriculum', section: '#' }
-];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const NavigationBar = () => {

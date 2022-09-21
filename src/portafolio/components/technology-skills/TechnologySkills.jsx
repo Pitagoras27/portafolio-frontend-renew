@@ -30,7 +30,7 @@ export const TechnologySkills = () => {
               align="center"
               className="marginHeaders"
             >
-              Technology Skills
+              SKILLS
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>

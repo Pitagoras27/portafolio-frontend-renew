@@ -38,7 +38,7 @@ export const AboutMe = () => {
           align="center"
           className="marginHeaders"
         >
-            About Me
+            ABOUT
         </Typography>
         <Grid container spacing={1}>          
           <Grid item xs={12} md={6}>
