@@ -20,6 +20,24 @@ const useStyles = makeStyles({
     color: 'white !important',
     textDecoration: 'none !important',
     margin: '8px !important'
+  },
+  quote: {
+    position: 'relative',
+    borderBottom: '1px solid #255a74',
+    padding: '18px',
+    paddingBottom: '14px',
+    '& > span':{
+      fontSize: '80px',
+      position: 'absolute',
+    },
+  },
+  initialQuote: {
+    left: '-40px',
+    bottom: '-50px'
+  },
+  endQuote: {
+    top: '-10px',
+    right: '-20px'
   }
 });
 
@@ -52,7 +70,13 @@ export const Footer = () => {
                     className={classes.quoteStyle}
                     align="center"
                   > 
-                    <em>&ldquo;{ getQuote(quotes).quote }&rdquo;</em>
+                    <blockquote>
+                      <em className={classes.quote}>
+                        <span className={classes.initialQuote}>&ldquo;</span>
+                        { getQuote(quotes).quote }
+                        <span className={classes.endQuote}>&rdquo;</span>
+                      </em>
+                    </blockquote>
                     <span>{ getQuote(quotes).author }</span>
                   </Typography>
                 </>

@@ -14,7 +14,9 @@ const useStyles = makeStyles({
     paddingLeft: '0 !important',
     display: 'flex !important',
     alignItems: 'right !important',
-    // margin: 0
+    '& h6': {
+      textAlign: 'right',
+    }
   }
 });
 
@@ -38,7 +40,8 @@ export const DateJob = ({ startJob, endJob, settingLogo}) => {
             width: '80px',
             height: '1px',
             border: 0,
-            backgroundImage: "linear-gradient(to right, #066daa, #163243, #066daa)"
+            backgroundImage: "linear-gradient(to right, #066daa, #163243, #066daa)",
+            flexGrow: 2
           }}
         />
         <Typography variant="h6" component="h6">
