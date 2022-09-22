@@ -1,6 +1,7 @@
 
 export { Buttons } from "./components/Buttons";
 export { Contact } from "./components/contact/Contact";
+export { LayoutContact } from "./components/contact/LayoutContact";
 export { Notification } from "./components/contact/Notification";
 export { Divider } from "./components/Divider";
 export { FloatingActionButton } from "./components/FloatingActionButton";

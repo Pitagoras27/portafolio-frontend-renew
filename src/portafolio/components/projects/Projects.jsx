@@ -10,11 +10,10 @@ import { DateJob } from "./DateJob";
 
 export const Projects = () => {
   return (
-    <Box      
+    <Box
       sx={{
         backgroundColor: 'white',
         width: '100%',
-        paddingBottom: '70px'
       }}
     >
       <Container maxWidth="lg" fixed={false}>
