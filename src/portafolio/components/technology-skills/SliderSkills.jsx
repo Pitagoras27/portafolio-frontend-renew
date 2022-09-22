@@ -84,7 +84,7 @@ export const SliderSkills = ({ areaSkill, level }) => {
         valueLabelDisplay="off"
         color="secondary"
       />
-      <Box sx={{ m: 3 }} />
+      <Box sx={{ m: 1 }} />
     </Box>
   );
 }

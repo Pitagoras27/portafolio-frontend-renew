@@ -40,7 +40,9 @@ export const Projects = () => {
             />
 
             <Typography>
-              Al trabajar para una organización financiera como lo es un banco, tuve la oportunidad de mejorar mis habilidades técnicas y definitivamente me ayudo a jamás subestimar el desarrollo tecnológico. Mejoré en mis tiempos de entrega y aprendí técnicas y herramientas en tiempo record. Ahora cuento con una gestión del tiempo más eficaz y un gusto más azusado por el detalle
+              <em>
+                Working for a financial organization such as a bank, I had the opportunity to improve my technical and comunicative skills. I learnt how to work with a team talent and upgrade my soft skills
+              </em>
             </Typography>
           </Grid>
 
@@ -49,9 +51,25 @@ export const Projects = () => {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography>
-              Aparte de una intensa planeación y discución sobre posibilidades y deuda, cada parte del desarrollo cuenta con su conjunto de pruebas unitarias, experiencia de usuario, performance y una continua mejora de la totalidad de cada uno de los proyectos 
+            <Typography variant="h6" sx={{ marginTop: '20px', fontWeight: '700'}}>
+              Perfil: Front-end developer
             </Typography>
+            <Typography variant="h6">
+              <em>Company: Financial, Bank</em>
+            </Typography>
+            <br />
+            <Typography variant="h6">
+              Tecnologies and job:
+            </Typography>
+            <ul>
+              <li>React and custom components</li>
+              <li>Angular</li>
+              <li>Feed app with API Rest</li>
+              <li>Unit test with Jest for react and karma</li>
+              <li>Deploy and security</li>
+              <li>Best paractices with scanners of code Fortify and Blak Duck</li>
+              <li>Scrum methodology</li>
+            </ul>
           </Grid>
         </Grid>
 
@@ -66,7 +84,7 @@ export const Projects = () => {
               }}
             />
             <Typography>
-              Lorem Dolore enim labore quis enim. Adipisicing et voluptate cillum ea anim elit ut.
+              <em> Lorem Dolore enim labore quis enim. Adipisicing et voluptate cillum ea anim elit ut. </em>
             </Typography>
               
             <Typography>
@@ -75,9 +93,24 @@ export const Projects = () => {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography>
-              Aparte de una intensa planeación y discución sobre posibilidades...
+            <Box sx={{ mt: 5 }} />
+            <Typography variant="h6" sx={{ marginTop: '20px', fontWeight: '700'}}>
+              Perfil: Front-end developer
             </Typography>
+            <Typography variant="h6">
+              <em> Company: Financial, Insurances</em>
+            </Typography>
+            <br />
+            <Typography variant="h6">
+              Tecnologies and job:
+            </Typography>
+
+            <ul>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Feed app with API Rest</li>
+              <li>Material UI</li>
+            </ul>
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -96,16 +129,36 @@ export const Projects = () => {
             }}
           />
 
-          <Grid item xs={12}>
-            Labore fugiat velit ut ut fugiat ad dolore enim. Lorem in consectetur ex sit do ea.
-          </Grid>
-
-          <Grid item xs={6}>
+          <Grid item xs={8}>
             <img src={firstCompany} className="img-responsive" alt="last job" />
           </Grid>
 
-          <Grid item xs={6}>
-            Sint eiusmod ad Lorem nostrud eiusmod irure commodo. Officia incididunt est quis cupidatat culpa excepteur ut fugiat.Consequat nulla fugiat quis eu officia tempor tempor consequat magna anim incididunt.
+          <Grid item xs={4}>
+            <em> Work for huge cantity of information requires solutions modulars and scalars</em>
+            
+            <Typography variant="h6" sx={{ marginTop: '20px', fontWeight: '700'}}>
+              Perfil: Fullstack developer
+            </Typography>
+
+            <Typography variant="h6">
+              <em>
+                Company: Entertainment, TV
+              </em>
+            </Typography>
+            <br />
+
+            <Typography variant="h6">
+              Tecnologies and work
+            </Typography>
+            <ul>
+              <li>React</li>
+              <li>Storybook</li>
+              <li>Wordpress</li>
+              <li>Brighspot</li>
+              <li>jQuery</li>
+              <li>PHP</li>
+              <li>And more...</li>
+            </ul>
           </Grid>
         </Grid>
 

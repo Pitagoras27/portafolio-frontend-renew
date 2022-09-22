@@ -57,6 +57,7 @@ export const TechnologySkills = () => {
           >
             <SliderSkills areaSkill="Front-end" level={70}/>
             <SliderSkills areaSkill="React" level={55}/>
+            <SliderSkills areaSkill="Design" level={45}/>
             <SliderSkills areaSkill="Back-end" level={40} />
             <SliderSkills areaSkill="Typescript" level={35}/>
           </Grid> 
