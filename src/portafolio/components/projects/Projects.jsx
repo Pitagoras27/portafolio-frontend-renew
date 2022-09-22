@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import lastCompany from "../../../assets/imgs/projects/finance.png";
 import prevCompany from "../../../assets/imgs/projects/gnp.jpg";
-import firstCompany from "../../../assets/imgs/projects/televisas.png";
-import { DateJob } from "./DateJob";
-
 import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png";
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
+import firstCompany from "../../../assets/imgs/projects/televisas.png";
+import { HeaderSection } from '../../../ui';
+import { DateJob } from "./DateJob";
 
 export const Projects = () => {
   return (
@@ -18,16 +18,7 @@ export const Projects = () => {
       }}
     >
       <Container maxWidth="lg" fixed={false}>
-        <Typography
-            id="projects"
-            gutterBottom
-            variant="h3"
-            align="center"
-            className="marginHeaders"
-          >
-            PROJECTS
-        </Typography>
-
+        <HeaderSection headerTitle="Projects" idScroll="projects" />
         <Grid container spacing={1}>
           <Grid item xs={12}>
             <DateJob

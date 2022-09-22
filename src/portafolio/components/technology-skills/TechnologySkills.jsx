@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles/';
+import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
 
 const useStyles = makeStyles({
@@ -15,7 +16,6 @@ export const TechnologySkills = () => {
   const classes = useStyles();
   return (
     <Box
-      id="skills"
       sx={{
         backgroundColor: 'white',
         width: '100%'
@@ -24,14 +24,7 @@ export const TechnologySkills = () => {
       <Container maxWidth="lg">
         <Grid container>
           <Grid item xs={12} justifyContent="center">
-            <Typography
-              gutterBottom
-              variant="h3"
-              align="center"
-              className="marginHeaders"
-            >
-              SKILLS
-            </Typography>
+          <HeaderSection headerTitle="Skills" idScroll="skills" />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="body1" paragraph align="left">

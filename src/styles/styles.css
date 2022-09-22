@@ -37,13 +37,6 @@ body {
   width: 100%;
 }
 
-/** Headers sections */
-.marginHeaders {
-  padding-top: 40px;
-  padding-bottom: 10px;
-  color: rgb(43, 93, 115);
-}
-
 /** Footer styles */
 .shape-bottom:not([class*="shape-blur"]) {
   overflow: hidden;

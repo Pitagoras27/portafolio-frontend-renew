@@ -5,6 +5,7 @@ import {
 } from '@mui/material';
 import { makeStyles, styled } from '@mui/styles/';
 import customImage from '../../../assets/imgs/mycellaneous/allDevice.svg';
+import { HeaderSection } from '../../../ui';
 
 const useStyles = makeStyles({
   marginHeader: {
@@ -26,20 +27,12 @@ export const AboutMe = () => {
   const classes = useStyles();
   return (
     <Box sx={{
-      backgroundColor: 'white',
-      width: '100%',
-    }}
-      id="about"
+        backgroundColor: 'white',
+        width: '100%',
+      }}
     >
       <Container maxWidth="lg">
-        <Typography
-          gutterBottom
-          variant="h3"
-          align="center"
-          className="marginHeaders"
-        >
-            ABOUT
-        </Typography>
+        <HeaderSection headerTitle="About" idScroll="about" />
         <Grid container spacing={1}>          
           <Grid item xs={12} md={6}>
             <img src={customImage} alt='Tech devices' style={{
