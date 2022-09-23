@@ -4,15 +4,21 @@ export const animatedSlice = createSlice({
     name: 'animated',
     initialState: {
       animatedClass: '',
-      animatedSection: ''
+      animatedSection: [],
+      animationType: '',
     },
     reducers: {
-      targetReachedByScroll: (state, { payload } ) => {
+      targetReachedByScroll: ( state, { payload } ) => {
         state.animatedClass = 'showSection animate__animated animate__fadeInDown';
-        state.animatedSection = payload
+        state.animatedSection.push(payload)
+        state.animationType = 'animate__animated animate__fadeInUp'
+      },
+
+      clearSectionName: ( state, {payload} ) => {
+        state.animatedSection.filter((section) => section !== payload);
       }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { targetReachedByScroll } = animatedSlice.actions;
+export const { targetReachedByScroll, clearSectionName } = animatedSlice.actions;

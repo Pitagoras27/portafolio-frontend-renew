@@ -12,8 +12,8 @@ export const PortafolioPage = () => {
       <NavigationBar />
       <Box sx={{ position: 'relative', top: '64px' }}>
         <CarouselSkills handleOpen={handleOpen} />
-        <TechnologySkills />
         <AboutMe />
+        <TechnologySkills />
         <Projects />
         <ContactFooter />
         <Footer />

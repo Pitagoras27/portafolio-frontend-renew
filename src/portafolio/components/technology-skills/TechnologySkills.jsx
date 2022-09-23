@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles/';
+import { useEffect, useState } from 'react';
 import { Link as LinkScroll } from "react-scroll";
-import { useAnimatedStore } from '../../../hooks';
+import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
 
@@ -15,10 +16,38 @@ const useStyles = makeStyles({
 })
 
 export const TechnologySkills = () => {
-  const { animatedClass, animatedSection } = useAnimatedStore();
   const classes = useStyles();
+
+
+  const [heightEl, setHeightEl] = useState('0');
+  const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const options = {
+    root: null,
+    rootMargin: `${heightEl}px`,
+    threshold:1.0
+  }
+  
+  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+ 
+  useEffect(() => {
+    if (containerRef.current) {
+      setHeightEl(containerRef.current.clientHeight)
+    }
+  }, []);
+
+  useEffect(() => {
+    if(!isVisible) {
+      clearVisibleSection('skills');
+    } else {
+      startAnimated('skills');
+    }
+  }, [isVisible])
+
+  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
+
   return (
     <Box
+      ref={containerRef}
       sx={{
         backgroundColor: 'white',
         width: '100%'
@@ -26,7 +55,7 @@ export const TechnologySkills = () => {
     >
       <Container
         maxWidth="lg"
-        className={ animatedSection === 'skills' ? animatedClass : 'hideSection'}
+        className={ onSectionVisible('skills') ? animatedClass : 'hideSection'}
       >
         <Grid container>
           <Grid item xs={12} justifyContent="center">

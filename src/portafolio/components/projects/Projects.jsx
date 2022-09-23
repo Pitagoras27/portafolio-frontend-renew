@@ -1,18 +1,44 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import lastCompany from "../../../assets/imgs/projects/finance.png";
 import prevCompany from "../../../assets/imgs/projects/gnp.jpg";
 import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png";
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
 import firstCompany from "../../../assets/imgs/projects/televisas.png";
-import { useAnimatedStore } from "../../../hooks";
+import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
 import { HeaderSection } from '../../../ui';
 import { DateJob } from "./DateJob";
 
 export const Projects = () => {
-  const { animatedClass, animatedSection } = useAnimatedStore();
+  const { animatedClass, animatedSection, animationType, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const [heightEl, setHeightEl] = useState('0');
+  const options = {
+    root: null,
+    rootMargin: `${heightEl}px`,
+    threshold:1.0
+  }
+  
+  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+  useEffect(() => {
+    if (containerRef.current) {
+      setHeightEl(containerRef.current.clientHeight)
+    }
+  }, []);
+  
+  useEffect(() => {
+    if(!isVisible) {
+      clearVisibleSection('projects');
+    } else {
+      startAnimated('projects');
+    }
+  }, [isVisible])
+
+  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
+
   return (
     <Box
+      ref={containerRef}
       sx={{
         backgroundColor: 'white',
         width: '100%',
@@ -21,7 +47,7 @@ export const Projects = () => {
       <Container
         maxWidth="lg"
         fixed={false}
-        className={ animatedSection === 'projects' ? animatedClass : 'hideSection'}
+        className={ onSectionVisible('projects') ? animationType : 'hideSection'}
       >
         <HeaderSection headerTitle="Projects" idScroll="projects" />
         <Grid container spacing={1}>

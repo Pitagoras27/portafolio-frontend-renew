@@ -3,22 +3,49 @@ import {
   Container,
   Grid, Typography
 } from '@mui/material';
+import { useEffect, useState } from 'react';
 import customImage from '../../../assets/imgs/mycellaneous/allDevice.svg';
-import { useAnimatedStore } from '../../../hooks';
+import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 
 export const AboutMe = () => {
-  const { animatedClass, animatedSection } = useAnimatedStore();
+  const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const [heightEl, setHeightEl] = useState('0');
+
+  const options = {
+    root: null,
+    rootMargin: `${heightEl}px`,
+    threshold:1.0
+  }
+  
+  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+  useEffect(() => {
+    if (containerRef.current) {
+      setHeightEl(containerRef.current.clientHeight)
+    }
+  }, []);
+  
+  useEffect(() => {
+    if(!isVisible) {
+      clearVisibleSection('about');
+    } else {
+      startAnimated('about');
+    }
+  }, [isVisible])
+
+  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
   return (
-    <Box sx={{
+    <Box
+      ref={containerRef}
+      sx={{
         backgroundColor: 'white',
-        width: '100%',
+        width: '100%'
       }}
     >
       <Container
         maxWidth="lg"
-        className={ animatedSection === 'about' ? animatedClass : 'hideSection'}
+        className={ (onSectionVisible('about')) ? animatedClass : 'hideSection'}
       >
         <HeaderSection headerTitle="About" idScroll="about"/>
         <Grid container spacing={1}>          

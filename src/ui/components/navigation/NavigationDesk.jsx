@@ -4,6 +4,7 @@ import { useAnimatedStore } from '../../../hooks';
 
 export const NavigationDesk = ({ classes, pages }) => {
   const { startAnimated } = useAnimatedStore();
+
   const handleAnimationByScroll = (section) => {
     setTimeout(() => { startAnimated(section) }, 400);
   }

@@ -1,17 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
-import { targetReachedByScroll } from "../store";
+import { clearSectionName, targetReachedByScroll } from "../store";
 
 export const useAnimatedStore = () => {
   const dispatch = useDispatch();
-  const { animatedClass, animatedSection } = useSelector((state) => state.animated);
+  const { animatedClass, animationType, animatedSection } = useSelector((state) => state.animated);
 
   const startAnimated = (section) => {
     dispatch( targetReachedByScroll(section) );
   }
 
+  const clearVisibleSection = () => {
+    dispatch(clearSectionName());
+  }
+
   return {
+    animationType,
     animatedClass,
     animatedSection,
-    startAnimated
+    startAnimated,
+    clearVisibleSection
   }
 }
