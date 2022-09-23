@@ -5,10 +5,12 @@ import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
 import firstCompany from "../../../assets/imgs/projects/televisas.png";
+import { useAnimatedStore } from "../../../hooks";
 import { HeaderSection } from '../../../ui';
 import { DateJob } from "./DateJob";
 
 export const Projects = () => {
+  const { animatedClass, animatedSection } = useAnimatedStore();
   return (
     <Box
       sx={{
@@ -16,7 +18,11 @@ export const Projects = () => {
         width: '100%',
       }}
     >
-      <Container maxWidth="lg" fixed={false}>
+      <Container
+        maxWidth="lg"
+        fixed={false}
+        className={ animatedSection === 'projects' ? animatedClass : 'hideSection'}
+      >
         <HeaderSection headerTitle="Projects" idScroll="projects" />
         <Grid container spacing={1}>
           <Grid item xs={12}>

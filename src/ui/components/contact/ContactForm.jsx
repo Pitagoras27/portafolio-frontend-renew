@@ -14,6 +14,7 @@ export const ContactForm = ({
   interestsValid,
   messageUserValid,
   handleChange,
+  onResetForm,
   onSubmit
 }) => {
   return (
@@ -96,7 +97,7 @@ export const ContactForm = ({
                 minRows={3}
               />
 
-              <Buttons title="Send a message" />
+              <Buttons title="Send a message" onResetForm={onResetForm} />
             </form>
           </>
         )

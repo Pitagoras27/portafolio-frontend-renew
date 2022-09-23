@@ -1,4 +1,3 @@
-import SendIcon from '@mui/icons-material/Send';
 import {
   Button,
   Grid,
@@ -6,18 +5,31 @@ import {
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
-export const Buttons = ({ title, linkTitle, path } = {}) => {
+export const Buttons = ({ title, linkTitle, path, onResetForm } = {}) => {
   return (
     <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-      <Grid item xs={12} sm={6}>
+      <Grid item sm={6}>
         <Button
           variant="contained"
           fullWidth
           type="submit"
-          endIcon={<SendIcon />}
+          color="secondary"
           // disabled // TODO Controls this attribute
-        >
+          >
           <Typography>{ title }</Typography>
+        </Button>
+      </Grid>
+
+      <Grid item sm={6}>
+        <Button
+          fullWidth
+          type="button"
+          onClick={onResetForm}
+          color="secondary"
+          // disabled // TODO Controls this attribute
+          variant="outlined"
+        >
+          <Typography>Reset</Typography>
         </Button>
       </Grid>
 

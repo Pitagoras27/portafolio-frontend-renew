@@ -36,6 +36,7 @@ export const Contact = () => {
     handleChange,
     isFormValid,
     validationValues,
+    onResetForm,
     inputValues
   } = useForm(initialStateForm, validatedData);
 
@@ -59,6 +60,7 @@ export const Contact = () => {
       initialValue={initialValue}
       handleChange={handleChange}
       onSubmit={onSubmit}
+      onResetForm={onResetForm}
     />
   )
 }

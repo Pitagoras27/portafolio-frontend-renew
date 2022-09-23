@@ -46,12 +46,13 @@ export const RegisterPage = () => {
     email,
     password,
     password2,
-    handleChange,
     displayNameValid,
     emailValid,
     passwordValid,
     password2Valid,
     isFormValid,
+    handleChange,
+    onResetForm,
   } = useForm(dataFormRegister, validatedFields);
 
   const [ initialValidation, setInitialValidation ] = useState(false);
@@ -140,6 +141,7 @@ export const RegisterPage = () => {
           title="Register"
           linkTitle="You have an Account"
           path="/auth/login"
+          onResetForm={onResetForm}
         />
       </form>
     </AuthLayout>

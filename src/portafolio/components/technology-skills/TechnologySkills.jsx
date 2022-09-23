@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles/';
 import { Link as LinkScroll } from "react-scroll";
+import { useAnimatedStore } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
 
@@ -14,6 +15,7 @@ const useStyles = makeStyles({
 })
 
 export const TechnologySkills = () => {
+  const { animatedClass, animatedSection } = useAnimatedStore();
   const classes = useStyles();
   return (
     <Box
@@ -22,7 +24,10 @@ export const TechnologySkills = () => {
         width: '100%'
       }}
     >
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        className={ animatedSection === 'skills' ? animatedClass : 'hideSection'}
+      >
         <Grid container>
           <Grid item xs={12} justifyContent="center">
           <HeaderSection headerTitle="Skills" idScroll="skills" />

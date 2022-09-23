@@ -26,10 +26,11 @@ export const LoginPage = () => {
   const {
     email,
     password,
-    handleChange,
+    isFormValid,
     emailValid,
     passwordValid,
-    isFormValid
+    handleChange,
+    onResetForm,
   } = useForm(formLoginData, validatedData);
 
   const { startLoginUser, errorMessage } = useAuthStore();
@@ -89,6 +90,7 @@ export const LoginPage = () => {
           title="Login"
           linkTitle="Create Account"
           path="/auth/register"
+          onResetForm={onResetForm}
         />
       </form>
     </AuthLayout>

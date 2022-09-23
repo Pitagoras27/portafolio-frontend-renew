@@ -57,7 +57,7 @@ export const NavigationBar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+  
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -79,7 +79,6 @@ export const NavigationBar = () => {
                 <NavigationDesk
                   classes={classes.pAll}
                   pages={pages}
-                  handleCloseNavMenu={handleCloseNavMenu} 
                 />
               </>
             ) : (

@@ -31,8 +31,7 @@ const styleBox = {
     '& button': {
       alignItems: 'flexStart',
       paddingTop: '8px',
-      color: '#f5f7f9',
-      backgroundColor: '#1e5372',
+      color: '#ffffff',
       float: 'right',
       marginRight: '20px'
     }
@@ -71,7 +70,7 @@ export const CarouselItem = ({ item, image, handleOpen, type }) => {
             <Button
               className={ classes.checkButton }
               onClick={() => handleOpen(true)}
-              // variant="outlined"
+              color="secondary"
               variant="contained"
             > Get in touch! </Button>
           </div>

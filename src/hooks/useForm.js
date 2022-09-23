@@ -20,9 +20,7 @@ export const useForm = (initialState, validatedFields = {}) => {
     });
   };
 
-  const onResetForm = () => {
-    setInputValue(initialState);
-  };
+  const onResetForm = () => setInputValue(initialState);
 
   const isFormValid = useMemo(() => {
     for (const fieldForm of Object.keys(validationValues)) {

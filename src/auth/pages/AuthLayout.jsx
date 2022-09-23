@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import bgAuth from "../../assets/imgs/mycellaneous/bgAuth.jpg";
 
 export const AuthLayout = ({ children, title }) => {
   return (
@@ -8,7 +9,12 @@ export const AuthLayout = ({ children, title }) => {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: "100vh", backgroundColor: "primary.main", padding: 4 }}
+      sx={{
+        minHeight: "100vh",
+        backgroundImage: `url(${bgAuth})`,
+        backgroundSize: 'cover',
+        padding: 4
+      }}
     >
       <Grid
         item

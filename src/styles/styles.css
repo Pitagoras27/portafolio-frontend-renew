@@ -33,6 +33,14 @@ body {
   background-color: #1c3643 !important;
 }
 
+.showSection {
+  visibility: visible;
+}
+
+.hideSection {
+  visibility: hidden;
+}
+
 .img-responsive {
   width: 100%;
 }

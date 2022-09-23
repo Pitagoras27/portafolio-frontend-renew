@@ -1,38 +1,26 @@
 import {
   Box,
   Container,
-  Grid, Paper, Typography
+  Grid, Typography
 } from '@mui/material';
-import { makeStyles, styled } from '@mui/styles/';
 import customImage from '../../../assets/imgs/mycellaneous/allDevice.svg';
+import { useAnimatedStore } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 
-const useStyles = makeStyles({
-  marginHeader: {
-    color: 'rgb(43, 93, 115)',
-    paddingTop: '40px',
-    paddingBottom: '40px',
-  }
-});
-
-const Item = styled(Paper)(({ theme }) => ({
-  // backgroundColor: theme.palette.mode !== 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
 export const AboutMe = () => {
-  const classes = useStyles();
+  const { animatedClass, animatedSection } = useAnimatedStore();
+
   return (
     <Box sx={{
         backgroundColor: 'white',
         width: '100%',
       }}
     >
-      <Container maxWidth="lg">
-        <HeaderSection headerTitle="About" idScroll="about" />
+      <Container
+        maxWidth="lg"
+        className={ animatedSection === 'about' ? animatedClass : 'hideSection'}
+      >
+        <HeaderSection headerTitle="About" idScroll="about"/>
         <Grid container spacing={1}>          
           <Grid item xs={12} md={6}>
             <img src={customImage} alt='Tech devices' style={{
