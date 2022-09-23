@@ -46,11 +46,11 @@ export const AboutMe = () => {
             </Typography>
 
             <Typography variant="body1" paragraph align="left"> 
-              Well-organised person, problem solver, independent employee with high attention to detail. I like outdoor activities, Musinc, and in this time lern English language.
+              Well-organised person, problem solver, independent employee with high attention to detail. I like outdoor activities, Music, and in this time, I love learn study English language.
             </Typography>
 
             <Typography variant="body1" paragraph align="left">
-              I love family, I'm father of one entuciastic and smart adolecent girl.
+              I love my family, I'm father of one entuciastic and smart adolecent girl.
             </Typography>
 
             <Typography variant="body1" paragraph align="left">

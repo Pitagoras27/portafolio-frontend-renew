@@ -85,9 +85,8 @@ export const cardsSkillsData = [
 ];
 
 export const pages = [
+  { page: 'About', section: 'about' },
   { page: 'Skills', section: 'skills' },
-  { page: 'About of me', section: 'about' },
-  { page: 'Contact', section: 'contact' },
   { page: 'Projects', section: 'projects' },
-  { page: 'Curriculum', section: '#' }
+  { page: 'Contact', section: 'contact' }
 ];

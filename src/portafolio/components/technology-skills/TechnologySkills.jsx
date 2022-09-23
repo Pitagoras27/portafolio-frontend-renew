@@ -1,5 +1,6 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles/';
+import { Link as LinkScroll } from "react-scroll";
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
 
@@ -40,7 +41,28 @@ export const TechnologySkills = () => {
             </Typography>
 
             <Typography variant="body1" paragraph align="left">
-              Visit me in my Linkding profile or get in touch!
+              Visit me in my {'\n'}
+              <Link
+                color="secondary"
+                href="https://www.linkedin.com/in/carlos-guti%C3%A9rrez-39ab891a6/"
+                sx={{ textDecoration: 'none', fontWeight: '700'}}
+              >
+                Linkedin
+              </Link> profile or {'\n'}
+              <LinkScroll
+                activeClass="active"
+                to="contact"
+                duration={500}
+              >
+                <Typography
+                  color='secondary'
+                  variant='subtitle1'
+                  component='span'
+                  sx={{ fontWeight: '700', cursor: 'pointer'}}
+                >
+                  get in touch!
+                </Typography>
+              </LinkScroll>
             </Typography>
           </Grid>
           

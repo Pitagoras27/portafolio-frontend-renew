@@ -8,14 +8,14 @@ export const useContactStore = () => {
   const { errorMessage, status } = useSelector(state => state.contact);
   const [loading, setLoading] = useState(false);
 
-  const startSaveMessage = async ({ messageUser, interests } = {}) => {
+  const startSaveMessage = async ({ messageUser, interests, name, email } = {}) => {
     setLoading(true);
 
     try {
 
-      const { data } = await axiosFetch.post('/messages-client/', { message: messageUser, interests });
+      const { data } = await axiosFetch.post('/messages-client/', { message: messageUser, interests, name, email });
       const { message } = data;
-      dispatch(onSending({ message, interests: data.interests }));
+      dispatch(onSending({ message, interests: data.interests, name, email }));
       setLoading(false);
 
     } catch (error) {

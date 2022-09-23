@@ -4,12 +4,16 @@ import { Buttons, InputField, Loader } from "../../";
 export const ContactForm = ({
   loading,
   errorMessage,
+  initialValue,
+  name,
+  email,
+  interests,
+  messageUser,
+  nameValid,
+  emailValid,
   interestsValid,
   messageUserValid,
   handleChange,
-  initialValue,
-  messageUser,
-  interests,
   onSubmit
 }) => {
   return (
@@ -33,7 +37,39 @@ export const ContactForm = ({
             <form
               onSubmit={onSubmit}
               className="animate__animated animate__fadeIn animate__faster"
+              noValidate
             >
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <InputField
+                    label="Name"
+                    name="name"
+                    type="text"
+                    multiline={false}
+                    value={name}
+                    autoComplete="off"
+                    handleChange={handleChange}
+                    helperText={initialValue && nameValid}
+                    error={!!nameValid && initialValue}
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <InputField
+                    label="email"
+                    name="email"
+                    type="email"
+                    multiline={false}
+                    value={email}
+                    autoComplete="off"
+                    handleChange={handleChange}
+                    helperText={initialValue && emailValid}
+                    error={!!emailValid && initialValue}
+                    fullWidth
+                  />
+                </Grid>
+              </Grid>
+
               <InputField
                 label="Subject"
                 name="interests"

@@ -1,13 +1,24 @@
 import { useState } from "react";
+import { validateEmail } from "../../../helpers";
 import { useContactStore, useForm } from "../../../hooks";
 import { ContactForm } from "./ContactForm";
 
 const initialStateForm = {
+  name: '',
+  email: '',
   interests: '',
   messageUser: ''
 }
 
 const validatedData = {
+  name: [
+    (value) => value.length <= 1,
+    'What is your name'
+  ],
+  email: [
+    (value) => !validateEmail(value),
+    'Add a valid email'
+  ],
   interests: [
     (value) => value.length <= 1,
     'What is your interest in me'
@@ -22,12 +33,10 @@ export const Contact = () => {
   const { loading, errorMessage, startSaveMessage } = useContactStore();
 
   const {
-    interests,
-    messageUser,
-    interestsValid,
-    messageUserValid,
     handleChange,
-    isFormValid
+    isFormValid,
+    validationValues,
+    inputValues
   } = useForm(initialStateForm, validatedData);
 
   const [initialValue, setInitialValue] = useState(false);
@@ -37,20 +46,18 @@ export const Contact = () => {
     setInitialValue(true)
 
     if(isFormValid) {
-      startSaveMessage({ interests, messageUser });
+      startSaveMessage({ ...inputValues });
     }
   }
 
   return (
     <ContactForm
+      { ...validationValues }
+      { ...inputValues }
       loading={loading}
       errorMessage={errorMessage}
-      interestsValid={interestsValid}
-      messageUserValid={messageUserValid}
-      handleChange={handleChange}
       initialValue={initialValue}
-      messageUser={messageUser}
-      interests={interests}
+      handleChange={handleChange}
       onSubmit={onSubmit}
     />
   )
