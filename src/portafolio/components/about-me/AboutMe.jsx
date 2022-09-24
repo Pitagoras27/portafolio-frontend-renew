@@ -3,14 +3,13 @@ import {
   Container,
   Grid, Typography
 } from '@mui/material';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import customImage from '../../../assets/imgs/mycellaneous/allDevice.svg';
 import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 
-export const AboutMe = () => {
-
-  const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+export const AboutMe = React.memo(({ direction }) => {
+  const { fadeInUp, fadeInDown, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
 
   const options = {
@@ -36,6 +35,13 @@ export const AboutMe = () => {
 
   const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
+  const animationType = useMemo(() => {
+    if (isVisible) {
+      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
+    }
+    }, [isVisible]
+  );
+
   return (
     <Box
       ref={containerRef}
@@ -46,7 +52,7 @@ export const AboutMe = () => {
     >
       <Container
         maxWidth="lg"
-        className={ onSectionVisible('about') ? animatedClass : 'hideSection'}
+        className={ `animate__animated ${onSectionVisible('about') ? animationType : 'hideSection'}`}
       >
         <HeaderSection headerTitle="About" idScroll="about"/>
         <Grid container spacing={1}>          
@@ -82,4 +88,4 @@ export const AboutMe = () => {
       </Container>
     </Box>
   )
-}
+})

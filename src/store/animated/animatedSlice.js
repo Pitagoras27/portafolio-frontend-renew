@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const animatedSlice = createSlice({
     name: 'animated',
     initialState: {
-      animatedClass: '',
+      fadeInUp: '',
       animatedSection: [],
-      animationType: '',
+      fadeInDown: '',
     },
     reducers: {
       targetReachedByScroll: ( state, { payload } ) => {
-        state.animatedClass = 'showSection animate__animated animate__fadeInDown';
+        state.fadeInUp = 'showSection animate__fadeInDown';
         state.animatedSection.push(payload);
-        state.animationType = 'animate__animated animate__fadeInDown';
+        state.fadeInDown = 'animate__fadeInDown';
       },
 
       clearSectionName: ( state, { payload } ) => {

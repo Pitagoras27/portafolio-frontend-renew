@@ -3,7 +3,7 @@ import { clearSectionName, targetReachedByScroll } from "../store";
 
 export const useAnimatedStore = () => {
   const dispatch = useDispatch();
-  const { animatedClass, animationType, animatedSection } = useSelector((state) => state.animated);
+  const { fadeInUp, fadeInDown, animatedSection } = useSelector((state) => state.animated);
 
   const startAnimated = (section) => {
     dispatch( targetReachedByScroll(section) );
@@ -14,8 +14,8 @@ export const useAnimatedStore = () => {
   }
 
   return {
-    animationType,
-    animatedClass,
+    fadeInDown,
+    fadeInUp,
     animatedSection,
     startAnimated,
     clearVisibleSection

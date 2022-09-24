@@ -1,0 +1,1 @@
+export const animationType = (direction) => direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp';

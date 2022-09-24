@@ -1,15 +1,17 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { LoginPage, RegisterPage } from "../auth";
-import { useAuthStore } from "../hooks/useAuthStore";
+import { useAuthStore } from "../hooks";
 import { PortafolioPage } from "../portafolio";
 import { Loader } from "../ui/components/Loader";
 
 export const RouterApp = () => {
   const { status, startCheckingToken } = useAuthStore();
+  
   useEffect(() => {
     startCheckingToken();
   }, []);
+
 
   if(status === 'checking') {
     return <Loader />

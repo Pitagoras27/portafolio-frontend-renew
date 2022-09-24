@@ -1,17 +1,18 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import lastCompany from "../../../assets/imgs/projects/finance.png";
 import prevCompany from "../../../assets/imgs/projects/gnp.jpg";
 import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png";
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
 import firstCompany from "../../../assets/imgs/projects/televisas.png";
+// import { animationType } from '../../../helpers';
 import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
 import { HeaderSection } from '../../../ui';
 import { DateJob } from "./DateJob";
 
-export const Projects = () => {
-  const { animatedClass, animatedSection, animationType, clearVisibleSection, startAnimated } = useAnimatedStore();
+export const Projects = React.memo(({ direction }) => {
+  const { fadeInUp, animatedSection, fadeInDown, clearVisibleSection, startAnimated } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
   const options = {
     root: null,
@@ -36,6 +37,13 @@ export const Projects = () => {
 
   const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
+  const animationType = useMemo(() => {
+    if (isVisible) {
+      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
+    }
+    }, [isVisible]
+  );
+
   return (
     <Box
       ref={containerRef}
@@ -47,7 +55,7 @@ export const Projects = () => {
       <Container
         maxWidth="lg"
         fixed={false}
-        className={ onSectionVisible('projects') ? animationType : 'hideSection'}
+        className={ `animate__animated ${onSectionVisible('projects') ? animationType : 'hideSection'}`}
       >
         <HeaderSection headerTitle="Projects" idScroll="projects" />
         <Grid container spacing={1}>
@@ -187,4 +195,4 @@ export const Projects = () => {
       </Container>
     </Box>
   )
-}
+})

@@ -1,12 +1,12 @@
 import { Box, Container } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+// import { animationType } from '../../../helpers';
 import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
 import { Contact, HeaderSection, LayoutContact } from "../../../ui";
 
-export const ContactFooter = () => {
+export const ContactFooter = React.memo(({ direction }) => {
 
-
-  const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const { fadeInUp, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
   const options = {
     root: null,
@@ -31,6 +31,13 @@ export const ContactFooter = () => {
 
   const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
+  const animationType = useMemo(() => {
+    if (isVisible) {
+      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
+    }
+    }, [isVisible]
+  );
+
   return (
     <Box
       ref={containerRef}
@@ -40,7 +47,10 @@ export const ContactFooter = () => {
         paddingBottom: '90px'
       }}
     >
-      <Container maxWidth="sm" className={ onSectionVisible('contact') ? animatedClass : 'hideSection'}>
+      <Container
+        maxWidth="sm"
+        className={ `animate__animated ${onSectionVisible('contact') ? animationType : 'hideSection'}`}
+      >
         <HeaderSection headerTitle="Contact" idScroll="contact" />
         <LayoutContact
           mainTitle='Write a Message' 
@@ -52,4 +62,4 @@ export const ContactFooter = () => {
       </Container>
     </Box>
   )
-}
+})

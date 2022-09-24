@@ -1,11 +1,10 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles/';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link as LinkScroll } from "react-scroll";
 import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
-
 const useStyles = makeStyles({
   cardsContainer: {
     display: 'flex',
@@ -15,12 +14,12 @@ const useStyles = makeStyles({
   }
 })
 
-export const TechnologySkills = () => {
+export const TechnologySkills = React.memo(({ direction }) => {
   const classes = useStyles();
 
 
   const [heightEl, setHeightEl] = useState('0');
-  const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const { fadeInUp, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
   const options = {
     root: null,
     rootMargin: `${heightEl}px`,
@@ -45,6 +44,13 @@ export const TechnologySkills = () => {
 
   const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
+  const animationType = useMemo(() => {
+    if (isVisible) {
+      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
+    }
+    }, [isVisible]
+  );
+
   return (
     <Box
       ref={containerRef}
@@ -55,7 +61,8 @@ export const TechnologySkills = () => {
     >
       <Container
         maxWidth="lg"
-        className={ onSectionVisible('skills') ? animatedClass : 'hideSection'}
+        className={ `animate__animated ${onSectionVisible('skills') ? animationType : 'hideSection'}`}
+
       >
         <Grid container>
           <Grid item xs={12} justifyContent="center">
@@ -120,5 +127,5 @@ export const TechnologySkills = () => {
       </Container>
     </Box>
   );
-}
+})
 
