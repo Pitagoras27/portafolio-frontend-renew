@@ -9,6 +9,7 @@ import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 
 export const AboutMe = () => {
+
   const { animatedClass, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
 
@@ -21,7 +22,7 @@ export const AboutMe = () => {
   const [ containerRef, isVisible ] = useSectionOnScreen(options);
   useEffect(() => {
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight)
+      setHeightEl(containerRef.current.clientHeight - 100);
     }
   }, []);
   
@@ -45,7 +46,7 @@ export const AboutMe = () => {
     >
       <Container
         maxWidth="lg"
-        className={ (onSectionVisible('about')) ? animatedClass : 'hideSection'}
+        className={ onSectionVisible('about') ? animatedClass : 'hideSection'}
       >
         <HeaderSection headerTitle="About" idScroll="about"/>
         <Grid container spacing={1}>          

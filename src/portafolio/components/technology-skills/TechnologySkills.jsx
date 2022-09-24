@@ -31,7 +31,7 @@ export const TechnologySkills = () => {
  
   useEffect(() => {
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight)
+      setHeightEl(containerRef.current.clientHeight - 100)
     }
   }, []);
 

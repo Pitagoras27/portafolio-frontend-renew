@@ -22,7 +22,7 @@ export const Projects = () => {
   const [ containerRef, isVisible ] = useSectionOnScreen(options);
   useEffect(() => {
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight)
+      setHeightEl(containerRef.current.clientHeight - 100)
     }
   }, []);
   

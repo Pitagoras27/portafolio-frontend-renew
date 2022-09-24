@@ -25,17 +25,11 @@ export const ContactFooter = () => {
     if(!isVisible) {
       clearVisibleSection('contact');
     } else {
-      // console.log('here is true animated should have show');
       startAnimated('contact');
     }
   }, [isVisible])
 
-  // console.log('isVisible about',isVisible);
-
   const onSectionVisible = (section) => animatedSection.find((item) => item === section);
-
-
-
 
   return (
     <Box
@@ -43,7 +37,7 @@ export const ContactFooter = () => {
       sx={{
         backgroundColor: 'white',
         width: '100%',
-        paddingBottom: '50px'
+        paddingBottom: '90px'
       }}
     >
       <Container maxWidth="sm" className={ onSectionVisible('contact') ? animatedClass : 'hideSection'}>
