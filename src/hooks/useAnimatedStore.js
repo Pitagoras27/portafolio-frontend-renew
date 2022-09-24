@@ -9,8 +9,8 @@ export const useAnimatedStore = () => {
     dispatch( targetReachedByScroll(section) );
   }
 
-  const clearVisibleSection = () => {
-    dispatch(clearSectionName());
+  const clearVisibleSection = (sectionToClean) => {
+    dispatch(clearSectionName(sectionToClean));
   }
 
   return {

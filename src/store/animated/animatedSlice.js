@@ -10,12 +10,12 @@ export const animatedSlice = createSlice({
     reducers: {
       targetReachedByScroll: ( state, { payload } ) => {
         state.animatedClass = 'showSection animate__animated animate__fadeInDown';
-        state.animatedSection.push(payload)
-        state.animationType = 'animate__animated animate__fadeInUp'
+        state.animatedSection.push(payload);
+        state.animationType = 'animate__animated animate__fadeInDown';
       },
 
-      clearSectionName: ( state, {payload} ) => {
-        state.animatedSection.filter((section) => section !== payload);
+      clearSectionName: ( state, { payload } ) => {
+        state.animatedSection = state.animatedSection.filter((section) => section !== payload);
       }
     }
 });
