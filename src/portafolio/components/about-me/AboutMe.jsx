@@ -28,7 +28,7 @@ export const AboutMe = React.memo(({ direction }) => {
 
   useEffect(() => {
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight - 100);
+      setHeightEl(containerRef.current.clientHeight);
     }
   }, []);
 

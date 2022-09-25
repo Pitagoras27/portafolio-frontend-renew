@@ -6,7 +6,6 @@ import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
 import firstCompany from "../../../assets/imgs/projects/televisas.png";
-// import { animationType } from '../../../helpers';
 import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
 import { HeaderSection } from '../../../ui';
 import { DateJob } from "./DateJob";
@@ -19,11 +18,10 @@ export const Projects = React.memo(({ direction }) => {
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
-  
   const [ containerRef, isVisible ] = useSectionOnScreen(options);
   useEffect(() => {
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight - 100)
+      setHeightEl(containerRef.current.clientHeight + 23)
     }
   }, []);
   

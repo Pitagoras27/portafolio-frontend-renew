@@ -7,6 +7,7 @@ export const useSectionOnScreen = (options) => {
   const callbackFunction = (entries) => {  
     const [ entry ] = entries
     setIsVisible(entry.isIntersecting)
+    console.log('callbackFunction', entry.isIntersecting);
   }
 
   useEffect(() => {

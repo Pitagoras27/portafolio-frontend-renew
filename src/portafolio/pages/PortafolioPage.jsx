@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { useState } from 'react';
 import { AboutMe, CarouselSkills, ContactFooter, Projects, TechnologySkills } from "../";
+
 import { useScrollDirection } from '../../hooks';
 import { FloatingActionButton, Footer, ModalContact, NavigationBar } from "../../ui";
 
