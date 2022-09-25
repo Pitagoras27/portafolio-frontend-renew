@@ -6,7 +6,7 @@ export const NavigationDesk = ({ classes, pages }) => {
   const { startAnimated } = useAnimatedStore();
 
   const handleAnimationByScroll = (section) => {
-    setTimeout(() => { startAnimated(section) }, 400);
+    setTimeout(() => { startAnimated(section) }, 600);
   }
 
   return (

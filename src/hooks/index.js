@@ -8,4 +8,5 @@ export * from './useFetch';
 export * from './useForm';
 export * from './useScrollDirection';
 export * from './useSectionOnScreen';
+export * from './useSetAnimationSection';
 

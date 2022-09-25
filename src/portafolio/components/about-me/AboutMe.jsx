@@ -3,13 +3,15 @@ import {
   Container,
   Grid, Typography
 } from '@mui/material';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import customImage from '../../../assets/imgs/mycellaneous/allDevice.svg';
-import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
+import { useAnimatedStore, useSetAnimationSection } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 
+const section = 'about';
+
 export const AboutMe = React.memo(({ direction }) => {
-  const { fadeInUp, fadeInDown, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const { animatedSection } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
 
   const options = {
@@ -17,30 +19,18 @@ export const AboutMe = React.memo(({ direction }) => {
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
-  
-  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+
+  const { 
+    containerRef,
+    animationType,
+    onSectionVisible 
+  } = useSetAnimationSection(options, direction, animatedSection, section);
+
   useEffect(() => {
     if (containerRef.current) {
       setHeightEl(containerRef.current.clientHeight - 100);
     }
   }, []);
-  
-  useEffect(() => {
-    if(!isVisible) {
-      clearVisibleSection('about');
-    } else {
-      startAnimated('about');
-    }
-  }, [isVisible])
-
-  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
-
-  const animationType = useMemo(() => {
-    if (isVisible) {
-      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
-    }
-    }, [isVisible]
-  );
 
   return (
     <Box
@@ -52,7 +42,7 @@ export const AboutMe = React.memo(({ direction }) => {
     >
       <Container
         maxWidth="lg"
-        className={ `animate__animated ${onSectionVisible('about') ? animationType : 'hideSection'}`}
+        className={ `animate__animated ${onSectionVisible ? animationType : 'hideSection'}`}
       >
         <HeaderSection headerTitle="About" idScroll="about"/>
         <Grid container spacing={1}>          

@@ -1,12 +1,30 @@
-import { useEffect, useState } from "react";
-import { useScrollDirection } from "./useScrollDirection";
+import { useEffect, useMemo } from "react";
+import { useAnimatedStore, useSectionOnScreen } from "./";
 
-export const useSetAnimationSection = () => {
-  const [direction, setDirection] = useState('');
+export const useSetAnimationSection = (options, direction, animatedSection, sectionPage) => {
+  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+  const { clearVisibleSection, startAnimated } = useAnimatedStore();
+
+  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
 
   useEffect(() => {
-    setDirection(useScrollDirection());
-  }, []);
+    if(!isVisible) {
+      clearVisibleSection('about');
+    } else {
+      startAnimated('about');
+    }
+  }, [isVisible])
 
-  return direction
+  const animationType = useMemo(() => {
+    if (isVisible) {
+      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
+    }
+    }, [isVisible]
+  );
+
+  return {
+    containerRef,
+    animationType,
+    onSectionVisible: onSectionVisible(sectionPage)
+  }
 }

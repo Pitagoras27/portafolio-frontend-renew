@@ -1,0 +1,1 @@
+export const onSectionVisible = (animatedSection, section) => animatedSection.find((item) => item === section);
