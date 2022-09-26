@@ -49,18 +49,13 @@ export const NavigationBar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const handleCloseNavMenu = () => setAnchorElNav(null);
   
-  const handleCloseUserMenu = () => {
-    startLogout();
-    // setAnchorElUser(null);
-  };
+  const handleCloseUserMenu = () => setAnchorElUser(null);
+
+  const handleCloseSession = () => startLogout();
 
   return (
     <AppBar
@@ -119,7 +114,7 @@ export const NavigationBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem onClick={handleCloseSession}>
                 <Typography textAlign="center">{settings}</Typography>
               </MenuItem>
             </Menu>
