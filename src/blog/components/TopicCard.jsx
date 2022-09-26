@@ -18,10 +18,9 @@ const useStyles = makeStyles({
     }
   }
 })
-export const Cards = ({ title, text, image }) => {
+export const TopicCard = ({ title, text, image }) => {
   const classes = useStyles();
 
-  // animate__animated animate__pulse
   return (
     <Card sx={{ maxWidth: 345 }} className={classes.lift}>
       <CardMedia

@@ -21,7 +21,7 @@ export const PortafolioPage = () => {
         <TechnologySkills direction={direction} />
         <Projects direction={direction} />
         <ContactFooter direction={direction} />
-        <Footer direction={direction} />
+        <Footer />
         <FloatingActionButton />
       </Box>
       <ModalContact

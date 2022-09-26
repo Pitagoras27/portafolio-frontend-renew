@@ -1,21 +1,11 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles/';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link as LinkScroll } from "react-scroll";
 import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
-const useStyles = makeStyles({
-  cardsContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '20px',
-    justifyContent: 'center'
-  }
-})
 
 export const TechnologySkills = React.memo(({ direction }) => {
-  const classes = useStyles();
 
 
   const [heightEl, setHeightEl] = useState('0');
@@ -106,24 +96,21 @@ export const TechnologySkills = React.memo(({ direction }) => {
               </LinkScroll>
             </Typography>
           </Grid>
-          
-        
-          <Grid item xs={12} md={6} justifyContent="flex-end"
+
+          <Grid item
+            xs={12}
+            md={6}
+            justifyContent="flex-end"
             sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <SliderSkills areaSkill="Front-end" level={70}/>
+            <SliderSkills areaSkill="Frontend" level={70}/>
             <SliderSkills areaSkill="React" level={55}/>
             <SliderSkills areaSkill="Design" level={45}/>
-            <SliderSkills areaSkill="Back-end" level={40} />
+            <SliderSkills areaSkill="Backend" level={40} />
             <SliderSkills areaSkill="Typescript" level={35}/>
-          </Grid> 
-        </Grid>
+          </Grid>
 
-        <Box className={classes.cardsContainer}>
-          {
-            // cardsSkillsData.map((data) => <Cards key={generateId()} { ...data }/>)
-          }
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );
