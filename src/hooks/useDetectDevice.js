@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useDeviceDetect = () => {
+export const useDetectDevice = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const handleWindowResize = () => {
         setWidth(window.innerWidth);
@@ -15,5 +15,3 @@ const useDeviceDetect = () => {
 
     return (width <= 899);
 }
-
-export default useDeviceDetect

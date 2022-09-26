@@ -1,17 +1,17 @@
 import {
-  AppBar,
-  Avatar, Box,
+  AppBar, Box,
   Container,
   IconButton,
-  Menu, MenuItem,
+  Menu,
+  MenuItem,
   Toolbar,
   Tooltip,
   Typography
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
-import { pages } from '../../../data';
-import useDeviceDetect from '../../../hooks/useDetectDevice';
+import { pages, settings } from '../../../data';
+import { useAuthStore, useDetectDevice } from '../../../hooks';
 import { Brand } from './Brand';
 import { NavigationDesk } from './NavigationDesk';
 import { NavigationMobile } from './NavigationMobile';
@@ -39,13 +39,12 @@ const useStyles = makeStyles({
   }
 });
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
 export const NavigationBar = () => {
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const isMobile = useDeviceDetect();
+  const isMobile = useDetectDevice();
+  const { user, startLogout }= useAuthStore();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -59,7 +58,8 @@ export const NavigationBar = () => {
   };
   
   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+    startLogout();
+    // setAnchorElUser(null);
   };
 
   return (
@@ -98,7 +98,9 @@ export const NavigationBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={`/assets/imgs/avatar/identicon.png`} /> {/* // todo: Load this avatar image dinamicaly */ }
+                <Typography variant='h6' component='h6' sx={{ color: 'white' }}>
+                  {`Hi! ${user.name}`}
+                </Typography>
               </IconButton>
             </Tooltip>
             <Menu
@@ -117,11 +119,9 @@ export const NavigationBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">{settings}</Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

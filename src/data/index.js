@@ -90,3 +90,5 @@ export const pages = [
   { page: 'Projects', section: 'projects' },
   { page: 'Contact', section: 'contact' }
 ];
+
+export const settings = ['Logout'];

@@ -13,7 +13,7 @@ export const ContactFooter = React.memo(({ direction }) => {
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
-  console.log('heightEl->', heightEl)
+ 
   const [ containerRef, isVisible ] = useSectionOnScreen(options);
   useEffect(() => {
     if (containerRef.current) {
