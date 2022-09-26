@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   blast: {
@@ -61,88 +62,89 @@ export const Brand = ({ mobileDisplay, deskDisplay, deviceAligment }) => {
       >
         {`<`}
       </Typography>
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        href="/"
-        className={classes.effectLetter}
-        sx={{
-          display: { xs: mobileDisplay, md: deskDisplay },
-          fontFamily: 'monospace',
-          fontWeight: 700,
-          color: 'inherit',
-          textDecoration: 'none',
-          '& span:nth-of-type(6n)': {
-            marginRight: '10px'
-          }
-        }}
-      >
-        <span 
-          className={`${classes.blast} ${onHovering1 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement1}
-          onMouseOut={onMouseLeaveElement1}
+      <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}>
+        <Typography
+          variant="h6"
+          noWrap
+          component="span"
+          className={classes.effectLetter}
+          sx={{
+            display: { xs: mobileDisplay, md: deskDisplay },
+            fontFamily: 'monospace',
+            fontWeight: 700,
+            color: 'inherit',
+            textDecoration: 'none',
+            '& span:nth-of-type(6n)': {
+              marginRight: '10px'
+            }
+          }}
         >
-          C
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering2 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement2}
-          onMouseOut={onMouseLeaveElement2}
-        >
-          a
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering3 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement3}
-          onMouseOut={onMouseLeaveElement3}
-        >
-          r
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering4 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement4}
-          onMouseOut={onMouseLeaveElement4}
-        >
-          l
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering5 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement5}
-          onMouseOut={onMouseLeaveElement5}
-        >
-          o
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering6 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement6}
-          onMouseOut={onMouseLeaveElement6}
-        >
-          s
-        </span>
-        <span>{' '}</span>
-        <span 
-          className={`${classes.blast} ${onHovering7 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement7}
-          onMouseOut={onMouseLeaveElement7}
-        >
-          D
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering8 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement8}
-          onMouseOut={onMouseLeaveElement8}
-        >
-          e
-        </span>
-        <span 
-          className={`${classes.blast} ${onHovering9 ? "rubberBand animatedBrand" : ""}`}
-          onMouseOver={onMouseOverElement9}
-          onMouseOut={onMouseLeaveElement9}
-        >
-          v
-        </span>
-      </Typography>
+          <span 
+            className={`${classes.blast} ${onHovering1 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement1}
+            onMouseOut={onMouseLeaveElement1}
+          >
+            C
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering2 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement2}
+            onMouseOut={onMouseLeaveElement2}
+          >
+            a
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering3 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement3}
+            onMouseOut={onMouseLeaveElement3}
+          >
+            r
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering4 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement4}
+            onMouseOut={onMouseLeaveElement4}
+          >
+            l
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering5 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement5}
+            onMouseOut={onMouseLeaveElement5}
+          >
+            o
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering6 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement6}
+            onMouseOut={onMouseLeaveElement6}
+          >
+            s
+          </span>
+          <span>{' '}</span>
+          <span 
+            className={`${classes.blast} ${onHovering7 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement7}
+            onMouseOut={onMouseLeaveElement7}
+          >
+            D
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering8 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement8}
+            onMouseOut={onMouseLeaveElement8}
+          >
+            e
+          </span>
+          <span 
+            className={`${classes.blast} ${onHovering9 ? "rubberBand animatedBrand" : ""}`}
+            onMouseOver={onMouseOverElement9}
+            onMouseOut={onMouseLeaveElement9}
+          >
+            v
+          </span>
+        </Typography>
+      </Link>
       <Typography 
         sx={{ 
           display: { xs: mobileDisplay, md: deskDisplay},

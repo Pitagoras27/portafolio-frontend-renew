@@ -5,7 +5,18 @@ import {
   Menu, MenuItem,
   Typography
 } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Link as LinkBlog, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
+
+const useStyles = makeStyles({
+  anchorBlog: {
+    '& a': {
+      color: '#000',
+      textDecoration: 'none'
+    }
+  }
+})
 
 export const NavigationMobile = ({
   pages,
@@ -14,6 +25,10 @@ export const NavigationMobile = ({
   handleOpenNavMenu,
   handleCloseNavMenu
 }) => {
+  const styles = useStyles();
+  const location = useLocation();
+
+
   return (
     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
       <IconButton
@@ -24,7 +39,7 @@ export const NavigationMobile = ({
         onClick={handleOpenNavMenu}
         color="inherit"
       >
-      <MenuIcon />
+        <MenuIcon />
       </IconButton>
       <Menu
         id="menu-appbar"
@@ -44,26 +59,33 @@ export const NavigationMobile = ({
           display: { xs: 'block', md: 'none' },
         }}
       >
-        {pages.map(({page, section}) => (
-          <MenuItem
-            key={page}
-            onClick={handleCloseNavMenu}
-            className={classes}
-          >
-            <Typography textAlign="center">
-            <Link
-              activeClass="active"
-              to={section}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              {page}
-            </Link>
-            </Typography>
-          </MenuItem>
-        ))}
+        {
+          location.pathname === '/' && (
+            pages.map(({page, section}) => (
+              <MenuItem
+                key={page}
+                onClick={handleCloseNavMenu}
+                className={classes}
+              >
+                <Typography textAlign="center">
+                <Link
+                  activeClass="active"
+                  to={section}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {page}
+                </Link>
+                </Typography>
+              </MenuItem>
+            ))
+          )
+        }
+        <Box className={`${classes} ${styles.anchorBlog}`}>
+          <LinkBlog to='/blog'>Blog</LinkBlog>
+        </Box>
       </Menu>
     </Box>
   )
