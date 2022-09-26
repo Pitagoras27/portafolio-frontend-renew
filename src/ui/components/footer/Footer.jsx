@@ -10,10 +10,18 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     color: 'rgb(195, 221, 235)',
-      '& span': {
-        fontSize: 'initial',
-        justifyContent: 'right'
-      }
+    '& blockquote': {
+      position: 'relative',
+      width: 'fit-content',
+      margin: 'auto',
+      paddingBottom: '20px'
+    },
+    '& span': {
+      fontSize: 'initial',
+      justifyContent: 'right',
+      borderBottom: '1px solid #255a74',
+    },
+    
   },
   socialMedia: {
     fontSize: '40px',
@@ -22,8 +30,6 @@ const useStyles = makeStyles({
     margin: '8px !important'
   },
   quote: {
-    position: 'relative',
-    borderBottom: '1px solid #255a74',
     padding: '18px',
     paddingBottom: '14px',
     '& > span':{
