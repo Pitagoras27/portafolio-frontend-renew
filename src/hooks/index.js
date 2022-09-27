@@ -2,6 +2,7 @@
 
 export * from './useAnimatedStore';
 export * from './useAuthStore';
+export * from './useBlogStore';
 export * from './useContactStore';
 export * from './useDetectDevice';
 export * from './useFetch';

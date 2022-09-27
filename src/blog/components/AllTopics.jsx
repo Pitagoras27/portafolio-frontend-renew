@@ -1,7 +1,8 @@
 import { Box, Container } from "@mui/material";
 import { makeStyles } from '@mui/styles/';
-import { cardsSkillsData } from "../../data";
+
 import { generateId } from "../../helpers";
+import { useBlogStore } from "../../hooks";
 import { TopicCard } from "../components/TopicCard";
 
 const useStyles = makeStyles({
@@ -16,6 +17,9 @@ const useStyles = makeStyles({
 export const AllTopics = () => {
   const classes = useStyles();
 
+  const { topics, filterList } = useBlogStore();
+  const allTopics = filterList.length < 1 ? topics : filterList;
+
   return (
     <Box
       sx={{
@@ -29,7 +33,7 @@ export const AllTopics = () => {
 
         <Box className={classes.cardsContainer}>
             {
-              cardsSkillsData.map((data) => <TopicCard key={generateId()} { ...data }/>)
+              allTopics.map((data) => (<TopicCard key={generateId()} { ...data }/>))
             }
         </Box>
       </Container>

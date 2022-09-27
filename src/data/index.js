@@ -13,9 +13,10 @@ export const carouselData = [
   }
 ];
 
-export const cardsSkillsData = [
+export const cardsSkillsBlog = [
   {
     "title": "Typescript, hard to learn, but completely neccesary",
+    "section": "typescript",
     "badge": [
       "Secure",
       "Development"
@@ -25,6 +26,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "Material UI and React",
+    "section": "react",
     "badge": [
       "Libraries",
       "Frontend"
@@ -34,6 +36,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "Some stategies to test react apps",
+    "section": "testing",
     "badge": [
       "Testing Library"
     ],
@@ -42,6 +45,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "CSS Box Model",
+    "section": "css",
     "badge": [
       "Design",
       "CSS"
@@ -51,6 +55,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "Testing front with testing library in MaterialUI",
+    "section": "testing",
     "badge": [
       "Testing Library",
       "React"
@@ -60,6 +65,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "Interactive with backend",
+    "section": "fullstack",
     "badge": [
       "Fullstack"
     ],
@@ -68,6 +74,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "Git",
+    "section": "best practices",
     "badge": [
       "WorkFlow"
     ],
@@ -76,6 +83,7 @@ export const cardsSkillsData = [
   },
   {
     "title": "SOLID",
+    "section": "best practices",
     "badge": [
       "Framework",
       "Desarrollo"
@@ -98,9 +106,10 @@ export const settings = ['Logout'];
 // Categories
 
 export const categories = [
-  { type: 'Testing', id: 1},
-  { type: 'Typescript', id: 2 },
-  { type: 'React', id: 3},
-  { type: 'Fullstack', id: 4 },
-  { type: 'CSS', id: 5}
+  { section: 'Testing'},
+  { section: 'Typescript'},
+  { section: 'React'},
+  { section: 'Fullstack'},
+  { section: 'CSS'},
+  { section: 'Best practices'}
 ]

@@ -28,8 +28,6 @@ export const SearchCategory = () => {
             <CategorySelector label="Select a topic" options={categories} />
           </Grid>
         </Grid>
-
-        <Box sx={{ m: 3 }} />
       </Container>
     </Box>
   )

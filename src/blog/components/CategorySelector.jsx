@@ -1,13 +1,14 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-import { useState } from 'react';
+import { generateId } from "../../helpers";
+import { useBlogStore } from '../../hooks';
 
 export const CategorySelector = ({ label, options }) => {
-  const [ optionSelected, setOptionSelected ] = useState('');
+  
+  const { topicSelected, setTopicSelected } = useBlogStore();
 
   const handleChange = (event) => {
-    setOptionSelected(event.target.value);
+    setTopicSelected(event.target.value)
   };
-
   return (
     <>
       <FormControl variant="standard" fullWidth>
@@ -15,7 +16,7 @@ export const CategorySelector = ({ label, options }) => {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={optionSelected}
+          value={topicSelected}
           onChange={handleChange}
           label="Select"
         >
@@ -23,15 +24,18 @@ export const CategorySelector = ({ label, options }) => {
             <em>None</em>
           </MenuItem>
           {
-            options.map((item) => (
-              <MenuItem
-                key={ item.id }
-                id={ item.id }
-                value={ item.id }
-              >
-                { item.type }
-              </MenuItem>
-            ))
+            options.map((item) => {
+              const id = generateId();
+              return (
+                <MenuItem
+                  key={ id }
+                  id={ id }
+                  value={ item.section }
+                >
+                  { item.section }
+                </MenuItem>
+              )
+            })
           }
         </Select>
       </FormControl>
