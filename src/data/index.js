@@ -15,54 +15,55 @@ export const carouselData = [
 
 export const cardsSkillsData = [
   {
-    "title": "React, Redux y React Router",
+    "title": "Typescript, hard to learn, but completely neccesary",
     "badge": [
-      "Arquitectura",
-      "Libreria"
+      "Secure",
+      "Development"
     ],
-    "text": "Manejo combinado de react con redux, en caso de requirir la aplicación un estado global. Implementaciones con React Router, aunado a las mejores prácticas.",
+    "text": "Nowadays is more evident that technologic enterprices apply their efforts to create apps more secure and scalables, this is the main reason for implement and use Typescript ",
+    "image": "../src/assets/imgs/skill-cards/ts.png"
+  },
+  {
+    "title": "Material UI and React",
+    "badge": [
+      "Libraries",
+      "Frontend"
+    ],
+    "text": "In software development the priority is quality and speed, and the best way to reach this is learn Material UI, the best library of components for react",
     "image": "../src/assets/imgs/skill-cards/front1.png"
   },
   {
-    "title": "Bootstrap",
+    "title": "Some stategies to test react apps",
     "badge": [
-      "Frameworks Front"
+      "Testing Library"
     ],
-    "text": "Desarrollo ágil a partir del manejo de herramientas preconstruídas y fáciles de implementar con la finalidad de mejorar la productividad y entrega de producto final",
-    "image": "../src/assets/imgs/skill-cards/bootstrap-stack.png"
-  },
-  {
-    "title": "JS y ES6",
-    "badge": [
-      "Estándares y buenas prácticas"
-    ],
-    "text": "Manejo de EC6 y versiones porsteriores para mantener un dearrollo moderno al alcance de otros desarrolladores y visible desde todas los dispositivos",
+    "text": "Everybody know that testing is an essential practice in software development that help us to build robust and hight quality app. To test front-end react apps uses testing library",
     "image": "../src/assets/imgs/skill-cards/es6yjs.png"
   },
   {
-    "title": "Webpack y Babel",
+    "title": "CSS Box Model",
     "badge": [
-      "Herramientas",
-      "Desarrollo"
+      "Design",
+      "CSS"
     ],
-    "text": "Automatización de procesos e implemetación de herramientas que hagan una integración más robusta pero más manejable, configurable y extensible",
+    "text": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
     "image": "../src/assets/imgs/skill-cards/webpackBabel.jpg"
   },
   {
-    "title": "SASS",
+    "title": "Testing front with testing library in Vite",
     "badge": [
-      "Preprocesadores"
+      "Testing Library",
+      "React"
     ],
-    "text": "Gestión de preprocesadores para mejorar la calidad de código css. La finalidad es evitar repetir innecesariamente secciones previamente declaradas",
+    "text": "Vite is a great and amazing boilerplate to developing speed react apps, but is neccesary make some configurations, here will explore some strategies to start the suite test",
     "image": "../src/assets/imgs/skill-cards/sass.png"
   },
   {
     "title": "Express",
     "badge": [
-      "Backend",
-      "Desarrollo"
+      "Backend"
     ],
-    "text": "Conocimiento básico de la herramienta, configuración de servidor de desarrollo. SSR con React. Gestión de API rest. Template pug para vistas",
+    "text": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interactive app in front-end",
     "image": "../src/assets/imgs/skill-cards/express.png"
   },
   {
@@ -70,16 +71,16 @@ export const cardsSkillsData = [
     "badge": [
       "WorkFlow"
     ],
-    "text": "Gestion de recursos de tiempo, productividad y administración de código con git y github. Bifurcaciones, histórico, diferencias, logs, pull-request, etc.",
+    "text": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with branchs and colaborative team",
     "image": "../src/assets/imgs/skill-cards/scrum.png"
   },
   {
-    "title": "Angular",
+    "title": "SOLID",
     "badge": [
       "Framework",
       "Desarrollo"
     ],
-    "text": "Creación de módulos, enums, interfaces, TS, Documentación, pruebas unitarias básicas con Jasmine y Karma",
+    "text": "The SOLID principles tell us how to organize our functions and data structures into components and how those components should be interconnected.",
     "image": "../src/assets/imgs/skill-cards/angular.png"
   }
 ];
