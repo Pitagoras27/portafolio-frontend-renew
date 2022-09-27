@@ -38,7 +38,7 @@ export const cardsSkillsData = [
       "Testing Library"
     ],
     "text": "Everybody know that testing is an essential practice in software development that help us to build robust and hight quality app. To test front-end react apps uses testing library",
-    "image": "../src/assets/imgs/skill-cards/es6yjs.png"
+    "image": "../src/assets/imgs/skill-cards/thumb-section.jpg"
   },
   {
     "title": "CSS Box Model",
@@ -47,10 +47,10 @@ export const cardsSkillsData = [
       "CSS"
     ],
     "text": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
-    "image": "../src/assets/imgs/skill-cards/webpackBabel.jpg"
+    "image": "../src/assets/imgs/skill-cards/es6yjs.png"
   },
   {
-    "title": "Testing front with testing library in Vite",
+    "title": "Testing front with testing library in MaterialUI",
     "badge": [
       "Testing Library",
       "React"
@@ -59,12 +59,12 @@ export const cardsSkillsData = [
     "image": "../src/assets/imgs/skill-cards/sass.png"
   },
   {
-    "title": "Express",
+    "title": "Interactive with backend",
     "badge": [
-      "Backend"
+      "Fullstack"
     ],
     "text": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interactive app in front-end",
-    "image": "../src/assets/imgs/skill-cards/express.png"
+    "image": "../src/assets/imgs/skill-cards/fullstack.png"
   },
   {
     "title": "Git",
@@ -72,7 +72,7 @@ export const cardsSkillsData = [
       "WorkFlow"
     ],
     "text": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with branchs and colaborative team",
-    "image": "../src/assets/imgs/skill-cards/scrum.png"
+    "image": "../src/assets/imgs/skill-cards/git.png"
   },
   {
     "title": "SOLID",
@@ -81,10 +81,11 @@ export const cardsSkillsData = [
       "Desarrollo"
     ],
     "text": "The SOLID principles tell us how to organize our functions and data structures into components and how those components should be interconnected.",
-    "image": "../src/assets/imgs/skill-cards/angular.png"
+    "image": "../src/assets/imgs/skill-cards/solid.jpg"
   }
 ];
 
+// Navigation bar
 export const pages = [
   { page: 'About', section: 'about' },
   { page: 'Skills', section: 'skills' },
@@ -93,3 +94,13 @@ export const pages = [
 ];
 
 export const settings = ['Logout'];
+
+// Categories
+
+export const categories = [
+  { type: 'Testing', id: 1},
+  { type: 'Typescript', id: 2 },
+  { type: 'React', id: 3},
+  { type: 'Fullstack', id: 4 },
+  { type: 'CSS', id: 5}
+]

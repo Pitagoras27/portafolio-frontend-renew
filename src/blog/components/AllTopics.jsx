@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   cardsContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '20px',
+    gap: '50px',
     justifyContent: 'center'
   }
 })
@@ -21,11 +21,11 @@ export const AllTopics = () => {
       sx={{
         backgroundColor: 'white',
         width: '100%',
-        marginTop: '64px'
+        paddingTop: '100px',
+        paddingBottom: '140px'
       }}
     >
       <Container maxWidth="lg">
-        This is my blog page!
 
         <Box className={classes.cardsContainer}>
             {
