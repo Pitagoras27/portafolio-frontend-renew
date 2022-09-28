@@ -55,7 +55,7 @@ export const Projects = React.memo(({ direction }) => {
         fixed={false}
         className={ `animate__animated ${onSectionVisible('projects') ? animationType : 'hideSection'}`}
       >
-        <HeaderSection headerTitle="Projects" idScroll="projects" />
+        <HeaderSection headerTitle="My most important work" idScroll="projects" />
         <Grid container spacing={1}>
           <Grid item xs={12}>
             <DateJob

@@ -1,15 +1,15 @@
 export const carouselData = [
   {
-    name: "Programming",
-    description: "Soy un web developer apasionado con lo que hago, diseño, programo y continuamente estoy evolucionando"
+    name: "Front-end Programming",
+    description: "The quality of the front-end code is the most deciding factor of a great web app, for this reason I'm focus in best practices and other principes"
   },
   {
-    name: "Design Interfaces",
-    description: "Una de mis grandes sentirme orgulloso de mi trabajo, un reto dificil ante tanto tanlento y mejora entre mis colegas"
+    name: "Design",
+    description: "A well-designed website can help us form a good impression on our prospective customers. It can also help it make the difference in all digital universe so we have a relevant webapp"
   },
   {
-    name: "Growing Continuos",
-    description: "Busco afanosamente todo lo que signifique la mejora continua de mi propia persona, ya que si no pudiera tenerme de mi lado, nada puedira lograr con satisfacción"
+    name: "Colaboration and Creativity",
+    description: "For me the colaboration with a team is one of main factors to rise successful development, everyone learn, everyone benefits   "
   }
 ];
 
