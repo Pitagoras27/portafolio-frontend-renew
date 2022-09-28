@@ -1,11 +1,12 @@
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
   CardMedia, Typography
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { Link } from 'react-router-dom';
+import { pathSectionFriendly } from '../../helpers/utils';
 
 const useStyles = makeStyles({
   lift: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
     }
   }
 })
-export const TopicCard = ({ title, text, image }) => {
+export const TopicCard = ({ title, section, text, image, id }) => {
   const classes = useStyles();
 
   return (
@@ -42,7 +43,7 @@ export const TopicCard = ({ title, text, image }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Link to={`/blog/${pathSectionFriendly(section)}/${pathSectionFriendly(title)}/${id}`}>Learn More</Link>
       </CardActions>
     </Card>
   )

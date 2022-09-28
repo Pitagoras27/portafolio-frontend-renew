@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { cardsSkillsBlog } from '../../data';
-
+import { contentSectionTopic } from '../../helpers/utils';
 
 export const blogSlice = createSlice({
     name: 'blog',
@@ -12,8 +12,7 @@ export const blogSlice = createSlice({
     reducers: {
       themeSelected: (state, { payload } ) => {
         const lowerItem = payload.toLowerCase();
-        console.log('lowerItem-->', lowerItem)
-        state.filterList = state.topics.filter((item => item.section === lowerItem));
+        state.filterList = contentSectionTopic(state.topics, lowerItem);
         state.topicSelected = payload
       },
     }

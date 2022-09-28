@@ -15,6 +15,7 @@ export const carouselData = [
 
 export const cardsSkillsBlog = [
   {
+    "id": 1,
     "title": "Typescript, hard to learn, but completely neccesary",
     "section": "typescript",
     "badge": [
@@ -25,6 +26,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/ts.png"
   },
   {
+    "id": 2,
     "title": "Material UI and React",
     "section": "react",
     "badge": [
@@ -35,6 +37,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/front1.png"
   },
   {
+    "id": 3,
     "title": "Some stategies to test react apps",
     "section": "testing",
     "badge": [
@@ -44,6 +47,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/thumb-section.jpg"
   },
   {
+    "id": 4,
     "title": "CSS Box Model",
     "section": "css",
     "badge": [
@@ -54,6 +58,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/es6yjs.png"
   },
   {
+    "id": 5,
     "title": "Testing front with testing library in MaterialUI",
     "section": "testing",
     "badge": [
@@ -64,6 +69,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/sass.png"
   },
   {
+    "id": 6,
     "title": "Interactive with backend",
     "section": "fullstack",
     "badge": [
@@ -73,6 +79,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/fullstack.png"
   },
   {
+    "id": 7,
     "title": "Git",
     "section": "best practices",
     "badge": [
@@ -82,6 +89,7 @@ export const cardsSkillsBlog = [
     "image": "../src/assets/imgs/skill-cards/git.png"
   },
   {
+    "id": 8,
     "title": "SOLID",
     "section": "best practices",
     "badge": [

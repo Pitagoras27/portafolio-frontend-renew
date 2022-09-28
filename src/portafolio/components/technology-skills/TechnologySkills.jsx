@@ -55,7 +55,7 @@ export const TechnologySkills = React.memo(({ direction }) => {
 
       >
         <Grid container>
-          <Grid item xs={12} justifyContent="center">
+          <Grid item xs={12}>
           <HeaderSection headerTitle="Skills" idScroll="skills" />
           </Grid>
           <Grid item xs={12} md={6}>

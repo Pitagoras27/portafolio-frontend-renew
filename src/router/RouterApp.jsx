@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { LoginPage, RegisterPage } from "../auth";
-import { BlogPage } from "../blog";
+import { BlogDetailPage, BlogPage } from "../blog";
 import { useAuthStore } from "../hooks";
 import { PortafolioPage } from "../portafolio";
 import { Loader } from "../ui/components/Loader";
@@ -35,6 +35,7 @@ export const RouterApp = () => {
             <Route path="/" element={ <PortafolioPage /> } />
             <Route path="/*" element={ <Navigate to="/" /> } />
             <Route path="/blog" element={ <BlogPage /> } />
+            <Route path="/blog/:section/:title/:id" element={ <BlogDetailPage /> } />
           </>
         )
       }

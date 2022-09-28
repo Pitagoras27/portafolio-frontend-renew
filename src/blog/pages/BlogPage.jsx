@@ -1,14 +1,11 @@
 import { AllTopics, SearchCategory } from "../";
-import { Footer, NavigationBar } from "../../ui";
+import { LayoutBlog } from "./LayoutBlog";
 
 export const BlogPage = () => {
   return (
-    <>
-      <NavigationBar />
+    <LayoutBlog>
       <SearchCategory />
       <AllTopics />
-      <Footer />
-    </>
-    
+    </LayoutBlog>
   )
 }
