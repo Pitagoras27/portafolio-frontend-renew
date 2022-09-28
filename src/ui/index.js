@@ -12,4 +12,5 @@ export { Loader } from "./components/Loader";
 export { ModalContact } from "./components/ModalContact";
 export { Brand } from "./components/navigation/Brand";
 export { NavigationBar } from "./components/navigation/NavigationBar";
+export { NavigationSettingUser } from "./components/navigation/NavigationSettingUser";
 

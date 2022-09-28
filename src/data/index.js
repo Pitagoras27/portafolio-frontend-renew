@@ -109,7 +109,7 @@ export const pages = [
   { page: 'Contact', section: 'contact' }
 ];
 
-export const settings = ['Logout'];
+export const settings = ['Login', 'Logout'];
 
 // Categories
 

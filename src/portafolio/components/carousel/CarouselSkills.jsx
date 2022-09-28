@@ -12,12 +12,9 @@ export const CarouselSkills = ({ handleOpen }) => {
     {/* // TODO: Remove autoPlay PROP is default */}
     return (
       <Carousel
-        next={ (next, active) => console.log(``) }
-        prev={ (prev, active) => console.log(``) }
         fullHeightHover={true}
         animation='fade'
         indicators={false}
-        autoPlay={false}
         navButtonsProps={{
           style: { backgroundColor: "cornflowerblue", width: '50px', height: '50px'}
         }}

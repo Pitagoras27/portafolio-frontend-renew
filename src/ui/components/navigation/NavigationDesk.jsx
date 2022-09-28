@@ -1,20 +1,9 @@
 import { Box } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { Link as LinkBlog, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 import { useAnimatedStore } from '../../../hooks';
 
-const useStyles = makeStyles({
-  anchorBlog: {
-    '& a': {
-      color: '#fff',
-      textDecoration: 'none'
-    }
-  }
-})
-
 export const NavigationDesk = ({ classes, pages }) => {
-  const styles = useStyles();
   const location = useLocation();
   const { startAnimated } = useAnimatedStore();
 
@@ -29,7 +18,7 @@ export const NavigationDesk = ({ classes, pages }) => {
           pages.map(({page, section}) => (
             <Box
               key={page}
-              className={classes}
+              className={classes.pAll}
             >
               <Link
                 onClick={() => handleAnimationByScroll(section)}
@@ -42,11 +31,10 @@ export const NavigationDesk = ({ classes, pages }) => {
                 {page}
               </Link>
             </Box>
-          )
-          )
+          ))
         )
       }
-      <Box className={`${classes} ${styles.anchorBlog}`}>
+      <Box className={`${classes.pAll} ${classes.extraLink}`}>
         <LinkBlog to='/blog'>Blog</LinkBlog>
       </Box>
     </Box>

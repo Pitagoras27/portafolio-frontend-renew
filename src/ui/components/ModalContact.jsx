@@ -36,7 +36,9 @@ export function ModalContact({ open, handleClose }) {
         <Fade in={open}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h6">
-              Hi { user.name }
+              {
+                user.name ? `Hi ${ user.name }!` : 'Contact' 
+              }
             </Typography>
 
             <Divider />

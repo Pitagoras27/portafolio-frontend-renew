@@ -5,18 +5,8 @@ import {
   Menu, MenuItem,
   Typography
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { Link as LinkBlog, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
-
-const useStyles = makeStyles({
-  anchorBlog: {
-    '& a': {
-      color: '#000',
-      textDecoration: 'none'
-    }
-  }
-})
 
 export const NavigationMobile = ({
   pages,
@@ -25,9 +15,7 @@ export const NavigationMobile = ({
   handleOpenNavMenu,
   handleCloseNavMenu
 }) => {
-  const styles = useStyles();
   const location = useLocation();
-
 
   return (
     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -65,7 +53,7 @@ export const NavigationMobile = ({
               <MenuItem
                 key={page}
                 onClick={handleCloseNavMenu}
-                className={classes}
+                className={classes.pAll}
               >
                 <Typography textAlign="center">
                 <Link
@@ -83,7 +71,7 @@ export const NavigationMobile = ({
             ))
           )
         }
-        <Box className={`${classes} ${styles.anchorBlog}`}>
+        <Box className={`${classes.extraLinkMobile}`}>
           <LinkBlog to='/blog'>Blog</LinkBlog>
         </Box>
       </Menu>
