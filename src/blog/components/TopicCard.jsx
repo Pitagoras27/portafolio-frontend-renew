@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     }
   }
 })
-export const TopicCard = ({ title, section, text, image, id }) => {
+export const TopicCard = ({ title, section, intro, image, id }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,7 @@ export const TopicCard = ({ title, section, text, image, id }) => {
           { title }
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          { text }
+          { intro }
         </Typography>
       </CardContent>
       <CardActions>

@@ -22,7 +22,7 @@ export const cardsSkillsBlog = [
       "Secure",
       "Development"
     ],
-    "text": "Nowadays is more evident that technologic enterprices apply their efforts to create apps more secure and scalables, this is the main reason for implement and use Typescript ",
+    "intro": "Nowadays is more evident that technologic enterprices apply their efforts to create apps more secure and scalables, this is the main reason for implement and use Typescript ",
     "image": "../src/assets/imgs/skill-cards/ts.png"
   },
   {
@@ -33,7 +33,7 @@ export const cardsSkillsBlog = [
       "Libraries",
       "Frontend"
     ],
-    "text": "In software development the priority is quality and speed, and the best way to reach this is learn Material UI, the best library of components for react",
+    "intro": "In software development the priority is quality and speed, and the best way to reach this is learn Material UI, the best library of components for react",
     "image": "../src/assets/imgs/skill-cards/front1.png"
   },
   {
@@ -43,7 +43,7 @@ export const cardsSkillsBlog = [
     "badge": [
       "Testing Library"
     ],
-    "text": "Everybody know that testing is an essential practice in software development that help us to build robust and hight quality app. To test front-end react apps uses testing library",
+    "intro": "Everybody know that testing is an essential practice in software development that help us to build robust and hight quality app. To test front-end react apps uses testing library",
     "image": "../src/assets/imgs/skill-cards/thumb-section.jpg"
   },
   {
@@ -54,7 +54,7 @@ export const cardsSkillsBlog = [
       "Design",
       "CSS"
     ],
-    "text": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
+    "intro": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
     "image": "../src/assets/imgs/skill-cards/es6yjs.png"
   },
   {
@@ -65,28 +65,115 @@ export const cardsSkillsBlog = [
       "Testing Library",
       "React"
     ],
-    "text": "Vite is a great and amazing boilerplate to developing speed react apps, but is neccesary make some configurations, here will explore some strategies to start the suite test",
+    "intro": "Vite is a great and amazing boilerplate to developing speed react apps, but is neccesary make some configurations, here will explore some strategies to start the suite test",
     "image": "../src/assets/imgs/skill-cards/sass.png"
   },
   {
     "id": 6,
-    "title": "Interactive with backend",
+    "title": "Interact with backend",
     "section": "fullstack",
     "badge": [
       "Fullstack"
     ],
-    "text": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interactive app in front-end",
+    "intro": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interact app in front-end",
     "image": "../src/assets/imgs/skill-cards/fullstack.png"
   },
   {
     "id": 7,
-    "title": "Git",
+    "title": "Git Best Practices",
     "section": "best practices",
     "badge": [
       "WorkFlow"
     ],
-    "text": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with branchs and colaborative team",
-    "image": "../src/assets/imgs/skill-cards/git.png"
+    "intro": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with branchs and colaborative team",
+    "image": "../src/assets/imgs/skill-cards/git.png",
+    "content": [
+      { 
+        "type": "h4",
+        "node": "Style commits"
+      },
+      { 
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Method names:</strong> Naming things is one of the hard problstrongs in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that\'s an inaccurate method name. And probably a misleading function."
+          }
+        ],
+      },
+      {
+        "type": "p",
+        "node" : [
+          {
+            "type": "nested",
+            "node": "<strong>Variable names:</strong> foo or bar are probably not useful names for data structures. <strong>e</strong> is similarly not useful when compared to exception. Be as verbose as you need (depending on the language). Expressive variable names make it easier to understand code when we have to revisit it later."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Function length:</strong> My rule of thumb is that a function should be less than 20 or so lines. If I see a method above 50, I feel it\'s best that it be cut into smaller pieces."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Class length:</strong> I think classes should be under about 300 lines total and ideally less than 100. It\'s likely that large classes can be split into separate objects, which makes it easier to understand what the class is supposed to do."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>File length:</strong> For Python files, I think around 1000 lines of code is about the most we should have in one file. Anything above that is a good sign that it should be split into smaller, more focused files. As the size of a file goes up, discoverability goes down."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Docstrings:</strong> For complex methods or those with longer lists of arguments, is there a docstring explaining what each of the arguments does, if it\'s not obvious?"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Commented code:</strong> Good idea to rstrongove any commented out lines." 
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Number of method arguments:</strong> For the methods and functions, do they have 3 or fewer arguments? Greater than 3 is probably a sign that it could be grouped in a different way."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Readability:</strong> Is the code easy to understand?, Do I have to pause frequently during the review to decipher it?"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 8,
@@ -96,7 +183,7 @@ export const cardsSkillsBlog = [
       "Framework",
       "Desarrollo"
     ],
-    "text": "The SOLID principles tell us how to organize our functions and data structures into components and how those components should be interconnected.",
+    "intro": "The SOLID principles tell us how to organize our functions and data structures into components and how those components should be interconnected.",
     "image": "../src/assets/imgs/skill-cards/solid.jpg"
   }
 ];
