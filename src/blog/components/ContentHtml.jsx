@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 import { generateId } from "../../helpers";
@@ -6,6 +6,21 @@ import { generateId } from "../../helpers";
 const useStyles = makeStyles({
   aligmentElements: {
     margin: '20px 0 !important'
+  },
+  codeFragment: {
+    display: 'flex',
+    justifyContent: 'center',
+    '& code': {
+      padding: '16px',
+      backgroundColor:"#292d3e",
+      color: "#ffffff",
+      borderRadius: '5px'
+    }
+  },
+  container: {
+    '& li': {
+      marginBottom: '15px'
+    }
   }
 })
 
@@ -17,16 +32,26 @@ export const ContentHtml = ({ content }) => {
   const classes = useStyles();
   const htmlElements = {
     "h4": ({ type, node }) => (
+      <div key={generateId()}>
+        <Box sx={{ mt: 7 }} />
+        <Typography
+          variant={type}
+          component={type}
+          children={node}
+          className={classes.aligmentElements}
+        />
+      </div>
+    ),
+    "p": ({ node }) => (
       <Typography
         key={generateId()}
-        variant={type}
-        component={type}
+        paragraph
         children={node}
         className={classes.aligmentElements}
       />
     ),
+    "code": ({ node }) => <div className={classes.codeFragment} key={generateId()}><code>{ node }</code></div>,
     "nested": ({ node, parent }) => {
-      console.log(variant[parent])
       return (
         <Typography
           dangerouslySetInnerHTML={{ __html: node }}
@@ -56,11 +81,11 @@ export const ContentHtml = ({ content }) => {
   const parser = (collection) => collection.map(createHtml)
 
   return (
-    <>
+    <div className={classes.container}>
       {
         parser(content)
       }
-    </>
+    </div>
   )
 }
 

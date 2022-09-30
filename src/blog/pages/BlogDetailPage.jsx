@@ -2,9 +2,9 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useLocation, useParams } from "react-router-dom";
+import { ContentHtml } from "../";
 import { contentSection, pathSection } from "../../helpers/utils";
 import { useBlogStore } from "../../hooks";
-import { ContentHtml } from "../components/ContentHtml";
 import { LayoutBlog } from "./LayoutBlog";
 
 const useStyles = makeStyles({
@@ -65,7 +65,7 @@ export const BlogDetailPage = () => {
 
             <Grid item xs={12}>
             <Typography variant="body1" paragraph align="left" className={classes.marginIntroText}>
-              { intro }
+              <em>{ intro }</em>
             </Typography>
             </Grid>
 
