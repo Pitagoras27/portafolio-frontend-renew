@@ -20,7 +20,25 @@ const useStyles = makeStyles({
   container: {
     '& li': {
       marginBottom: '15px'
+    },
+    '& blockquote': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-end',
+      fontWeight: '700',
+      '& span': {
+        fontWeight: '500',
+        fontStyle: 'italic',
+      }
+    },
+    '& img': {
+      display: 'flex',
+      margin: '35px auto'
     }
+  },
+  quoteContainer: {
+    display: 'flex',
+    justifyContent: 'column'
   }
 })
 
@@ -51,6 +69,7 @@ export const ContentHtml = ({ content }) => {
       />
     ),
     "code": ({ node }) => <div className={classes.codeFragment} key={generateId()}><code>{ node }</code></div>,
+    "img": ({ node }) => <img src={node} key={generateId()} alt="code image" />,
     "nested": ({ node, parent }) => {
       return (
         <Typography
