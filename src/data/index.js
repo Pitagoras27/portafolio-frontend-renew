@@ -286,6 +286,18 @@ export const cardsSkillsBlog = [
           }
         ]
       },
+      {
+        "type": "p",
+        "node": "Básicamente mientras tengamos lógica de estado es posible aislar su lógica en un hook. A continuación un ejemplo de un hook \"toogle\" y su implementación desde el componente:"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/hooks-pattern-1.png"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/hooks-pattern-2.png"
+      },
 
 
 
@@ -298,24 +310,45 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong><em>En muchas ocasiones algunos componentes requieren saber el estado o los cambios de estado de otros adyacentes o más lejanos en el árbol de componentes pero visibles en la misma interfaz. Como podría ser el caso de un carrito de compras que en todo momento se mantiene informado de los productos seleccionados para comprar, así como que se requiere contar con interacción mutua para actualizar o eliminar elementos del carrito. Sin este patrón seguramente utlizariamos redux (que en realidad implementa este patrón) o mediante el envío de props (props drilling). Problema que resuelve bien el patrón de composición.</em>"
+            "node": "<strong>Que problema resuelve: </strong><em>En muchas ocasiones algunos componentes requieren saber el estado o los cambios de estado de otros adyacentes o más lejanos en el árbol de componentes pero visibles en la misma interfaz. Este patrón aprovecha al máximo la composición para que podamos implementar componentes muy flexibles que comparten un estado común pero haciendo que se comuniquen internamente sin necesidad de pasar props (props drilling).</em>"
           } 
         ]
       },
       {
         "type": "p",
-        "node": "Los elementos de la UI deben compartir un estado en común y al mismo tiempo dar la flexibilidad suficiente para modificar estructuras de la UI"
+        "node": "Los elementos de la UI deben compartir un estado en común y al mismo tiempo dar la flexibilidad suficiente para modificar estructuras de la UI. Este patrón nos permite manejar la información desde un componente padre y tener control total sobre los componentes hijos. A continuación el aspecto que tiene el componente proveedor y sus hijos consumidores"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-1.png"
       },
       {
         "type": "p",
-        "node": ""
+        "node": "El componente ProductCard, es el encargado de proveer información a todos sus descendientes. Éste a travpes de API Context devuelve los valores esperados por sus componentes hijos"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-3.png"
       },
       {
         "type": "p",
         "node": [
           {
             "type": "nested",
-            "node": "Al actualizar el valor a través de una variable de control de estado en cada renderizado, se ofrece un control de valor generado a través de un controlador de evento, en este caso el método “onChange”. El patrón <strong>Control Props</strong> es similar a esta implementación ofrecida por react."
+            "node": "El componente consumidor, en este caso el componente <strong>ProductImage</strong> se conecta con a su proveedor a través de <code>useContext()</code> y mediante destructuración se accede a los valores requeridos"
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-2.png"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Omito el código para los componentes <strong><ProductTitle /></strong> y <strong><ProductBottons /></strong> debido a que el procedimiento para acceder a los datos de su provedor es el mismo. Es decir se conectan mediante <code>useContext()</code> y utilizan los valores como es requerido. Como podemos ver este patrón nos abre una gran variedad de posibilidades para construir componentes reutilizables e incluso librerías personalizadas (así está por ejemplo <strong>React Router</strong>) con la máxima flexibilidad posible."
           }
         ]
       },
@@ -332,7 +365,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong>Este patrón de diseño permite ofrecer al usuario (desarrollador), mayor control sobre la actualización de estado del componente, permitiéndole acceder al estado interno y aplicar difentes actualizaciones de estado"
+            "node": "<strong>Que problema resuelve: </strong><em>Este patrón de diseño permite ofrecer al usuario (desarrollador), mayor control sobre la actualización de estado del componente, permitiéndole acceder al estado interno y aplicar difentes actualizaciones de estado</em>"
           } 
         ]
       },
@@ -373,9 +406,29 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Hasta ahora no hay en realidad nada distinto, se actualiza el estado pero en lugar de hacerlo con useState utilizamos useReducer. La actualización de estado está completamente en manos del hook con la logica que implica la llamada a useReducer; necesitamos aportar mayor flexibilidad e invertir el control de estado, para que sea responsabilidad del componente que utiliza este hook.  "
+        "node": [
+          {
+            "type": "nested",
+            "node": "En el ejemplo anterior un custom hook controla la lógica de actualizacion de estado mediante useReducer. La actualización de estado está completamente en manos del hook, aqui  llamado <code>usePlayerReducer()</code> con la lógica que implica la llamada a useReducer(); necesitamos aportar mayor flexibilidad e invertir el control de estado, para que sea responsabilidad del componente que utiliza este hook."
+          }
+        ]
       },
-
+      {
+        "type": "p",
+        "node": "Para lograrlo debemos pasar una función que suplante la llamada de la función reductora utilizada por el custom hook. Hacer los cambios de estado que la lógica del componente demande en la función que se le pasará a usePlayerReducer() y de esa manera invertir control de estado a manos del componente. Y modificar el usePlayerReducer para que este listo y pueda recibir el objeto con la funcion reductora personalizada en el lado del componente:"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-3.png"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-2.png"
+      },
+      {
+        "type": "p",
+        "node": "Cada vez que se requiera pasar el control de estado al custom hook lo hacemos desde el componente que lo requiera mediante el envío de un objeto que contenga la función reductora personalizada. Notece que en caso de no envíar la función reductora, el custom hook está preparado para realizar una actualización de estado por defecto en esta linea <code>use</code>"
+      },
 
 
 
@@ -388,11 +441,28 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong>"
+            "node": "<strong>Que problema resuelve:</strong> El poder gestionar el estado interno de nuestro componente desde el exterior. Generalmente desde el componnete contenedor. Lo que también permite sobreescribir el estado por defecto que tenga el hijo."
           } 
         ]
       },
+      {
+        "type": "p",
+        "node": "Un componente controlado usa props para obtener su valor actual y mediante un callback notifica los cambios al padre. Al procesar el callback, en el padre (administrador de estado de su hijo) éste entrega los valores actualizados como props al componente hijo."
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/control-props-1.png"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/control-props-2.png"
+      },
+      {
+        "type": "p",
+        "node": "Esta es la forma más simple de implementar este patrón, pero la forma recomendada es dejar un gestor de estado internamente por default en caso de no controlar el componente desde el padre."
+      },
       
+
       
       {
         "type": "h4",
@@ -403,16 +473,39 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong>"
+            "node": "<strong>Que problema resuelve: </strong> <em>delegar la responsabilidad del renderizado del componente a un prop de tipo función. Es permite definir diferente lógica de renderizado, desde un componente contenedor.</em>"
           } 
         ]
       },
       {
         "type": "p",
-        "node": "El principal objetivo de este patrón es poder exponer todo lo que el usuario (otro desarrollador) puede utilizar, el patrón principalmente pide que se pueda ofrecer un estado inicial y una forma de re-establecer el estado a su forma original, pero de igual manera es posible exponer funciones y nuevas propiedades dentro de otros componentes más arriba en el árbol de componentes."
+        "node": "Con este patrón podemos cumplir con el <strong>Open and Close principle</strong> ya que al estar delegada la responsabilidad del render en el padre, no será necesario modificar la presentación del componente en la UI, cada que necesitemos modificar la UI. Por otro lado debemos cuidar de no caer en el antipatrón de anidar la prop de renderizado entre componetes ya que agrega complejidad al código."
+      },
+      {
+        "type": "p",
+        "node": "Pensemos por ejemplo en un componente que nos ayude a gestionar los mensajes de error mientras se está en tiempo de desarrollo. Este mensaje será diferente según la sección en la que nos encontremos. Por lo que tenemos diferentes UI. A continuación un ejemplo del componente ErrorBoundary sin alternativas para renderizar un mensaje personalizado desde el padre: "
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-1.png"
+      },
+      {
+        "type": "p",
+        "node": "Para pasar una prop con la lógica del renderizado o con la información necesaria para mostrar diferentes mensajes de error. Necesitamos preparar nuestro componente hijo y configurar el render prop en el padre: "
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-2.png"
+      },
+      {
+        "type": "p",
+        "node": "Una vez preparado el padre para envíar prop render de tipo función el componente hijo tendría el siguiente aspeto, para renderizar un mensaje por defecto o el que el contenedor decida, si es que lo envía"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-3.png"
       },
       
-
 
 
       {
@@ -467,7 +560,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li><a href=\"https://medium.com/the-non-traditional-developer/styling-best-practices-using-react-c37b96b8be9c\">Best practice in react styling components</a></li><li><a href=\"https://www2.logrocket.com/react-performance-monitoring\">Debuging performance in react apps</a></li><li><a href=\"https://blog.logrocket.com/react-component-design-patterns-2022/\">Most common patterns in react 2022</a></li>"
+            "node": "<li><a href=\"https://medium.com/the-non-traditional-developer/styling-best-practices-using-react-c37b96b8be9c\">Best practice in react styling components</a></li><li><a href=\"https://www2.logrocket.com/react-performance-monitoring\">Debuging performance in react apps</a></li><li><a href=\"https://blog.logrocket.com/react-component-design-patterns-2022/\">Most common patterns in react 2022</a></li><li><a href=\"https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks\">The State Reducer Pattern with React Hooks</a></li><li><a href=\"https://advanced-react-patterns.netlify.app/\">Advanced react patterns (excersices) </a></li><li><a href=\"https://github.com/streamich/react-use\">Hooks collection of react-use</a></li><li><a href=\"https://github.com/rehooks/awesome-react-hooks\">Awesome react hooks</a></li><li><a href=\"https://usehooks.com/useLocalStorage/\">Popular hooks</a></li>"
             
           }
         ]
