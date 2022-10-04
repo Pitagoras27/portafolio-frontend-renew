@@ -105,18 +105,374 @@ export const cardsSkillsBlog = [
     ],
     "intro": "In software development the priority is quality and speed, and the best way to reach this is learn Material UI, the best library of components for react",
     "image": "../src/assets/imgs/skill-cards/front1.png",
-    "content": []
+    "content": [
+      {
+        "type": "h4",
+        "node": "Primeros pasos en Material UI."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Trabajar con librerías y frameworks es muy beneficioso para solventar los tiempos de entrega, sin embargo requiere siempre del riguroso sometimiento a la curva de aprendizaje. El tiempo para adquirir los conocimientos depende de la complejidad de la librería, su documentación (dicho sea de paso, la ducomentación de MUI es simplemente excelente), el soporte y muchos otros factores. En el presente artículo presento un panorama general sobre como es trabajo con la librería estrella de React <strong>Material UI</strong> (desde mi punto de vista) , escrita tanto para desarrollos con JS plano como TS."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Como desarrollador mi primer acercamiento a esta librería fue algo intimidante, ver tantas secciones, tantos componentes y diferentes formas de personalizarlos era en definitiva un reto. Por otra parte los componentes están listos para llevarse a producción y lo hay de todo, sliders, tooltip, layouts (cabe destacar que la estructura está implementada con flexbox), tipografía, o componentes avanzados como tablas dinámicas, sliders, acordeones, de todo. A cualquiera le entran ganas de utilizarlo. Pero no es tan sencillo, si aún no se está tan familiarizado con las estructuras JSX, aconsejo para el desarrollador front react que está comenzando,intente soportar sus primeras aplicaciones con JSX y diseños personalizado, para conocer de primera mano como se trasmite la información desde el componente que contiene la lógica hasta su representación, pasando por las reglas sintácticas de JSX."
+      },
+      {
+        "type": "h4",
+        "node": "Configuración inicial"
+      },
+      {
+        "type": "p",
+        "node": "Primero la instalación de las dependencias:"
+      },
+      {
+        "type": "code",
+        "node": "yarn add @mui/material @emotion/react @emotion/styled -E"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Además de mui se instala <a href='https://github.com/emotion-js/emotionemotion'>emotion</a>, debido más que nada a la interoperabilidad que permite material para estilizar los componentes de múltiples maneras. Emotion proporciona una manera muy eficiente en cuanto a composición de estilos, además de admitir diferentes sintaxis con las que es posible llevar nuestro CSS al siguientes nivel."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Una vez realizada la instalación estamos listos para configurar el tema. La posibilidad que proporciona MUI para personalizar el aspecto visual de los componentes en general. Tópico muy importante que no podemos descartar en estos <strong>primeros pasos</strong>"
+          }
+        ]
+      },
+      {
+        "type": "h4",
+        "node": "Personalización del tema en MUI"
+      },
+      {
+        "type": "p",
+        "node": "Un tema en Material UI es simplemente un objeto que especifíca los valores de estilo tales como el color de fondo de los componentes, la opacidad, sombras, tamaños de fuentes, jerarquía de colores y más. Este objeto está configurado por defecto por lo que los nombres de propiedad son arbitrarios, si queremos modificar la apariencia de un componente tenemos que invocar este objeto y sobreescribir sus valores, y lo podemos hacer de forma global o de forma aislada y encapsulada en cada componente. Lo más recomendable es trabajar este objeto en su propio archivo:"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/mui-started/mui-2.png"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Para modificar este objeto primero debemos poder accederlo. MUI lo proporciona mediante React Context en el componente de <strong>ThemeProvider</strong>"
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/mui-started/mui-1.png"
+      },
+      {
+        "type": "p",
+        "node": "Con esta configuración inicial ThemeProvider ahora proporciona ese objeto si es que lo estamos configurando de forma global, si no es así proporcionará el objeto por defecto con el nombre theme desde cualquier componente descendiente en la jerarquía de componentes."
+      },
+      {
+        "type": "code",
+        "node": "import { createStyles, makeStyles} from '@material-ui/styles'"
+      },
+      {
+        "type": "p",
+        "node": "Según la documentación, createStyles realmente no hace nada, simplemente actúa como una función de identidad para pasar sus estilos. makeStyles, por otro lado, vincula una hoja de estilo a un componente de función utilizando un hook para ello."
+      },
+      {
+        "type": "p",
+        "node": "Ahora ya todo está listo para sobreescribir todas las propiedades del tema definidas por el propio MUI. Hay que hacer enfásis que las propiedades del objeto theme también pueden ser funciones por lo que para crear el nuevo estilo basta con pasarle los argumentos necesarios. A continuación vemos un ejemplo de sobrescritura del relleno infererior del componente Container:"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/mui-started/mui-3.png"
+      },
+      {
+        "type": "h4",
+        "node": "Conclusión"
+      },
+      {
+        "type": "p",
+        "node": "Como mencioné al inicio MUI es inmenso en este artículo sólo toco el contenido de forma muy superficial. Es la iniciativa de cada uno lo que nos lleva al siguiente nivel. Espero seguir editando y agregando topicos a este tema que por lejos está por agotarse y también lejos estoy de dejarlo de utilizar. Tal vez agregue temas más avanzado o reedite este post conforme vaya avanzando."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Algunos recursos útiles:</strong>"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://in-your-saas.github.io/material-ui-theme-editor/#text-buttons\">IYS Theme Editor</a></li><li><a href=\"https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=17ad99&secondary.color=ffb300&primary.text.color=000000&secondary.text.color=000000\">Material Design Color Theme</a></li><li><a href=\"https://rossbulat.medium.com/theming-with-material-ui-in-react-49cc767dfc8\">Artículo</a></li>"
+          }
+        ]
+      },
+    ]
   },
   {
     "id": 3,
-    "title": "Some stategies to test react apps",
-    "section": "testing",
+    "title": "Patrones en react",
+    "section": "react",
     "badge": [
-      "Testing Library"
+      "React Library, patterns"
     ],
-    "intro": "Everybody know that testing is an essential practice in software development that help us to build robust and hight quality app. To test front-end react apps uses testing library",
+    "intro": "Design patterns are solution templates to common software development problems. In React, also provide solution to solve common problems.",
     "image": "../src/assets/imgs/skill-cards/thumb-section.jpg",
-    "content": []
+    "content": [
+      {
+        "type": "h4",
+        "node": "Design patterns"
+      },
+      {
+        "type": "p",
+        "node": "A continuación, realizo un acercamiento a los principales patrones de diseño de componentes de React. Algunos de los patrones de diseño de React más son más populares porque son eficientes para preocupaciones transversales, el intercambio de datos globales (sin props dilling), la separación de responsabilidades como la lógica de estado compleja de otros componentes, la extensión de estilos, composición y otros."
+      },
+      
+      
+      
+      {
+        "type": "h4",
+        "node": "Hooks"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve: </strong><em>el encapsulamiento de la lógica de estado principalmente</em>"
+          } 
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Básicamente es una función JS con lógica aislada para ser reutilizable por otros componentes. Por convención la identificamos con el prefijo use. "
+      },
+      {
+        "type": "p",
+        "node": "Favorecen el mantenimiento de la aplicación al mantener la responsabilidad de cada parte dentro de funciones muy específicas"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Punto a favor del uso de hooks: </strong>"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li>Favorecen el mantenimiento de la aplicación al mantener la responsabilidad de cada parte dentro de funciones muy específicas</li><li>Es más fácil testear la aplicación ya que se encuentra delegada.</li><li>La abstracción del estado compartido entre componentes es más fácil de gestionar en contraposición con el uso de redux u otro patrón basado en clases como un Hight Order Component (HOC)</li>"
+          }
+        ]
+      },
+
+
+
+      {
+        "type": "h4",
+        "node": "Patrón de composición"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve: </strong><em>En muchas ocasiones algunos componentes requieren saber el estado o los cambios de estado de otros adyacentes o más lejanos en el árbol de componentes pero visibles en la misma interfaz. Como podría ser el caso de un carrito de compras que en todo momento se mantiene informado de los productos seleccionados para comprar, así como que se requiere contar con interacción mutua para actualizar o eliminar elementos del carrito. Sin este patrón seguramente utlizariamos redux (que en realidad implementa este patrón) o mediante el envío de props (props drilling). Problema que resuelve bien el patrón de composición.</em>"
+          } 
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Los elementos de la UI deben compartir un estado en común y al mismo tiempo dar la flexibilidad suficiente para modificar estructuras de la UI"
+      },
+      {
+        "type": "p",
+        "node": ""
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Al actualizar el valor a través de una variable de control de estado en cada renderizado, se ofrece un control de valor generado a través de un controlador de evento, en este caso el método “onChange”. El patrón <strong>Control Props</strong> es similar a esta implementación ofrecida por react."
+          }
+        ]
+      },
+
+
+
+
+      {
+        "type": "h4",
+        "node": "Patrón provider e inversión de control de estado"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve: </strong>Este patrón de diseño permite ofrecer al usuario (desarrollador), mayor control sobre la actualización de estado del componente, permitiéndole acceder al estado interno y aplicar difentes actualizaciones de estado"
+          } 
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "El patrón <strong>provider</strong> en React es un patrón avanzado que se utiliza para gestionar estados más complejos. Busca delegar el control de estado a una función reductora. Actualmente en aplicaciones de react más modernas se gestiona a partir de useReducer(reducer, initialState) que devuelve un array de 2 posiciones, siendo la primera la que contiene el estado actualizado; mientras que la segunda devuelve la función dispatch, encargada de actualizar ese estado."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "La actualización de estado se delega a una funcion reductora pura.  Como se menciona en el párrafo anterior react proporciona el hook incorporado: <code>useReduce()</code> que recibe como primer argumento la funcion reductora y como segundo el estado actual. Esta función devuelve un array de 2 posiciones, siendo el primero una variable con los últimos cambios realizados en el estado y en la segunda posición un función dispatch para actualizar ese estado:" 
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<code>const [ state, dispatch ] = useReducer(customReducer, state)</code>" 
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "La función dispatch recibe el action creator y éste por debajo invoca la función reductora, para que actualice el nuevo valor del estado."
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-1.png"
+      },
+      {
+        "type": "p",
+        "node": "Hasta ahora no hay en realidad nada distinto, se actualiza el estado pero en lugar de hacerlo con useState utilizamos useReducer. La actualización de estado está completamente en manos del hook con la logica que implica la llamada a useReducer; necesitamos aportar mayor flexibilidad e invertir el control de estado, para que sea responsabilidad del componente que utiliza este hook.  "
+      },
+
+
+
+
+      {
+        "type": "h4",
+        "node": "Patrón Control Props"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve: </strong>"
+          } 
+        ]
+      },
+      
+      
+      {
+        "type": "h4",
+        "node": "Render Props"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve: </strong>"
+          } 
+        ]
+      },
+      {
+        "type": "p",
+        "node": "El principal objetivo de este patrón es poder exponer todo lo que el usuario (otro desarrollador) puede utilizar, el patrón principalmente pide que se pueda ofrecer un estado inicial y una forma de re-establecer el estado a su forma original, pero de igual manera es posible exponer funciones y nuevas propiedades dentro de otros componentes más arriba en el árbol de componentes."
+      },
+      
+
+
+
+      {
+        "type": "h4",
+        "node": "Extensible Styles"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Que problema resuelve:</strong> <em>la necesidad de personalizar nuestros componentes de forma según el contexto en el que se encuentren. Por ejemplo un botón puede utilizarse para una acción de cancelar el envío de un formulario o por el contrario llevarlo a cabo, y sólo distinguirlo en la interfaz de usuario mediante los estilos; con un color de fondo que sea relevante o carente es este para la cancelación.</em>"
+          } 
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Por mucho, el patrón más sencillo de implementar, (junto con  <strong>state initializer</strong>). Algunos frameworks para componentes como MUI lo implementan en todos sus componentes. Este patrón proporciona la alternativas para modificar el aspecto visual de los componentes a través de props, donde podremos asignar tanto objetos, para crear reglas para estilos en línea o nombres de clase."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Las ventajas de este patrón es que permite la reutilización de componentes. Y cumple con el principio SOLID Open Close Principle- Donde la función en este caso el componente queda abierto a su extensión pero cerrado a su modificación"
+      },
+
+
+
+      {
+        "type": "h4",
+        "node": "Conclusión"
+      },
+      {
+        "type": "p",
+        "node": "Utilizar los patrones de diseño en react nos permiten reducir el tiempo de desarrollo ya que aprovechamos esquemas de solución a problemas aplicados y probados por muchos por la comunidad de desarrolladores de react y al mismo tiempo estamos mejorando la calidad del software en el proceso."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Enlaces de interés</strong>"
+            
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://medium.com/the-non-traditional-developer/styling-best-practices-using-react-c37b96b8be9c\">Best practice in react styling components</a></li><li><a href=\"https://www2.logrocket.com/react-performance-monitoring\">Debuging performance in react apps</a></li><li><a href=\"https://blog.logrocket.com/react-component-design-patterns-2022/\">Most common patterns in react 2022</a></li>"
+            
+          }
+        ]
+      },
+    ]
   },
   {
     "id": 4,
@@ -128,7 +484,145 @@ export const cardsSkillsBlog = [
     ],
     "intro": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
     "image": "../src/assets/imgs/skill-cards/es6yjs.png",
-    "content": []
+    "content": [
+      {
+        "type": "h4",
+        "node": "Fundamentos"
+      },
+      {
+        "type": "p",
+        "node": "En general el estudio de modelo de caja en css puede ser tedioso, no podemos simplemente comprenderlo si no acatamos primero la teoría. Detrás de todo el aspecto de cada uno de los elementos dentro de una página web tiene su base lógica explicativa, y detrás de ello comprensión del porque de ciertos comportamientos. En este artículo trato de dilusidar de formar general pero con intensión de ser conciso el modelo de caja para lograr sacar ventaja y hacer nuestro css más predecible."
+      },
+      {
+        "type": "p",
+        "node": "Hay que pensar en los elementos html de la interfaz en su forma más básica como meras cajas, formas de rectangulares con límites superior, inferior y lados, definido su ancho y alto por el tamaño de su contenido."
+      },
+      {
+        "type": "p",
+        "node": "Las cajas tienen un comportamiento diferente según su display, sus dimensiones establecidas (width y height) y el contenido que vive dentro de ellas. Pensemos primero que para hablar de un tamaño intrínsico  la anchura debe depender explícitamente del contenido y no de una anchura arbitraria definida con width"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/css/model-box-1.png"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "En esta imagen izquierda podemos visualizar claramente los efectos del modelo de caja cuando su anchura es fija y cuando la mantenemos por defecto (sin width) o con la propiedad <strong>min-width</strong>. Esta propiedad le dice a la caja que sea tan ancha como el ancho mínimo intrínseco de su contenido (la palabra \"awesome\"). Lo que permite que la caja se ajuste perfectamente a \"CSS is awesome\"."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Una vex más por las dudas, cuando la caja usa un tamaño arbitrario, hay un límite de la cantidad de contenido que se puede agregar antes de que se desborde de los límites establecidos. Estas dimensiones dan límites estrictos a todo lo que se encuentre adentro del elemento, que se respetará a menos que el contenido sea demasiado grande para la caja, en cuyo caso se producirá un desbordamiento visible."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong><em>Nota: </em></strong>Puedes definir cómo un elemento maneja el contenido de desbordamiento, utilizando la propiedad de overflow."
+          }
+        ]
+      },
+      {
+        "type": "h4",
+        "node": "De que está compuesto el modelo de caja:"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/css/model-box-2.png"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "El modelo de caja comienza por el área que ocupa el contenido, que como hemos visto anteriormente suele ser el área de tamaño más variable. A continuación contamos con el relleno o \"padding\" que rodea la caja de contenido. Si nuestra caja tiene reglas de desbordamiento establecidas, como <strong>overflow: auto</strong> o <strong>overflow: scroll</strong>, las barras de desplazamiento ocuparán este espacio también. Lo siguiente es la caja de borde ésta rodea la caja de padding y su espacio está ocupado por el valor del border. Y finalmente, nos encontramos con la caja de margen. Propiedades como el <strong>outline</strong> y <strong>box-shadow</strong> ocupan este espacio porque están pintadas por encima de los elementos, por lo que no afectan el tamaño de nuestra caja. Puedes tener un <strong>outline-width</strong> de 200px en nuestra caja y todo lo que está dentro e incluído la caja de borde sería exactamente del mismo tamaño."
+          }
+        ]
+      },
+      {
+        "type": "h4",
+        "node": "Algunas reglas del modelo de caja"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Márgenes:</strong> Un punto clave a la hora de entender los márgenes es el concepto de <strong>colapso del margen</strong>. Si tienes dos elementos cuyos márgenes se tocan, esos márgenes se combinan para convertirse en un sólo margen, cuyo tamaño es el del margen más grande."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Pensemos por ejemplo en dos elementos de párrafo, donde cada uno de ellos ocupa el ancho total de su contenedor. El primer párrafo, tiene un margen inferior de 30px y el segundo un margen superior de 20px. El colaso de sus márgenes hará que únicamente el margen con mayor cantidad de pixeles sea la distancia entre los 2 elementos y no sea la suma de estos. El concepto de colapso del margen es otra parte más del modelo de caja"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Bordes:</strong> Los bordes suman su width y height al total del modelo de caja a menos que se utilice el modelo de caja alternativo definido por la propiedad <strong>box-sizing: border-box</strong> que pasan de esa suma. Si se utiliza esta alternativa hay que agregar esta propiedad al selector html y heredar mediante cascada en los elementos descendientes."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/css/model-box-3.png"
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Padding:</strong> El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado al elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Propiedad display en elementos en línea y de bloque:</strong> El modelo de caja tiene un comportamiento distinto si se trata de elementos en línea o elementos de bloque. Para los elementos en línea no se respeta un ancho o altura fija; en cambio para los elementos de bloque si. Los elementos de bloque provocan un salto de línea los en linea no. Si embargo pordemos utilizar la propiedad especial: <strong>display: inline-block</strong> para agregar un comportamiento más flexible a los elementos en linea"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "La propiedad inline-block hace que el elemeto de línea se comporte como uno de bloque, respeta así las definiciones para ancho y alto. El relleno, el margen y el borde mantiene alejado a los otro elementos de la caja y lo más importante no genera un salto en línea entre los elementos colindantes."
+      },
+      {
+        "type": "h4",
+        "node": "Conclusión"
+      },
+      {
+        "type": "p",
+        "node": "El modelo de caja puede ser complicado de comprender si no se practica lo suficiente, hay muchos factores que afectan su correcto funcionamiento, desde la hoja de estilo por defecto del navegador hasta las propiedades css que lo controlan. Sin olvidar las variaciones de comportamiento ante el tamaño intrínseco o arbitrario de la caja de contenido o del tipo inline o block del elemento que tratamos. Alcanzar a generar un css predecible toma tiempo pero una vez comprendido mucho aspectos generales del diseño web son despejados."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Links de interés</strong>"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://web.dev/learn/css/box-model/\">Web Dev Box Model</a></li><li><a href=\"https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model\">MDN explica a detalle el modelo de caja</a></li><li><a href=\"https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\">Ancho de caja en CSS Tricks</a></li>"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 5,
@@ -290,6 +784,14 @@ export const cardsSkillsBlog = [
       {
         "type": "code",
         "node": "transformIgnorePatterns: []"
+      },
+      {
+        "type": "h4",
+        "node": "Conclusión"
+      },
+      {
+        "type": "p",
+        "node": "En mi reciente experiencia al trabajar con Vite, en lo que a pruebas unitarias se refiere puede ser costoso configurar desde cero el set, hay que tener en cuenta que esta aplicación de utilidad esta hecha para ser personalizada a la medida y muchas configuraciones no vienen escritas por defecto; hay que investigar y muchas otras veces trabajar con prueba y errror, por tanto es menester contar con un post relacionado que nos ayude a realizar esta tarea de forma más clara y explicita. Sin más tengo que decir que este post regularmente lo estaré actualizando con nueva información relacionada a la configuración y optimización de las pruebas unitarias dentro de Vite."
       }
 
     ]
@@ -303,7 +805,110 @@ export const cardsSkillsBlog = [
     ],
     "intro": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interact app in front-end",
     "image": "../src/assets/imgs/skill-cards/fullstack.png",
-    "content": []
+    "content": [
+      {
+        "type": "p",
+        "node": "En el mundo de desarrollo web las APIs son esesnciales para enriquecer las aplicaciónes, éstas nutren las interfaces con información interactiva para el usuario final. Permiten entre un mundo de posibilidades actualizar, borrar información o crear posts para personalizar un módulo de usuario, o afianzar la seguridad de la aplicación al gestionar la autenticación de algún usuario. El backend como el frontend puede manejarse con distintas infraestructuras y prácticamente aseguran lo mismo."
+      },
+      {
+        "type": "h4",
+        "node": "Códigos de estado establecidos de forma correcta"
+      },
+      {
+        "type": "p",
+        "node": "Cada que el cliente (solicitante) envía una petición al servidor, es procesado por el mismo para luego devolver los recursos relevantes junto con los encabezados HTTP"
+      },
+      {
+        "type": "p",
+        "node": "Los códigos de estado de HTTP se entregan a tu navegador en el encabezado de HTTP. Aunque los códigos de estado se devuelven cada vez que el navegador solicita una página web o un recurso, la mayoría de las veces no los ves."
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><strong>100s: </strong>Códigos informativos que indican que la solicitud iniciada por el navegador continúa.</li><li><strong>200s: </strong>Los códigos con éxito regresaron cuando la solicitud del navegador fue recibida, entendida y procesada por el servidor.</li><li><strong>300s: </strong>Códigos de redireccionamiento devueltos cuando un nuevo recurso ha sido sustituido por el recurso solicitado.</li><li><strong>400s: </strong>Códigos de error del cliente que indican que hubo un problema con la solicitud.</li><li><strong>500s: </strong>Códigos de error del servidor que indican que la solicitud fue aceptada, pero que un error en el servidor impidió que se cumpliera.</li>",
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "node": "Dentro de cada una de estas tipos, existe una variedad de códigos de servidor y pueden ser devueltos por el servidor. Cada código individual tiene un significado específico y único, que cubriremos en la lista más detallada a continuación."
+      },
+      {
+        "type": "p",
+        "node": "Los códigos de estado HTTP se dividen en 5 «tipos». Se trata de agrupaciones de respuestas que tienen significados similares o relacionados. Saber qué son puede ayudarte a determinar rápidamente la sustancia general de un código de estado antes de que vayas a buscar su significado específico."
+      },
+      {
+        "type": "p",
+        "node": "Finalmente una vez comprendido la operación realizada, hay que devolver el resultado adecuado segun sea decida la lógica. A continuación los tipos de respuesta que puede mandar el servidor al cliente al ejecutar una acción de eliminado."
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/fullstack/rest-back-1.png"
+      },
+      {
+        "type": "h4",
+        "node": "Es completamente necesario contar con un API Documentada"
+      },
+      {
+        "type": "p",
+        "node": "Cuando un desarrollador piensa en la documentación de la API, lo más probable es que visualice una referencia completa. Este es solo un tipo de documentación, pero es importante. Aquí encontrará una lista de puntos finales de la API, qué campos de solicitud y respuesta están disponibles y cómo autenticarse con la API. Todas estas son partes muy importantes de la integración con su API."
+      },
+      {
+        "type": "p",
+        "node": "El mejor lugar para comenzar a generar una referencia de API de forma automatizada después de configurar, son OpenAPI, Swagger o RAML. Estas aplicaciones permiten describir los endpoints de la API, configurar encabezados, realizar procesos de autenticación y otros mecanismos de interacción"
+      },
+      {
+        "type": "p",
+        "node": "En su forma más simple, una buena documentación de API puede mostrar respuestas de ejemplo. Los datos que se devuelven de una API son al menos tan importantes como la forma en que realiza las llamadas."
+      },
+      {
+        "type": "p",
+        "node": "Cuando un desarrollador puede ver qué esperar, puede predecir mejor cómo podría integrarse con una API sin hacer llamadas en vivo. Dicho esto, mostrar los documentos API puede ir más allá del contenido estático. La documentación interactiva es una opción que incluso permite ver respuestas simuladas o en vivo p generar codigo fuente en lenguajes populares. "
+      },
+      {
+        "type": "h4",
+        "node": "Lo aprendido al gestionar conexiones en un backend"
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li>Ya es un buen de tiempo que se pueden responder solicitudes mediante estructuras JSON sin instalar librerías de terceros. Ya esta incorporado en express <code>express.json()</code></li><li>Las acciones GET, PUT, DELETE, HEAD y PATCH deben ser idempotentes. La misma solicitud repetida en el mismo recurso debe dar como resultado el mismo estado. Por ejemplo, enviar varias solicitudes DELETE para el mismo URI debe tener el mismo efecto, aunque el código de estado HTTP en los mensajes de respuesta sea diferente. La primera solicitud DELETE podría devolver el código de estado 204 (sin contenido), mientras que una solicitud DELETE posterior podría devolver el código de estado 404 (no encontrado) </li><li>El método PUT es idempotente en HTTP lo que significa que producirá el mismo resultado si se ejecuta varias veces. El método POST no es idempotente, ya que si se ejecuta varias veces está creando varios elementos.</li><li>La diferencia entre el método HTTP PATCH y PUT es que el primero aplica modificaciones parciales a un recurso, mientras que el segundo únicamente permite reemplazar completamente un documento.</li><li>URL (Uniform Resource Locator o “Localizador uniforme de recursos”) está formada por un conjunto de caracteres, que sigue un estándar, y que especifica que un determinado recurso digital está identificado y disponible y permite localizarlo. Todos los URLs son URIs (pero no todos los URIs son URLs).</li><li>Admitir almacenamiento en caché del lado del cliente es otra manera de controlar la persistencia de datos</li><li>Utilizar endpoints anidados para mostrar pantescos semánticos entre la jerarquía. ( TRES NIVELES COMO MÁXIMO )</li>",
+          }
+        ]
+      },
+      {
+        "type": "h4",
+        "node": "Conclusión:"
+      },
+      {
+        "type": "p",
+        "node": "En el presente artículo prentendo hablar de forma general de algunas de las buenas prácticas y su porqué cuando las implementamos en nuestras API. Documentación, mensajes de respuesta adecuados a su codigo de estátus son sólo una pequeña parte del total de recomendaciónes que se aconsejan. Por tanto este artículo se muy posiblemente se fragmentará en otros más especificos que aborden el tema inmenso que abarca la creación de una API RESTful."
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Enlaces de interés:</strong>"
+          }
+
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://stoplight.io/api-documentation-guide\">Guía API documentatión y mejores prácticas</a></li><li><a href=\"https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/\">Freecodecamp Mejores prácticas API</a></li><li><a href=\"https://learn.microsoft.com/es-es/azure/architecture/best-practices/api-implementation\">API Imprementation</a></li><li><a href=\"https://kinsta.com/es/blog/codigos-de-estado-de-http/\">Codigos de estado HTTP</a></li><li><a href=\"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes\">Wikipedia: List of HTTP status codes.</a></li><li><a href=\"https://www.openapis.org/\">OpenAPI specification</a></li>"
+          }
+
+        ]
+      }
+    ]
   },
   {
     "id": 7,
@@ -312,28 +917,77 @@ export const cardsSkillsBlog = [
     "badge": [
       "WorkFlow"
     ],
-    "intro": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with branchs and colaborative team",
+    "intro": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with better commits and another tips",
     "image": "../src/assets/imgs/skill-cards/git.png",
     "content": [
       { 
         "type": "h4",
-        "node": "Style commits"
+        "node": "Git Commit Mejores Prácticas"
       },
       { 
         "type": "p",
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Method names:</strong> Naming things is one of the hard problstrongs in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that\'s an inaccurate method name. And probably a misleading function."
+            "node": "<strong>Commits relacionado a cambios</strong>"
+          }
+        ],
+      },
+      { 
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "Un commit debe ser un contenedor para los cambios relacionados. Por ejemplo, corregir dos errores diferentes debería producir dos confirmaciones separadas. Las confirmaciones pequeñas facilitan que otros desarrolladores comprendan los cambios y los reviertan si algo salió mal. Con herramientas como el <strong>staging area</strong> y la capacidad de organizar sólo partes de un archivo, Git facilita la creación de commits muy granulares."
+          },
+        ]
+      },
+      { 
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Commits constantes</strong>"
+          }
+        ],
+      },
+      { 
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Realizar commits de forma regular</strong> nos permite compartir nuestro código con mayor frecuencia con otros. De esa forma, es más fácil para todos integrar los cambios con regularidad y evitar conflictos de <strong>merge</strong>. Tener commits grandes y compartirlos con poca frecuencia, por el contrario, dificulta la resolución de conflictos."
+          },
+        ]
+      },
+      { 
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>No realizar commits con trabajo a medias</strong>"
           }
         ],
       },
       {
         "type": "p",
-        "node" : [
+        "node" : "Debemos commitear sólo cuando tenemos completo el aspecto lógico de la funcionalidad o fix. Si tenemos la tentación de commitear sólo porque tenemos la necesidad de respaldar nuestro trabajo, creemos una rama o guardemos los cambios en un stash."
+      },
+      { 
+        "type": "p",
+        "node": [
           {
             "type": "nested",
-            "node": "<strong>Variable names:</strong> foo or bar are probably not useful names for data structures. <strong>e</strong> is similarly not useful when compared to exception. Be as verbose as you need (depending on the language). Expressive variable names make it easier to understand code when we have to revisit it later."
+            "node": "<strong>Realizar commit después de probar que su funcionalidad es correcta</strong>"
+          }
+        ],
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "A menos que no estemos trabajando de forma colaborativa, no importa subir cambios sin testear, pero como en el desarrollo profesional esto no es una realidad hay que garantizar que el código creado está libre de errores y así evitar atascaderos en otras zonas del desarrollo."
           }
         ]
       },
@@ -342,7 +996,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Function length:</strong> My rule of thumb is that a function should be less than 20 or so lines. If I see a method above 50, I feel it\'s best that it be cut into smaller pieces."
+            "node": "<strong>Escribe buenos mensajes de commit</strong>"
           }
         ]
       },
@@ -351,7 +1005,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Class length:</strong> I think classes should be under about 300 lines total and ideally less than 100. It\'s likely that large classes can be split into separate objects, which makes it easier to understand what the class is supposed to do."
+            "node": "El mensaje deberá comenzar con un breve resumen de nuestros cambios (hasta 50 caracteres como guía, es recomendado). El cuerpo deberá estar separado por una línea en blanco. El cuerpo del mensaje debe proporcionar respuestas detalladas a las siguientes preguntas: – ¿Cuál fue la motivación para el cambio? – ¿En qué se diferencia de la implementación anterior? Usar el tiempo presente imperativo (\"cambiar\", no \"cambiado\" o \"cambios\") podemos ser coherentes con los mensajes generados a partir de comandos como <strong>git merge</strong>. Tener una copia de seguridad de nuestros archivos en un servidor remoto es un buen efecto secundario de tener un sistema de control de versiones, pero para nada debe ser la norma utilizarlo con esta finalidad."
           }
         ]
       },
@@ -360,7 +1014,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>File length:</strong> For Python files, I think around 1000 lines of code is about the most we should have in one file. Anything above that is a good sign that it should be split into smaller, more focused files. As the size of a file goes up, discoverability goes down."
+            "node": "<strong>Utilizar ramas</strong>"
           }
         ]
       },
@@ -369,7 +1023,20 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Docstrings:</strong> For complex methods or those with longer lists of arguments, is there a docstring explaining what each of the arguments does, if it\'s not obvious?"
+            "node": "La ramificación es una de las características más poderosas de Git, y esto no es por accidente: la ramificación rápida y fácil fue un requisito central desde el primer día. Las ramas son la herramienta perfecta para ayudarte a evitar mezclar diferentes líneas de desarrollo. Debemos usar ramas de manera extensiva en tus flujos de trabajo de desarrollo: para nuevas funciones, correcciones de errores, ideas..."
+          }
+        ]
+      },
+      {
+        "type": "h4",
+        "node": "Establecer reglas de formato (sugerencias)" 
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li>Commit en mayúsculas, corto (50 caracteres o menos)</li><li>Texto explicativo más detallado, si es necesario. Envuélvelo en alrededor de 72 caracteres. En algunos contextos, la primera línea se trata como el asunto de un correo electrónico y el resto del texto como el cuerpo. La línea en blanco que separa el resumen del cuerpo es fundamental</li><li>Siempre dejar la segunda línea en blanco</li><li>Escribir el mensaje de confirmación en imperativo: \"Fix bug\" y no \"Fixed bug\" o \"Fixes bug\". Esta convención coincide con los mensajes de confirmación generados por comandos como git merge y git revert.</li>"
           }
         ]
       },
@@ -378,7 +1045,32 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Commented code:</strong> Good idea to rstrongove any commented out lines." 
+            "node": "<strong>Ejemplos</strong>"
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/git/git-1.png"
+      },
+      {
+        "type": "img",
+        "node": "/src/assets/imgs/skill-cards/git/git-2.png"
+      },
+      {
+        "type": "h4",
+        "node": "Otros tips" 
+      },
+      {
+        "type": "p",
+        "node": "Crear alias para los comandos usados más comunes puede ayudarnos a ahorrar valiosos minutos todos los días, acciones repetitivas en comandos automátizados" 
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li>st = status</li><li>ci = commit</li><li>br = branch</li><li>co = checkout</li><li>ds = diff --staged</li><li>changes = log -n1 -p --format=fuller</li><li>amend = commit --amend -C HEAD</li><li>undo = clean -f -d</li><li>undoci = reset HEAD~1</li><li>unstage = reset HEAD --</li><li>lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit</li>"
           }
         ]
       },
@@ -387,19 +1079,36 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Number of method arguments:</strong> For the methods and functions, do they have 3 or fewer arguments? Greater than 3 is probably a sign that it could be grouped in a different way."
+            "node": "<strong>Nota: </strong>Este recurso fue extraído del gist de <a href=\"https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60\">LuisMTS</a> colega desarrollador, todos los créditos para él" 
           }
         ]
+      },
+      {
+        "type": "h4",
+        "node": "Conclusión:" 
+      },
+      {
+        "type": "p",
+        "node": "El sistema de control de versiones de GIT es fabuloso y también inmenso como lo es nuestro mundo de ingeniería, es también uno de nuestros mejores aliados y la mejor herramienta colaborativa para el desarrollo de próyectos más seguros y ágiles. Podemos estar seguros que entregando nuestra plena confianza a sus mejores prácticas nos facilitará el desarrollo y la calidad que siempre buscamos" 
       },
       {
         "type": "p",
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Readability:</strong> Is the code easy to understand?, Do I have to pause frequently during the review to decipher it?"
+            "node": "<strong>Algunos recursos útiles:</strong>"
           }
         ]
-      }
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li>La guía definitiva<a href=\"https://acompiler.com/git-best-practices/#tve-jump-17738882369\"></a></li><li><a href=\"https://github.com/\">Github Home</a></li><li><a href=\"http://yourfirstpr.github.io/\">Your First Pull Request</a></li><li><a href=\"http://yourfirstpr.github.io/\">Formateo básico según Github</a></li><li><a href=\"https://learngitbranching.js.org/?locale=es_ES\">Learn Git Branching</a></li>"
+          }
+        ]
+      },
     ]
   },
   {
