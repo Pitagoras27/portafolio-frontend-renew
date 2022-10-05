@@ -31,11 +31,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Para algunos, me incluyo, el implementar TS puede resultar dificultoso y más si es que la mayor parte de nuestro desarrollos han estado gestionados con JS plano. Pero como buen desarrollador debemos saber que es nuestro camino es la mejora constante y sabemos que somos mejores cuando nuestro flujo de trabajo es beneficioso en cuanto a tiempo la escalabilidad, legibilidad y mantenimiento nos dejan descansar como la gente normal"
+        "node": "Para algunos, me incluyo, implementar Typescript puede resultar difícil; más si es que la mayor parte de nuestro desarrollos han estado gestionados con el Javascript de toda la vida, es decir dinámico y no tipado. Pero como buenos desarrolladores debemos saber que nuestro camino es la mejora constante y sabemos que somos mejores cuando nuestro flujo de trabajo es beneficioso en cuanto a tiempo, escalabilidad, legibilidad y mantenimiento."
       },
       {
         "type": "p",
-        "node": "A continuación voy a tratar de abordar el panorama general al que nos iremos enfrentando al decidir trabajar con TS. Y por ello empezaré hablando de las ventajas, aunque tampoco dejaré de hablar de las dificultades y dolores de cabeza a los que nos enfrentaremos"
+        "node": "A continuación, voy a tratar de abordar el panorama general al que nos iremos enfrentando al decidir trabajar con TS. Y por ello empezaré hablando de las ventajas, aunque tampoco dejaré de hablar de las dificultades y dolores de cabeza a los que nos enfrentaremos."
       },
       {
         "type": "h4",
@@ -43,19 +43,19 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Hoy en día las más respetables librerías y frameworks ( MaterialUI, Redux, React Router, Node, etc ) implementan TS, lo que nos ayuda mejorar la legibilidad de las funciones y propiedades tipadas al momento de utilizarlas. ¿Qué significa esto? que en caso de tener dudar del tipo de argumentos o salida de una función incorporada no tenemos que ir a la definición de la función para poder implementarla correctamente."
+        "node": "Hoy en día las más respetables librerías y frameworks ( MaterialUI, Redux, React Router, Node, etc ) implementan TS, lo que nos ayuda mejorar la legibilidad de las funciones y propiedades tipadas al momento de utilizarlas. ¿Qué significa esto? que en caso de tener dudas del tipo de argumentos o salida de una función incorporada no tenemos que ir a su definición para poder implementarla correctamente, el intellisense de IDE, nos ayudará en esta tarea. Podemos ver en tiempo de desarrollo la firma, usar el autocompletado automático, visualizar errores de transpilación, entre otras cosas."
       },
       {
         "type": "p",
-        "node": "Y hablando de popularidad no hay que dejar de mencionar que es precisamente la amplia difusión lo que deja ver signos de éxito, en el desarrollo tecnológico no será la regla pero si la ventaja mientras viva. El punto es que la popularidad es soporte por la comunidad, lo que a su vez hace accesible herramientas cada vez más poderosas, como lo es el maravilloso uso del intellisense, en este caso de Visual Studio Code. Con su intellisence tenemos la predición y el autocompletado automático de los tipos en tiempo de desarrollo, sin olvidar la detección de errores."
+        "node": "Y hablando de popularidad no hay que dejar de mencionar que es precisamente la amplia difusión lo que deja ver signos de éxito. En el desarrollo tecnológico no será la regla, pero si una ventaja en cuanto a soporte se refiere. El punto es que la popularidad proporciona soporte por una comunidad cada vez más amplia, lo que a su vez nos da acceso a herramientas cada vez más poderosas, como lo es el ventajoso uso del intellisense."
       },
       {
         "type": "p",
-        "node": "Los desarrollos son entes organicos digitales por lo que podemos pensar que tienen un ciclo de vida. En este sentido la refactorización es un paso necesario en todo desarrollo. Bueno pues conocer los tipos exactos y dónde cambiarlos, facilita en gran medida esta parte del desarrollo"
+        "node": "Los desarrollos son entes orgánicos digitales. Podemos pensar en ellos como entidades con un ciclo de vida propio, desde el desarrollo de las ideas hasta la entrega del producto, con un rendimiento adecuado a las necesidades de cliente. En este sentido tenemos que ver la refactorización de código como una etapa más del desarrollo y que las herramientas que nos ayuden a facilitar esta tarea siempre serán bien recibidad. Así es como encontramos una ventaja más al utilizar TS, ya que este es especialmente relevante en cuanto al acceso a tipos de las variables que utilizamos."
       },
       {
         "type": "p",
-        "node": "La mantenibilidad mejorará en medida que aprendamos a manejar todas las posibilidades de esta herramienta. Usar types o interfaces, enums y genéricos ayuda a consolidar la estructura y evitar malas practicas como el temido acoplamiento y la baja cohesión de la aplicación"
+        "node": "La mantenibilidad mejorará en medida que aprendamos a manejar todas las posibilidades de esta herramienta. Usar types o interfaces, enums y genéricos ayuda a consolidar la estructura y evitar malas prácticas como el temido acoplamiento y la baja cohesión de la aplicación."
       },
       {
         "type": "h4",
@@ -70,14 +70,14 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Curva de aprendizaje</strong> Aparentemente su aprendizaje puede ser sencillo, pero nada más lejos de la realidad. El set de herramientas de TS es amplio y en muchas ocasiones los mensajes de error son cripticos y dificiles de leer. Hay que tener paciencia y perceverancia, practicar lo fácil pero despejar las dudas. Si evidentemente estamos en desarrollo de una aplicación, basada en tiempos, como lo son todas, la curva de aprendizaje será la principal desventaja"
+            "node": "<strong>Curva de aprendizaje</strong> Aparentemente su aprendizaje puede ser sencillo, pero nada más lejos de la realidad. El set de herramientas de TS es amplio y en muchas ocasiones los mensajes de error son crípticos y difíciles de leer. Hay que tener paciencia y perceverancia, practicar lo fácil pero despejar las dudas. Si evidentemente estamos en desarrollo de una aplicación, basada en tiempos, como lo es con todas, la curva de aprendizaje será la principal desventaja."
           }
         ],
         "type": "p",
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Pruebas unitarias:</strong> Por si mismas las pruebas unitarias tienen una curva de aprendizaje, su desarrollo también es particuar y acatado a ciertas normas. Hacerlo con TS implica mayor atención al detalle. Sin embargo desde mi punto de vista representa un problema cuando tenemos que acatar cierto porcentaje de covertura, bajar de éste puede deberse a la complejidad de implementarlas con TS"
+            "node": "<strong>Pruebas unitarias:</strong> Por si mismas las pruebas unitarias tienen una curva de aprendizaje, su desarrollo también es particular y acatado a ciertas normas. Hacerlo con TS implica mayor atención al detalle. Sin embargo, desde mi punto de vista representa un problema cuando tenemos que acatar cierto porcentaje de cobertura, trabajarlas desde TS puede aumentar la complejidad de implementarlas."
           }
         ],
       },
@@ -87,11 +87,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Typescript provee un sistema opcional de tipos (Type system) que permite escribir código escalable. Es decir, permite escribir código fácil de depurar y mantener. Lo que da un mejor sentido en proyectos medianos o grandes. Siempre se va agradecer que un proyectos heredables se haya escrito con la mayor de las entregas posibles y por lo que entiendo, typescript te ayuda a eso "
+        "node": "Typescript provee un sistema opcional de tipos (Type system) que permite escribir código escalable. Es decir, permite escribir código fácil de depurar y mantener. Lo que da un mejor sentido en proyectos medianos o grandes. Siempre se va agradecer que un proyecto heredado se haya escrito con la mayor de las entregas posibles y por lo que entiendo, typescript te ayuda a eso."
       },
       {
         "type": "p",
-        "node": "En cuanto a las partes duras o dificiles, aceptarlo y solventarlo nos hará más resilentes y poderosos." 
+        "node": "En cuanto a las partes duras o difíciles, aceptarlo y solventarlo nos hará a ser más resilentes y poderosos." 
       }
     ]
   },
@@ -115,13 +115,13 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Trabajar con librerías y frameworks es muy beneficioso para solventar los tiempos de entrega, sin embargo requiere siempre del riguroso sometimiento a la curva de aprendizaje. El tiempo para adquirir los conocimientos depende de la complejidad de la librería, su documentación (dicho sea de paso, la ducomentación de MUI es simplemente excelente), el soporte y muchos otros factores. En el presente artículo presento un panorama general sobre como es trabajo con la librería estrella de React <strong>Material UI</strong> (desde mi punto de vista) , escrita tanto para desarrollos con JS plano como TS."
+            "node": "Trabajar con librerías y frameworks es muy beneficioso para solventar los tiempos de entrega, sin embargo, requiere siempre del riguroso sometimiento a la curva de aprendizaje. El tiempo para adquirir los conocimientos depende de la complejidad de la librería, su documentación (dicho sea de paso, la ducumentación de MUI es simplemente excelente), el soporte y muchos otros factores. En el presente artículo presento un panorama general sobre cómo es trabajar con la librería estrella de React <strong>Material UI</strong> (desde mi punto de vista) , escrita tanto para desarrollos con JS plano como TS."
           }
         ]
       },
       {
         "type": "p",
-        "node": "Como desarrollador mi primer acercamiento a esta librería fue algo intimidante, ver tantas secciones, tantos componentes y diferentes formas de personalizarlos era en definitiva un reto. Por otra parte los componentes están listos para llevarse a producción y lo hay de todo, sliders, tooltip, layouts (cabe destacar que la estructura está implementada con flexbox), tipografía, o componentes avanzados como tablas dinámicas, sliders, acordeones, de todo. A cualquiera le entran ganas de utilizarlo. Pero no es tan sencillo, si aún no se está tan familiarizado con las estructuras JSX, aconsejo para el desarrollador front react que está comenzando,intente soportar sus primeras aplicaciones con JSX y diseños personalizado, para conocer de primera mano como se trasmite la información desde el componente que contiene la lógica hasta su representación, pasando por las reglas sintácticas de JSX."
+        "node": "Como desarrollador mi primer acercamiento a esta librería fue algo intimidante, ver tantas secciones, tantos componentes y diferentes formas de personalizarlos era en definitiva un reto. Por otra parte, los componentes están listos para llevarse a producción y lo hay de todo, sliders, tooltip, layouts (cabe destacar que la estructura está implementada con flexbox), tipografía, o componentes avanzados como tablas dinámicas, sliders, acordeones, de todo. A cualquiera le entran ganas de utilizarlo. Pero no es tan sencillo, si aún no se está tan familiarizado con las estructuras JSX, aconsejo para el desarrollador front react que está comenzando, intente soportar sus primeras aplicaciones con JSX y diseños personalizado, para conocer de primera mano cómo se trasmite la información desde el componente que contiene la lógica hasta su representación, pasando por las reglas sintácticas de JSX."
       },
       {
         "type": "h4",
@@ -140,7 +140,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Además de mui se instala <a href='https://github.com/emotion-js/emotionemotion'>emotion</a>, debido más que nada a la interoperabilidad que permite material para estilizar los componentes de múltiples maneras. Emotion proporciona una manera muy eficiente en cuanto a composición de estilos, además de admitir diferentes sintaxis con las que es posible llevar nuestro CSS al siguientes nivel."
+            "node": "Además de mui se instala <a href='https://github.com/emotion-js/emotionemotion'>emotion</a>, debido más que nada a la interoperabilidad que permite material para estilizar los componentes de múltiples maneras. Emotion proporciona una manera muy eficiente en cuanto a composición de estilos, además de admitir diferentes sintaxis con las que es posible llevar nuestro CSS al siguiente nivel."
           }
         ]
       },
@@ -159,7 +159,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Un tema en Material UI es simplemente un objeto que especifíca los valores de estilo tales como el color de fondo de los componentes, la opacidad, sombras, tamaños de fuentes, jerarquía de colores y más. Este objeto está configurado por defecto por lo que los nombres de propiedad son arbitrarios, si queremos modificar la apariencia de un componente tenemos que invocar este objeto y sobreescribir sus valores, y lo podemos hacer de forma global o de forma aislada y encapsulada en cada componente. Lo más recomendable es trabajar este objeto en su propio archivo:"
+        "node": "Un tema en Material UI es simplemente un objeto que específica los valores de estilo tales como el color de fondo de los componentes, la opacidad, sombras, tamaños de fuentes, jerarquía de colores y más. Este objeto está configurado por defecto por lo que los nombres de propiedad son arbitrarios, si queremos modificar la apariencia de un componente tenemos que invocar este objeto y sobrescribir sus valores, y lo podemos hacer de forma global o de forma aislada y encapsulada en cada componente. Lo más recomendable es trabajar este objeto en su propio archivo:"
       },
       {
         "type": "img",
@@ -192,7 +192,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Ahora ya todo está listo para sobreescribir todas las propiedades del tema definidas por el propio MUI. Hay que hacer enfásis que las propiedades del objeto theme también pueden ser funciones por lo que para crear el nuevo estilo basta con pasarle los argumentos necesarios. A continuación vemos un ejemplo de sobrescritura del relleno infererior del componente Container:"
+        "node": "Ahora ya todo está listo para sobrescribir todas las propiedades del tema definidas por el propio MUI. Hay que hacer énfasis que las propiedades del objeto theme también pueden ser funciones por lo que para crear el nuevo estilo basta con pasarle los argumentos necesarios. A continuación, vemos un ejemplo de sobrescritura del relleno inferior del componente Container:"
       },
       {
         "type": "img",
@@ -204,7 +204,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Como mencioné al inicio MUI es inmenso en este artículo sólo toco el contenido de forma muy superficial. Es la iniciativa de cada uno lo que nos lleva al siguiente nivel. Espero seguir editando y agregando topicos a este tema que por lejos está por agotarse y también lejos estoy de dejarlo de utilizar. Tal vez agregue temas más avanzado o reedite este post conforme vaya avanzando."
+        "node": "Como mencioné al inicio MUI es inmenso en este artículo sólo toco el contenido de forma muy superficial. Es la iniciativa de cada uno lo que nos lleva al siguiente nivel. Espero seguir editando y agregando tópicos a este tema que por lejos está por agotarse y también lejos estoy de dejarlo de utilizar. Tal vez agregue temas más avanzado o reedite este post conforme vaya avanzando."
       },
       {
         "type": "p",
@@ -256,7 +256,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong><em>el encapsulamiento de la lógica de estado principalmente</em>"
+            "node": "<strong>Qué problema resuelve: </strong><em>el encapsulamiento de la lógica de estado principalmente</em>"
           } 
         ]
       },
@@ -288,7 +288,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Básicamente mientras tengamos lógica de estado es posible aislar su lógica en un hook. A continuación un ejemplo de un hook \"toogle\" y su implementación desde el componente:"
+        "node": "Básicamente mientras tengamos lógica de estado es posible aislar su lógica en un hook. A continuación, un ejemplo de un hook \"toogle\" y su implementación desde el componente:"
       },
       {
         "type": "img",
@@ -310,13 +310,13 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong><em>En muchas ocasiones algunos componentes requieren saber el estado o los cambios de estado de otros adyacentes o más lejanos en el árbol de componentes pero visibles en la misma interfaz. Este patrón aprovecha al máximo la composición para que podamos implementar componentes muy flexibles que comparten un estado común pero haciendo que se comuniquen internamente sin necesidad de pasar props (props drilling).</em>"
+            "node": "<strong>Que problema resuelve: </strong><em>En muchas ocasiones algunos componentes requieren saber el estado o los cambios de estado de otros adyacentes o más lejanos en el árbol de componentes pero visibles en la misma interfaz. Este patrón aprovecha al máximo la composición para que podamos implementar componentes muy flexibles que comparten un estado común, pero haciendo que se comuniquen internamente sin necesidad de pasar props (props drilling).</em>"
           } 
         ]
       },
       {
         "type": "p",
-        "node": "Los elementos de la UI deben compartir un estado en común y al mismo tiempo dar la flexibilidad suficiente para modificar estructuras de la UI. Este patrón nos permite manejar la información desde un componente padre y tener control total sobre los componentes hijos. A continuación el aspecto que tiene el componente proveedor y sus hijos consumidores"
+        "node": "Los elementos de la UI deben compartir un estado en común y al mismo tiempo dar la flexibilidad suficiente para modificar estructuras de la UI. Este patrón nos permite manejar la información desde un componente padre y tener control total sobre los componentes hijos. A continuación, el aspecto que tiene el componente proveedor y sus hijos consumidores"
       },
       {
         "type": "img",
@@ -324,7 +324,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "El componente ProductCard, es el encargado de proveer información a todos sus descendientes. Éste a travpes de API Context devuelve los valores esperados por sus componentes hijos"
+        "node": "El componente ProductCard, es el encargado de proveer información a todos sus descendientes. Éste a través de API Context devuelve los valores esperados por sus componentes hijos"
       },
       {
         "type": "img",
@@ -335,7 +335,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "El componente consumidor, en este caso el componente <strong>ProductImage</strong> se conecta con a su proveedor a través de <code>useContext()</code> y mediante destructuración se accede a los valores requeridos"
+            "node": "El componente consumidor, en este caso el componente <strong>ProductImage</strong> se conecta con a su proveedor a través de <code>useContext()</code> y mediante desestructuración se accede a los valores requeridos"
           }
         ]
       },
@@ -348,7 +348,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Omito el código para los componentes <strong><ProductTitle /></strong> y <strong><ProductBottons /></strong> debido a que el procedimiento para acceder a los datos de su provedor es el mismo. Es decir se conectan mediante <code>useContext()</code> y utilizan los valores como es requerido. Como podemos ver este patrón nos abre una gran variedad de posibilidades para construir componentes reutilizables e incluso librerías personalizadas (así está por ejemplo <strong>React Router</strong>) con la máxima flexibilidad posible."
+            "node": "Omito el código para los componentes <strong><ProductTitle /></strong> y <strong><ProductBottons /></strong> debido a que el procedimiento para acceder a los datos de su proveedor es el mismo. Es decir se conectan mediante <code>useContext()</code> y utilizan los valores como es requerido. Como podemos ver este patrón nos abre una gran variedad de posibilidades para construir componentes reutilizables e incluso librerías personalizadas (así está por ejemplo <strong>React Router</strong>) con la máxima flexibilidad posible."
           }
         ]
       },
@@ -365,7 +365,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve: </strong><em>Este patrón de diseño permite ofrecer al usuario (desarrollador), mayor control sobre la actualización de estado del componente, permitiéndole acceder al estado interno y aplicar difentes actualizaciones de estado</em>"
+            "node": "<strong>Qué problema resuelve: </strong><em>Este patrón de diseño permite ofrecer al usuario (desarrollador), mayor control sobre la actualización de estado del componente, permitiéndole acceder al estado interno y aplicar diferentes actualizaciones de estado</em>"
           } 
         ]
       },
@@ -374,7 +374,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "El patrón <strong>provider</strong> en React es un patrón avanzado que se utiliza para gestionar estados más complejos. Busca delegar el control de estado a una función reductora. Actualmente en aplicaciones de react más modernas se gestiona a partir de useReducer(reducer, initialState) que devuelve un array de 2 posiciones, siendo la primera la que contiene el estado actualizado; mientras que la segunda devuelve la función dispatch, encargada de actualizar ese estado."
+            "node": "El patrón <strong>provider</strong> en React es un patrón avanzado que se utiliza para gestionar estados más complejos. Busca delegar el control de estado a una función reductora. Actualmente en aplicaciones de react más modernas se gestiona a partir de <code>useReducer(reducer, initialState)</code> que devuelve un array de 2 posiciones, siendo la primera la que contiene el estado actualizado; mientras que la segunda devuelve la función dispatch, encargada de actualizar ese estado."
           }
         ]
       },
@@ -383,7 +383,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "La actualización de estado se delega a una funcion reductora pura.  Como se menciona en el párrafo anterior react proporciona el hook incorporado: <code>useReduce()</code> que recibe como primer argumento la funcion reductora y como segundo el estado actual. Esta función devuelve un array de 2 posiciones, siendo el primero una variable con los últimos cambios realizados en el estado y en la segunda posición un función dispatch para actualizar ese estado:" 
+            "node": "La actualización de estado se delega a una función reductora pura.  Como se menciona en el párrafo anterior react proporciona el hook incorporado: <code>useReduce()</code> que recibe como primer argumento la función reductora y como segundo el estado actual. Esta función devuelve un array de 2 posiciones, siendo el primero una variable con los últimos cambios realizados en el estado y en la segunda posición una función dispatch para actualizar ese estado:" 
           }
         ]
       },
@@ -415,7 +415,12 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Para lograrlo debemos pasar una función que suplante la llamada de la función reductora utilizada por el custom hook. Hacer los cambios de estado que la lógica del componente demande en la función que se le pasará a usePlayerReducer() y de esa manera invertir control de estado a manos del componente. Y modificar el usePlayerReducer para que este listo y pueda recibir el objeto con la funcion reductora personalizada en el lado del componente:"
+        "node": [
+          {
+            "type": "nested",
+            "node": "Para lograrlo debemos pasar una función que suplante la llamada de la función reductora utilizada por el custom hook. Hacer los cambios de estado que la lógica del componente demande en la función que se le pasará a <code>usePlayerReducer()</code> y de esa manera invertir control de estado a manos del componente. Y modificar el <code>usePlayerReducer()</code> para que este listo y pueda recibir el objeto con la función reductora personalizada en el lado del componente:"
+          }
+        ]
       },
       {
         "type": "img",
@@ -427,7 +432,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Cada vez que se requiera pasar el control de estado al custom hook lo hacemos desde el componente que lo requiera mediante el envío de un objeto que contenga la función reductora personalizada. Notece que en caso de no envíar la función reductora, el custom hook está preparado para realizar una actualización de estado por defecto en esta linea <code>use</code>"
+        "node": "Cada vez que se requiera pasar el control de estado al custom hook lo hacemos desde el componente que lo requiera mediante el envío de un objeto que contenga la función reductora personalizada."
       },
 
 
@@ -441,7 +446,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve:</strong> El poder gestionar el estado interno de nuestro componente desde el exterior. Generalmente desde el componnete contenedor. Lo que también permite sobreescribir el estado por defecto que tenga el hijo."
+            "node": "<strong>Qué problema resuelve:</strong> El poder gestionar el estado interno de nuestro componente desde el exterior. Generalmente desde el componente contenedor. Lo que también permite sobrescribir el estado por defecto que tenga el hijo."
           } 
         ]
       },
@@ -479,11 +484,16 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Con este patrón podemos cumplir con el <strong>Open and Close principle</strong> ya que al estar delegada la responsabilidad del render en el padre, no será necesario modificar la presentación del componente en la UI, cada que necesitemos modificar la UI. Por otro lado debemos cuidar de no caer en el antipatrón de anidar la prop de renderizado entre componetes ya que agrega complejidad al código."
+        "node": [
+          {
+            "type": "nested",
+            "node": "Con este patrón podemos cumplir con el <strong>Open and Close principle</strong> ya que al estar delegada la responsabilidad del render en el padre, no será necesario modificar la presentación del componente en la UI, cada que necesitemos modificar la UI. Por otro lado, debemos cuidar de no caer en el antipatrón de anidar la prop de renderizado entre componentes ya que agrega complejidad al código."
+          }
+        ]
       },
       {
         "type": "p",
-        "node": "Pensemos por ejemplo en un componente que nos ayude a gestionar los mensajes de error mientras se está en tiempo de desarrollo. Este mensaje será diferente según la sección en la que nos encontremos. Por lo que tenemos diferentes UI. A continuación un ejemplo del componente ErrorBoundary sin alternativas para renderizar un mensaje personalizado desde el padre: "
+        "node": "Pensemos por ejemplo en un componente que nos ayude a gestionar los mensajes de error mientras se está en tiempo de desarrollo. Este mensaje será diferente según la sección en la que nos encontremos. Por lo que tenemos diferentes UI. A continuación, un ejemplo del componente ErrorBoundary sin alternativas para renderizar un mensaje personalizado desde el padre: "
       },
       {
         "type": "img",
@@ -499,7 +509,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Una vez preparado el padre para envíar prop render de tipo función el componente hijo tendría el siguiente aspeto, para renderizar un mensaje por defecto o el que el contenedor decida, si es que lo envía"
+        "node": "Una vez preparado el padre para enviar prop render de tipo función el componente hijo tendría el siguiente aspecto, para renderizar un mensaje por defecto o el que el contenedor decida, si es que lo envía"
       },
       {
         "type": "img",
@@ -517,7 +527,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Que problema resuelve:</strong> <em>la necesidad de personalizar nuestros componentes de forma según el contexto en el que se encuentren. Por ejemplo un botón puede utilizarse para una acción de cancelar el envío de un formulario o por el contrario llevarlo a cabo, y sólo distinguirlo en la interfaz de usuario mediante los estilos; con un color de fondo que sea relevante o carente es este para la cancelación.</em>"
+            "node": "<strong>Qué problema resuelve:</strong> <em>la necesidad de personalizar nuestros componentes de forma según el contexto en el que se encuentren. Por ejemplo, un botón puede utilizarse para una acción de cancelar el envío de un formulario o por el contrario llevarlo a cabo, y sólo distinguirlo en la interfaz de usuario mediante los estilos; con un color de fondo que sea relevante o carente para la cancelación.</em>"
           } 
         ]
       },
@@ -526,13 +536,13 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Por mucho, el patrón más sencillo de implementar, (junto con  <strong>state initializer</strong>). Algunos frameworks para componentes como MUI lo implementan en todos sus componentes. Este patrón proporciona la alternativas para modificar el aspecto visual de los componentes a través de props, donde podremos asignar tanto objetos, para crear reglas para estilos en línea o nombres de clase."
+            "node": "Por mucho, el patrón más sencillo de implementar, (junto con  <strong>state initializer</strong>). Algunos frameworks para componentes como MUI lo implementan en todos sus componentes. Este patrón proporciona la alternativa para modificar el aspecto visual de los componentes a través de props, donde podremos asignar tanto objetos, para crear reglas para estilos en línea o nombres de clase."
           }
         ]
       },
       {
         "type": "p",
-        "node": "Las ventajas de este patrón es que permite la reutilización de componentes. Y cumple con el principio SOLID Open Close Principle- Donde la función en este caso el componente queda abierto a su extensión pero cerrado a su modificación"
+        "node": "Las ventajas de este patrón es que permite la reutilización de componentes. Y cumple con el principio SOLID Open Close Principle- Donde la función en este caso el componente queda abierto a su extensión, pero cerrado a su modificación"
       },
 
 
@@ -543,7 +553,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Utilizar los patrones de diseño en react nos permiten reducir el tiempo de desarrollo ya que aprovechamos esquemas de solución a problemas aplicados y probados por muchos por la comunidad de desarrolladores de react y al mismo tiempo estamos mejorando la calidad del software en el proceso."
+        "node": "Utilizar los patrones de diseño en react nos permiten reducir el tiempo de desarrollo ya que aprovechamos esquemas de solución a problemas comunes, aplicados y probados por muchos desarrolladores de react y al mismo tiempo mejoramos la calidad del software en el proceso."
       },
       {
         "type": "p",
@@ -560,7 +570,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li><a href=\"https://medium.com/the-non-traditional-developer/styling-best-practices-using-react-c37b96b8be9c\">Best practice in react styling components</a></li><li><a href=\"https://www2.logrocket.com/react-performance-monitoring\">Debuging performance in react apps</a></li><li><a href=\"https://blog.logrocket.com/react-component-design-patterns-2022/\">Most common patterns in react 2022</a></li><li><a href=\"https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks\">The State Reducer Pattern with React Hooks</a></li><li><a href=\"https://advanced-react-patterns.netlify.app/\">Advanced react patterns (excersices) </a></li><li><a href=\"https://github.com/streamich/react-use\">Hooks collection of react-use</a></li><li><a href=\"https://github.com/rehooks/awesome-react-hooks\">Awesome react hooks</a></li><li><a href=\"https://usehooks.com/useLocalStorage/\">Popular hooks</a></li>"
+            "node": "<li><a href=\"https://medium.com/the-non-traditional-developer/styling-best-practices-using-react-c37b96b8be9c\">Best practice in react styling components</a></li><li><a href=\"https://www2.logrocket.com/react-performance-monitoring\">Debugging performance in react apps</a></li><li><a href=\"https://blog.logrocket.com/react-component-design-patterns-2022/\">Most common patterns in react 2022</a></li><li><a href=\"https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks\">The State Reducer Pattern with React Hooks</a></li><li><a href=\"https://advanced-react-patterns.netlify.app/\">Advanced react patterns (exercises) </a></li><li><a href=\"https://github.com/streamich/react-use\">Hooks collection of react-use</a></li><li><a href=\"https://github.com/rehooks/awesome-react-hooks\">Awesome react hooks</a></li><li><a href=\"https://usehooks.com/useLocalStorage/\">Popular hooks</a></li>"
             
           }
         ]
@@ -584,7 +594,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "En general el estudio de modelo de caja en css puede ser tedioso, no podemos simplemente comprenderlo si no acatamos primero la teoría. Detrás de todo el aspecto de cada uno de los elementos dentro de una página web tiene su base lógica explicativa, y detrás de ello comprensión del porque de ciertos comportamientos. En este artículo trato de dilusidar de formar general pero con intensión de ser conciso el modelo de caja para lograr sacar ventaja y hacer nuestro css más predecible."
+        "node": "En general el estudio de modelo de caja en css puede ser tedioso, no podemos simplemente comprenderlo si no acatamos primero la teoría. Detrás de todo el aspecto de cada uno de los elementos dentro de una página web tiene su base lógica explicativa, y detrás de ello comprensión del por qué de ciertos comportamientos. En este artículo trato de dilucidar de forma general pero con intensión de ser conciso el modelo de caja para lograr sacar ventaja y hacer nuestro css más predecible."
       },
       {
         "type": "p",
@@ -592,7 +602,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Las cajas tienen un comportamiento diferente según su display, sus dimensiones establecidas (width y height) y el contenido que vive dentro de ellas. Pensemos primero que para hablar de un tamaño intrínsico  la anchura debe depender explícitamente del contenido y no de una anchura arbitraria definida con width"
+        "node": "Las cajas tienen un comportamiento diferente según su display, sus dimensiones establecidas (width y height) y el contenido que vive dentro de ellas. Pensemos primero que para hablar de un tamaño intrínseco  la anchura debe depender explícitamente del contenido y no de una anchura arbitraria definida con width"
       },
       {
         "type": "img",
@@ -609,7 +619,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Una vex más por las dudas, cuando la caja usa un tamaño arbitrario, hay un límite de la cantidad de contenido que se puede agregar antes de que se desborde de los límites establecidos. Estas dimensiones dan límites estrictos a todo lo que se encuentre adentro del elemento, que se respetará a menos que el contenido sea demasiado grande para la caja, en cuyo caso se producirá un desbordamiento visible."
+        "node": "Una vez más por las dudas, cuando la caja usa un tamaño arbitrario, hay un límite de la cantidad de contenido que se puede agregar antes de que se desborde de los límites establecidos. Estas dimensiones dan límites estrictos a todo lo que se encuentre adentro del elemento, que se respetará a menos que el contenido sea demasiado grande para la caja, en cuyo caso se producirá un desbordamiento visible."
       },
       {
         "type": "p",
@@ -633,7 +643,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "El modelo de caja comienza por el área que ocupa el contenido, que como hemos visto anteriormente suele ser el área de tamaño más variable. A continuación contamos con el relleno o \"padding\" que rodea la caja de contenido. Si nuestra caja tiene reglas de desbordamiento establecidas, como <strong>overflow: auto</strong> o <strong>overflow: scroll</strong>, las barras de desplazamiento ocuparán este espacio también. Lo siguiente es la caja de borde ésta rodea la caja de padding y su espacio está ocupado por el valor del border. Y finalmente, nos encontramos con la caja de margen. Propiedades como el <strong>outline</strong> y <strong>box-shadow</strong> ocupan este espacio porque están pintadas por encima de los elementos, por lo que no afectan el tamaño de nuestra caja. Puedes tener un <strong>outline-width</strong> de 200px en nuestra caja y todo lo que está dentro e incluído la caja de borde sería exactamente del mismo tamaño."
+            "node": "El modelo de caja comienza por el área que ocupa el contenido, que como hemos visto anteriormente suele ser el área de tamaño más variable. A continuación, contamos con el relleno o \"padding\" que rodea la caja de contenido. Si nuestra caja tiene reglas de desbordamiento establecidas, como <strong>overflow: auto</strong> o <strong>overflow: scroll</strong>, las barras de desplazamiento ocuparán este espacio también. Lo siguiente es la caja de borde ésta rodea la caja de padding y su espacio está ocupado por el valor del border. Y finalmente, nos encontramos con la caja de margen. Propiedades como el <strong>outline</strong> y <strong>box-shadow</strong> ocupan este espacio porque están pintadas por encima de los elementos, por lo que no afectan el tamaño de nuestra caja. Puedes tener un <strong>outline-width</strong> de 200px en nuestra caja y todo lo que está dentro e incluido la caja de borde sería exactamente del mismo tamaño."
           }
         ]
       },
@@ -652,7 +662,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Pensemos por ejemplo en dos elementos de párrafo, donde cada uno de ellos ocupa el ancho total de su contenedor. El primer párrafo, tiene un margen inferior de 30px y el segundo un margen superior de 20px. El colaso de sus márgenes hará que únicamente el margen con mayor cantidad de pixeles sea la distancia entre los 2 elementos y no sea la suma de estos. El concepto de colapso del margen es otra parte más del modelo de caja"
+        "node": "Pensemos por ejemplo en dos elementos de párrafo, donde cada uno de ellos ocupa el ancho total de su contenedor. El primer párrafo, tiene un margen inferior de 30px y el segundo un margen superior de 20px. El colapso de sus márgenes hará que únicamente el margen con mayor cantidad de pixeles sea la distancia entre los 2 elementos y no sea la suma de estos. El concepto de colapso del margen es otra parte más del modelo de caja"
       },
       {
         "type": "p",
@@ -681,13 +691,13 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Propiedad display en elementos en línea y de bloque:</strong> El modelo de caja tiene un comportamiento distinto si se trata de elementos en línea o elementos de bloque. Para los elementos en línea no se respeta un ancho o altura fija; en cambio para los elementos de bloque si. Los elementos de bloque provocan un salto de línea los en linea no. Si embargo pordemos utilizar la propiedad especial: <strong>display: inline-block</strong> para agregar un comportamiento más flexible a los elementos en linea"
+            "node": "<strong>Propiedad display en elementos en línea y de bloque:</strong> El modelo de caja tiene un comportamiento distinto si se trata de elementos en línea o elementos de bloque. Para los elementos en línea no se respeta un ancho o altura fija; en cambio para los elementos de bloque si. Los elementos de bloque provocan un salto de línea, los elementos inline no. Sin embargo, podemos utilizar la propiedad especial: <strong>display: inline-block</strong> para agregar un comportamiento más flexible a los elementos en línea"
           }
         ]
       },
       {
         "type": "p",
-        "node": "La propiedad inline-block hace que el elemeto de línea se comporte como uno de bloque, respeta así las definiciones para ancho y alto. El relleno, el margen y el borde mantiene alejado a los otro elementos de la caja y lo más importante no genera un salto en línea entre los elementos colindantes."
+        "node": "La propiedad inline-block hace que el elemento de línea se comporte como uno de bloque, respeta así las definiciones para ancho y alto. El relleno, el margen y el borde mantiene alejado a los otros elementos de la caja y lo más importante no genera un salto en línea entre los elementos colindantes."
       },
       {
         "type": "h4",
@@ -695,7 +705,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "El modelo de caja puede ser complicado de comprender si no se practica lo suficiente, hay muchos factores que afectan su correcto funcionamiento, desde la hoja de estilo por defecto del navegador hasta las propiedades css que lo controlan. Sin olvidar las variaciones de comportamiento ante el tamaño intrínseco o arbitrario de la caja de contenido o del tipo inline o block del elemento que tratamos. Alcanzar a generar un css predecible toma tiempo pero una vez comprendido mucho aspectos generales del diseño web son despejados."
+        "node": "El modelo de caja puede ser complicado de comprender si no se practica lo suficiente, hay muchos factores que afectan su correcto funcionamiento, desde la hoja de estilo por defecto del navegador hasta las propiedades css que lo controlan. Sin olvidar las variaciones de comportamiento ante el tamaño intrínseco o arbitrario de la caja de contenido o del tipo inline o block del elemento que tratamos. Alcanzar a generar un css predecible toma tiempo, pero una vez comprendido mucho aspectos generales del diseño web son despejados."
       },
       {
         "type": "p",
@@ -733,7 +743,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Importante:</strong> Los conceptos son generales y aplican para cualquier aplicación escrita en x lenguaje, sin embargo las herramientas son particularmente utilizadas para testear una aplicación desarrollada con react.",
+            "node": "<strong>Importante:</strong> Los conceptos son generales y aplican para cualquier aplicación escrita en x lenguaje, sin embargo, las herramientas son particularmente utilizadas para testear una aplicación desarrollada con react.",
           }
         ],
       },
@@ -752,7 +762,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Igualmente para todos los desarrolladores involucrados la creación de pruebas unitarias es muy favorable comenzar con la automátización del proceso de ejecución, es muy pesado andar ejecutando comandos repetitivos una y otra vez, cuando se puede ejecutar uno que se mantenga a la escucha de cambios, aquí el de jest: "
+        "node": "Igualmente, para todos los desarrolladores involucrados la creación de pruebas unitarias es muy favorable comenzar con la automátización del proceso de ejecución, es muy pesado andar ejecutando comandos repetitivos una y otra vez, cuando se puede ejecutar uno que se mantenga a la escucha de cambios, aquí el de jest: "
       },
       {
         "type": "code",
@@ -768,7 +778,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Otra cuestión de ayuda muy importante para el desarrollo hoy en día lo proporcionan las IDE's, la más importante hoy en día por mucho es Visual Studio Code, con ayuda de su intellisense tenemos acceso a métodos y propiedades de la librería de jest de forma predictiva, para ello basta con escribir las primeras letras para que nos sugiera algún autocompletado, sin embargo no es automático; hay que instalar los tipos de Jest con el siguiente comando:"
+        "node": "Otra cuestión de ayuda muy importante para el desarrollo hoy en día lo proporcionan las IDE's, la más importante hoy en día por mucho es Visual Studio Code, con ayuda de su intellisense tenemos acceso a métodos y propiedades de la librería de jest de forma predictiva, para ello basta con escribir las primeras letras para que nos sugiera algún autocompletado, sin embargo, no es automático; hay que instalar los tipos de Jest con el siguiente comando:"
       },
       {
         "type": "code",
@@ -779,7 +789,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Algo más que nos puede ayudar a mejorar el flujo de trabajo y hacerlo más rapido y eficiente, es aislar las pruebas por componente trabajado. Ya que si se estamos en modo “observador” cada cambio involucra todo el conjunto de pruebas que viven dentro de la carpeta test, lo que significa que ejecutara todo el proyecto por cada cambio, ineficiente no? Jest a través de la Línea de comandos nos ofrece la solucion: después de realizar algún cambio en el archivo a trabajar, presionar la letra <strong>w</strong>, estando en el CLI y a continuación la letra <strong>p</strong> lo que nos permitirá escribir el título del archivo y ejecutar unicamente ese test. El realizar esta acción mantiene a Jest escuchando cambiós en ese archivo; cuándo necesitemos pasar a otro archivo o componente realizamos el mismo procedimiento y listo."
+            "node": "Algo más que nos puede ayudar a mejorar el flujo de trabajo y hacerlo más rápido y eficiente, es aislar las pruebas por componente trabajado. Ya que si se estamos en modo “observador” cada cambio involucra todo el conjunto de pruebas que viven dentro de la carpeta test, lo que significa que ejecutará todo el proyecto por cada cambio, ¿ineficiente no es así? Jest, a través de la Línea de comandos nos ofrece la solución: después de realizar algún cambio en el archivo a trabajar, presionar la letra <strong>w</strong>, estando en el CLI y a continuación la letra <strong>p</strong> lo que nos permitirá escribir el título del archivo y ejecutar únicamente ese test. El realizar esta acción mantiene a Jest escuchando cambios en ese archivo; cuándo necesitemos pasar a otro archivo o componente realizamos el mismo procedimiento y listo."
           }
         ]
       },
@@ -789,14 +799,14 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "A continuación una pequeña lista con algunas recomendaciones para realizar las pruebas unitarias:"
+        "node": "A continuación, una pequeña lista con algunas recomendaciones para realizar las pruebas unitarias:"
       },
       {
         "type": "ul",
         "node": [
           {
             "type": "nested",
-            "node": "<li>Es recomendable trabajar con el Snapshot sólo cuando se tiene el producto final y no en tiempo de desarrollo ya que los constantes cambios al componente provocan una actualización continua.</li><li>De la misma manera hay que buscar que las pruebas verifiquen lo que se necesita pero que al mismo tiempo sean flexibles. Es decir probar la existencia de valores en un arreglo podría indicar la conexión exitosa a un backend y no esperar la longitud de un arreglo específico</li><li>Vale la pena darse un tiempo para analizar la ruta crítica de una funcionalidad o de la aplicación; lo que en la práctica ayudaría a evitar perder tiempo en acciones dependientes de la alguna funcionalidad dentro de la <strong>ruta crítica</strong></li><li>Para hacer las pruebas unitarias más eficientes es muy importante analizar el código y tener claro que se espera haga; si se reciben props de tipo función que se espera que hagan, si se reciben argumentos en una función que se espera resuelva, etc</li><li>Hay que verificar que pruebas son aplicables a un componente, o función, ya que hay tareas que no corresponden al correcto funcionamiento de un components, como podría ser la actualización de un estado ya sea mediante un useState, un reducer, o cualquier otra función que podría comprobarse por aparte</li><li>Si alguno de los nombres de directorios de la suite de test coincide con otro directorio de la aplicación que no requiera de test, como puede ser una carpeta mock, es buena práctica nombrarla __mocks__</li><li>Utilizar <em>react-testing-library</em> hace más eficiente las evaluaciones del renderizado de react. Aunado a esto podemos prescindir de utilizar los objetos devueltos por “render” (getByText, container..,) y gestionarlos con la función <strong>screen</strong>; un método importado por testing-library que permite almacenar el objeto generado por la función <strong>render.</strong></li><li>Utilizar la función <strong>debug()</strong> para visualizar en la terminal como luce el objeto de pruebas en el DOM. Es parecido console.log(), pero enfocado al DOM</li>"
+            "node": "<li>Es recomendable trabajar con el Snapshot sólo cuando se tiene el producto final y no en tiempo de desarrollo ya que los constantes cambios al componente provocan una actualización continua.</li><li>De la misma manera hay que buscar que las pruebas verifiquen lo que se necesita pero que al mismo tiempo sean flexibles. Es decir, probar la existencia de valores en un arreglo podría indicar la conexión exitosa a un backend y no esperar la longitud de un arreglo específico</li><li>Vale la pena darse un tiempo para analizar la ruta crítica de una funcionalidad o de la aplicación; lo que en la práctica ayudaría a evitar perder tiempo en acciones dependientes de la alguna funcionalidad dentro de la <strong>ruta crítica</strong></li><li>Para hacer las pruebas unitarias más eficientes es muy importante analizar el código y tener claro que se espera haga; si se reciben props de tipo función que se espera que hagan, si se reciben argumentos en una función que se espera resuelva, etc</li><li>Hay que verificar que pruebas son aplicables a un componente, o función, ya que hay tareas que no corresponden al correcto funcionamiento de un components, como podría ser la actualización de un estado ya sea mediante un useState, un reducer, o cualquier otra función que podría comprobarse por aparte</li><li>Si alguno de los nombres de directorios de la suite de test coincide con otro directorio de la aplicación que no requiera de test, como puede ser una carpeta mock, es buena práctica nombrarla __mocks__</li><li>Utilizar <em>react-testing-library</em> hace más eficiente las evaluaciones del renderizado de react. Aunado a esto podemos prescindir de utilizar los objetos devueltos por “render” (getByText, container..,) y gestionarlos con la función <strong>screen</strong>; un método importado por testing-library que permite almacenar el objeto generado por la función <strong>render.</strong></li><li>Utilizar la función <strong>debug()</strong> para visualizar en la terminal como luce el objeto de pruebas en el DOM. Es parecido console.log(), pero enfocado al DOM</li>"
           }
         ]
       },
@@ -818,7 +828,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Los hooks son funciones, hay que verificar que el argumento recibido se utiliza para devolver lo esperado. Por tanto para lograr esto debemos apoyarnos de <strong>renderHook</strong> función proporcionada por <strong>testing-library</strong>. Debemos pasar el custom hook en el callback proporcionado por renderHook. El resultado se almacena en un objeto llamado: <strong>result.current</strong>"
+            "node": "Los hooks son funciones, hay que verificar que el argumento recibido se utiliza para devolver lo esperado. Por lo tanto, para lograr esto debemos apoyarnos de <strong>renderHook</strong> función proporcionada por <strong>testing-library</strong>. Debemos pasar el custom hook en el cuerpo del callback, asignado como el primer argumento de la función renderHook. El resultado se almacena en un objeto llamado: <strong>result.current</strong>"
           }
         ],        
       },
@@ -872,7 +882,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Para evitar agregar archivos de terceros (como puede ser el caso de las dependecias de firebase para trabajar con su módulo de autenticación) es importante agregar la siguiente opción al objeto de configuración de Jest: "
+        "node": "Para evitar agregar archivos de terceros (como puede ser el caso de las dependencias de firebase para trabajar con su módulo de autenticación) es importante agregar la siguiente opción al objeto de configuración de Jest: "
       },
       {
         "type": "code",
@@ -884,7 +894,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "En mi reciente experiencia al trabajar con Vite, en lo que a pruebas unitarias se refiere puede ser costoso configurar desde cero el set, hay que tener en cuenta que esta aplicación de utilidad esta hecha para ser personalizada a la medida y muchas configuraciones no vienen escritas por defecto; hay que investigar y muchas otras veces trabajar con prueba y errror, por tanto es menester contar con un post relacionado que nos ayude a realizar esta tarea de forma más clara y explicita. Sin más tengo que decir que este post regularmente lo estaré actualizando con nueva información relacionada a la configuración y optimización de las pruebas unitarias dentro de Vite."
+        "node": "En mi reciente experiencia al trabajar con Vite, en lo que a pruebas unitarias se refiere puede ser costoso configurar desde cero el set, hay que tener en cuenta que esta aplicación de utilidad está realizada para ser personalizada a la medida y muchas configuraciones no vienen escritas por defecto; hay que investigar y muchas otras veces trabajar con prueba y error, por lo tanto, es menester contar con un post relacionado que nos ayude a realizar esta tarea de forma más clara y explícita. Sin más tengo que decir que este post regularmente lo estaré actualizando con nueva información relacionada a la configuración y optimización de las pruebas unitarias dentro de Vite."
       }
 
     ]
@@ -901,7 +911,7 @@ export const cardsSkillsBlog = [
     "content": [
       {
         "type": "p",
-        "node": "En el mundo de desarrollo web las APIs son esesnciales para enriquecer las aplicaciónes, éstas nutren las interfaces con información interactiva para el usuario final. Permiten entre un mundo de posibilidades actualizar, borrar información o crear posts para personalizar un módulo de usuario, o afianzar la seguridad de la aplicación al gestionar la autenticación de algún usuario. El backend como el frontend puede manejarse con distintas infraestructuras y prácticamente aseguran lo mismo."
+        "node": "En el mundo de desarrollo web las APIs son esenciales para enriquecer las aplicaciones, éstas nutren las interfaces con información interactiva para el usuario final. Permiten entre un mundo de posibilidades actualizar, borrar información o crear posts para personalizar un módulo de usuario, o afianzar la seguridad de la aplicación al gestionar la autenticación de algún usuario. El backend como el frontend puede manejarse con distintas infraestructuras y prácticamente aseguran lo mismo."
       },
       {
         "type": "h4",
@@ -934,7 +944,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Finalmente una vez comprendido la operación realizada, hay que devolver el resultado adecuado segun sea decida la lógica. A continuación los tipos de respuesta que puede mandar el servidor al cliente al ejecutar una acción de eliminado."
+        "node": "Finalmente, una vez comprendido la operación realizada, hay que devolver el resultado adecuado según sea decida la lógica. A continuación, los tipos de respuesta que puede mandar el servidor al cliente al ejecutar una acción de eliminado."
       },
       {
         "type": "img",
@@ -975,11 +985,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "h4",
-        "node": "Conclusión:"
+        "node": "Conclusión"
       },
       {
         "type": "p",
-        "node": "En el presente artículo prentendo hablar de forma general de algunas de las buenas prácticas y su porqué cuando las implementamos en nuestras API. Documentación, mensajes de respuesta adecuados a su codigo de estátus son sólo una pequeña parte del total de recomendaciónes que se aconsejan. Por tanto este artículo se muy posiblemente se fragmentará en otros más especificos que aborden el tema inmenso que abarca la creación de una API RESTful."
+        "node": "En el presente artículo pretendo hablar de forma general de algunas de las buenas prácticas y su porqué cuando las implementamos en nuestras API. Documentación, mensajes de respuesta adecuados a su código de estátus son sólo una pequeña parte del total de recomendaciones que se aconsejan. Por lo tanto, este artículo muy posiblemente se fragmentará en otros más especificos que aborden el tema inmenso que abarca la creación de una API RESTful."
       },
       {
         "type": "p",
@@ -996,7 +1006,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li><a href=\"https://stoplight.io/api-documentation-guide\">Guía API documentatión y mejores prácticas</a></li><li><a href=\"https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/\">Freecodecamp Mejores prácticas API</a></li><li><a href=\"https://learn.microsoft.com/es-es/azure/architecture/best-practices/api-implementation\">API Imprementation</a></li><li><a href=\"https://kinsta.com/es/blog/codigos-de-estado-de-http/\">Codigos de estado HTTP</a></li><li><a href=\"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes\">Wikipedia: List of HTTP status codes.</a></li><li><a href=\"https://www.openapis.org/\">OpenAPI specification</a></li>"
+            "node": "<li><a href=\"https://stoplight.io/api-documentation-guide\">Guía API documentatión y mejores prácticas</a></li><li><a href=\"https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/\">Freecodecamp Mejores prácticas API</a></li><li><a href=\"https://learn.microsoft.com/es-es/azure/architecture/best-practices/api-implementation\">API Implementation</a></li><li><a href=\"https://kinsta.com/es/blog/codigos-de-estado-de-http/\">Códigos de estado HTTP</a></li><li><a href=\"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes\">Wikipedia: List of HTTP status codes.</a></li><li><a href=\"https://www.openapis.org/\">OpenAPI specification</a></li>"
           }
 
         ]
@@ -1156,7 +1166,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Crear alias para los comandos usados más comunes puede ayudarnos a ahorrar valiosos minutos todos los días, acciones repetitivas en comandos automátizados" 
+        "node": "Crear alias para los comandos usados más comunes puede ayudarnos a ahorrar valiosos minutos todos los días, acciones repetitivas en comandos automatizados" 
       },
       {
         "type": "p",
@@ -1182,7 +1192,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "El sistema de control de versiones de GIT es fabuloso y también inmenso como lo es nuestro mundo de ingeniería, es también uno de nuestros mejores aliados y la mejor herramienta colaborativa para el desarrollo de próyectos más seguros y ágiles. Podemos estar seguros que entregando nuestra plena confianza a sus mejores prácticas nos facilitará el desarrollo y la calidad que siempre buscamos" 
+        "node": "El sistema de control de versiones de GIT es fabuloso y también inmenso como lo es nuestro mundo de ingeniería, es también uno de nuestros mejores aliados y la mejor herramienta colaborativa para el desarrollo de proyectos más seguros y ágiles. Podemos estar seguros que entregando nuestra plena confianza a sus mejores prácticas nos facilitará el desarrollo y la calidad que siempre buscamos" 
       },
       {
         "type": "p",
@@ -1217,11 +1227,11 @@ export const cardsSkillsBlog = [
     "content": [
       {
         "type": "p",
-        "node": "A continuación se aborda un tema vital para el desarrollo de código escalable, por contar con una estructura que evita el código altamente acoplado. Cabe destacar que son PRINCIPIOS, no es la regla y es siempre una opción optar por estructurar nuestro código basado en sus dictamentes."
+        "node": "A continuación, se aborda un tema vital para el desarrollo de código escalable, por contar con una estructura que evita el código altamente acoplado. Cabe destacar que son PRINCIPIOS, no es la regla y es siempre una opción optar por estructurar nuestro código basado en sus dictámenes."
       },
       {
         "type": "p",
-        "node": "Los principios SOLID nos indican cómo organizar nuestras funciones y estructuras de datos en componentes y cómo dichos componentes deben estar interconectados entre ellos. De igual manera abordaré su contraparte descrito con el acronimo STUPID, sin más introduccion consideremos primero como describir de forma general las malas prácticas"
+        "node": "Los principios SOLID nos indican cómo organizar nuestras funciones y estructuras de datos en componentes y cómo dichos componentes deben estar interconectados entre ellos. De igual manera abordaré su contraparte descrito con el acrónimo STUPID, sin más introducción consideremos primero como describir de forma general las malas prácticas"
       },
       {
         "type": "h4",
@@ -1241,7 +1251,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Tight coupling: </strong> Básicamente con alto acoplamiento se refiere a la dependencia de otras funciones, clases o módulos ajenas a la propia lógica que maneja. Y con baja cohesión a las múltiples responsabilidades que gestion la lógica de una función, clase o módulo. Lo ideal es tener bajo acoplamiento y alta cohesión."
+            "node": "<strong>Tight coupling: </strong> Básicamente con alto acoplamiento se refiere a la dependencia de otras funciones, clases o módulos ajenas a la propia lógica que maneja. Y con baja cohesión a las múltiples responsabilidades que gestión la lógica de una función, clase o módulo. Lo ideal es tener bajo acoplamiento y alta cohesión."
           }
         ]
       },
@@ -1259,7 +1269,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Premature Optimization: </strong>La optimización de una aplicación es necesaria desde muchos enfoques, con decir que una aplicación veloz afianza la confianza del cliente, es suficiente para justificar su necesidad, sin embargo esta implementación debe contar con su fase dedicada a ello y no en la fase de desarrollo de funcionalidades. ¿Porqué? Bueno, implica tiempo y en determinados momentos es más necesario tener el feature funcional por posibles cambios y mejoras que la optimización. En tiempo de desarrollo estamos supeditados a cambios, la optimización debería estar lista en el producto final."
+            "node": "<strong>Premature Optimization: </strong>La optimización de una aplicación es necesaria desde muchos enfoques, con decir que una aplicación veloz afianza la confianza del cliente, es suficiente para justificar su necesidad, sin embargo, esta implementación debe contar con su fase dedicada a ello y no en la fase de desarrollo de funcionalidades. ¿Porqué? Bueno, implica tiempo y en determinados momentos es más necesario tener el feature funcional por posibles cambios y mejoras que la optimización. En tiempo de desarrollo estamos supeditados a cambios, la optimización debería estar lista en el producto final."
           }
         ]
       },
@@ -1287,7 +1297,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "He comenzado con los cláusulas dedicadas a describir lo que no debemos hacer como desarrolladores, por el simple hecho de que no podemos saber que es lo bueno si antes no pasamos por lo malo, además que a partir de esa pequeña descripción podemos identificarnos mejor con la solución ya que los principios SOLID requieren un analisis adicional partiendo de la abstracción a partir de momento en el que decidimos CREAR!"
+        "node": "He comenzado con las cláusulas dedicadas a describir lo que no debemos hacer como desarrolladores, por el simple hecho de que no podemos saber que es lo bueno si antes no pasamos por lo malo, además que a partir de esa pequeña descripción podemos identificarnos mejor con la solución ya que los principios SOLID requieren un análisis adicional partiendo de la abstracción a partir de momento en el que decidimos CREAR!"
       },
       {
         "type": "h4",
@@ -1304,7 +1314,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Tener una única responsabilidad no es sinónimo de hacer una única cosa, sino de tener funcionalidades que estén expuestos a una sola fuente de cambio. Por ejemplo una clase con un método que cargue información de una base de datos y con otro método los represente en la interfaz de usuario, es una clase que tiene 2 responsabilidades, si en algún momento cambia el requerimiento de conexión innevitablemente se verá afectada el método que agrega la información a la interfaz. Lo que indudablemente es un indicio de que esta clase está expuesta a 2 fuentes de cambio distinta."
+        "node": "Tener una única responsabilidad no es sinónimo de hacer una única cosa, sino de tener funcionalidades que estén expuestos a una sola fuente de cambio. Por ejemplo, una clase con un método que cargue información de una base de datos y con otro método los represente en la interfaz de usuario, es una clase que tiene 2 responsabilidades, si en algún momento cambia el requerimiento de conexión inevitablemente se verá afectada el método que agrega la información a la interfaz. Lo que indudablemente es un indicio de que esta clase está expuesta a 2 fuentes de cambio distinta."
       },
       {
         "type": "p",
@@ -1315,7 +1325,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Nombres de clases o módulos demasiado genéricos</li><li>La clase involucra múltiples capas, la de representación de datos en la UI; la consumo y guardado de información a una base de datos, la de gestión del estado global, etc</li><li>Excesivo número de líneas</li>"
+            "node": "<li>Nombres de clases o módulos demasiado genéricos</li><li>La clase involucra múltiples capas, la de representación de datos en la UI; la consumo y guardado de información a una base de datos, la de gestión del estado global, etc.</li><li>Excesivo número de líneas</li>"
           }
         ]
       },
@@ -1346,7 +1356,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "En conclusión para añadir funcionalidades a la aplicación, tenemos que escribir nuevo código, no modificar el ya existente."
+        "node": "En conclusión, para añadir funcionalidades a la aplicación, tenemos que escribir nuevo código, no modificar el ya existente."
       },
       {
         "type": "p",
@@ -1357,7 +1367,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Cambios normalmente afectan a la clase, módulo o función de forma constante</li><li>Cuando una clase o módulo afecta a varias capas de la aplicación (Representación en la UI, almacenamiento en Base de datos, interacción con la API, etc)<li>Este principio es el más ligado con el principio 'Single Responsability'</li>"
+            "node": "<li>Cambios normalmente afectan a la clase, módulo o función de forma constante</li><li>Cuando una clase o módulo afecta a varias capas de la aplicación (Representación en la UI, almacenamiento en Base de datos, interacción con la API, etc.)<li>Este principio es el más ligado con el principio 'Single Responsability'</li>"
           }
         ]
       },
@@ -1376,15 +1386,15 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "De forma breve aunque muy abstracto, este principio se refiere al hecho de que si una clase A es extendida por una clase B, debemos ser capaces de sustituir cualquier instancia de A por cualquier instancia de B, o en otras palabras una subclase debe poder ser substituida por su superclase, sin que el sistema se corrompa o falle."
+        "node": "De forma breve, aunque muy abstracto, este principio se refiere al hecho de que si una clase A es extendida por una clase B, debemos ser capaces de sustituir cualquier instancia de A por cualquier instancia de B, o en otras palabras una subclase debe poder ser substituida por su superclase, sin que el sistema se corrompa o falle."
       },
       {
         "type": "p",
-        "node": "El principio Liskov nos ayuda a utilizar la herencia de forma correcta y a tener un mayor cuidado a la hora de extender clases. Es necesario cuidar no violar el principio de responsabilidad única, ya que usualmente utilizar la herencia en JS genera codigo acoplado, sin embargo existe un técnica que nos ayudará a gestionar la jerarquia de forma más eficiente, pero sólo se puede implementar con el uso de Typescript. "
+        "node": "El principio Liskov nos ayuda a utilizar la herencia de forma correcta y a tener un mayor cuidado a la hora de extender clases. Es necesario cuidar no violar el principio de responsabilidad única, ya que usualmente utilizar la herencia en JS genera código acoplado, sin embargo, existe un técnica que nos ayudará a gestionar la jerarquía de forma más eficiente, pero sólo se puede implementar con el uso de Typescript. "
       },
       {
         "type": "p",
-        "node": "Si decimos que una clase hija debe poder funcionar como implementamos la clase padre, significa que la clase hija contiene los mismo métodos de la clase padre. Como hacemos que se respete esto y no rompa la aplicación en el momento un metodo que no existe, con las clases abstractas de TS."
+        "node": "Si decimos que una clase hija debe poder funcionar como implementamos la clase padre, significa que la clase hija contiene los mismos métodos de la clase padre. Como hacemos que se respete esto y no rompa la aplicación en el momento que un metodo que no exista.., solución: con las clases abstractas de TS."
       },
       {
         "type": "img",
@@ -1396,7 +1406,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Las clases que extieden de Vehicle no pueden implementar nada que no esté en la firma de padre. Rápido seguro y eficiente. Pensar en clases abstractas al momento de querer aplicar este principio es una solución rapida y elegante."
+        "node": "Las clases que extienden de Vehicle no pueden implementar nada que no esté en la firma del padre. Rápido seguro y eficiente. Pensar en clases abstractas al momento de querer aplicar este principio es una solución rápida y elegante."
       },
       {
         "type": "p",
@@ -1427,7 +1437,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Aplicar correctamente este principio permite crear clases o funciones tolerantes al cambio. Las modificaciones en una clase no deben afectar a aquellas que no implementen la interfaz relacionada. Hace el código verboso pero con la capacidad de expandirse o extenderse más."
+        "node": "Aplicar correctamente este principio permite crear clases o funciones tolerantes al cambio. Las modificaciones en una clase no deben afectar a aquellas que no implementen la interfaz relacionada. Hace el código verboso, pero con la capacidad de expandirse o extenderse más."
       },
       {
         "type": "p",
@@ -1451,7 +1461,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "Evidentemente estamos implementando para la <strong>clase Tucan</strong> métodos que no va a utilizar. Esta clase no utiliza los métodos <strong>run()</strong> y <strong>swim()</strong>, porque está fuera de sus habilidades. Por lo que estoy recurriendo a una mala práctica. La solución es implementar las interfaces propias de la clase Tucán e implementar los métodos sobrantes para las clases que lo requieran, si es que van a existir clases que requieran de esas habilidades. A continuación el mismo ejemplo pero implementado de la forma correcta: "
+            "node": "Evidentemente estamos implementando para la <strong>clase Tucan</strong> métodos que no va a utilizar. Esta clase no utiliza los métodos <strong>run()</strong> y <strong>swim()</strong>, porque está fuera de sus habilidades. Por lo que estoy recurriendo a una mala práctica. La solución es implementar las interfaces propias de la clase Tucán e implementar los métodos sobrantes para las clases que lo requieran, si es que van a existir clases que requieran de esas habilidades. A continuación, el mismo ejemplo pero implementado de la forma correcta: "
           }
         ]
       },
@@ -1478,15 +1488,15 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Con este principio garantizamos que las principales entidades de la aplicación permanezcan desacopladas de los componentes encargados de suministrar los detalles. Lo que en la práctica significa que cambios en la capa de detalles o de bajo nivel no induce a errores o perdida de rendimiento, porque no afecta a la capa superior. Entiendase como componentes de bajo nivel, a aquellos que suministran los detalles, pero sobre todo aquellos que no contienen dependencias"
+        "node": "Con este principio garantizamos que las principales entidades de la aplicación permanezcan desacopladas de los componentes encargados de suministrar los detalles. Lo que en la práctica significa que cambios en la capa de detalles o de bajo nivel no induce a errores o perdida de rendimiento, porque no afecta a la capa superior. Entiéndase como componentes de bajo nivel, a aquellos que suministran los detalles, pero sobre todo aquellos que no contienen dependencias"
       },
       {
         "type": "p",
-        "node": "Este principio se salda (la de evitar el acoplamiento entre componentes) con la implementación de abstracciones o interfaces. Por lo que aplicarlo con Javascript puro es distinto de lo que hariamos si lo hacemos con Typescript"
+        "node": "Este principio se salda (la de evitar el acoplamiento entre componentes) con la implementación de abstracciones o interfaces. Por lo que aplicarlo con Javascript puro es distinto de lo que haríamos si lo hacemos con Typescript"
       },
       {
         "type": "p",
-        "node": "La comunicación entre los componentes del sistema depende de interfaces no de componentes con funcionalidad concreta. Ahora las entidades, como podría ser una encargada de la conexión con una base de datos no debería causar estragos si las conexiones de otras entidades a ésta se realiza mediante interfaces. Así es evidente que la aplicación permanece desacoplada y ahora es posible modificar el gestor encargado del almacenamiento de datos de MondoDB a MySQL sin causar ningún problema al funcionamiento de la aplicación."
+        "node": "La comunicación entre los componentes del sistema depende de interfaces no de componentes con funcionalidad concreta. Ahora las entidades, como podría ser una encargada de la conexión con una base de datos no debería causar estragos si las conexiones de otras entidades a ésta se realiza mediante interfaces. Así es evidente que la aplicación permanece desacoplada y ahora es posible modificar el gestor encargado del almacenamiento de datos de MongoDB a MySQL sin causar ningún problema al funcionamiento de la aplicación."
       },
       {
         "type": "h4",
@@ -1501,7 +1511,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Una buena práctica es tener en cuenta las pruebas unitarias desde la creación del código, un buen código las hará más sencillas</li><li>En general un método con más de 10 líneas de código debe hacernos pensar en la existencia del mismo</li><li>Utilizar demasiados valores en datos primitivos, puede generar un código innecesariamente grande. Es importante analizar a que campo semántico pertenecerían los similares para agruparlos en objetos, clases, módulos, etc.</li><li>Tener una larga lista de parámetros también es una mala práctica</li><li>Hacer clases, funciones o módulos que sepan lo menos posible de otros métodos, módulos o elementos es un buena práctica y ayuda mucho al testing.</li><li>Si identificamos una cadena de mensajes (información que pasa de A a D pero pasando por B y C) estamos haciendo código acoplado. En la medida de lo posible debemos intentar las posibilidades de pasarlo de A a D sin intermediarios.</li>"
+            "node": "<li>Una buena práctica es tener en cuenta las pruebas unitarias desde la creación del código, un buen código las hará más sencillas</li><li>En general un método con más de 10 líneas de código debe hacernos pensar en la existencia del mismo</li><li>Utilizar demasiados valores en datos primitivos, puede generar un código innecesariamente grande. Es importante analizar a que campo semántico pertenecerían los similares para agruparlos en objetos, clases, módulos, etc.</li><li>Tener una larga lista de parámetros también es una mala práctica</li><li>Hacer clases, funciones o módulos que sepan lo menos posible de otros métodos, módulos o elementos es una buena práctica y ayuda mucho al testing.</li><li>Si identificamos una cadena de mensajes (información que pasa de A a D pero pasando por B y C) estamos haciendo código acoplado. En la medida de lo posible debemos intentar las posibilidades de pasarlo de A a D sin intermediarios.</li>"
           }
         ]
       }
