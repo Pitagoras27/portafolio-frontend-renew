@@ -47,7 +47,7 @@ export const BlogDetailPage = () => {
           backgroundColor: 'white',
           width: '100%',
           paddingTop: '100px',
-          paddingBottom: '140px'
+          paddingBottom: '100px'
         }}
       >
         <Container maxWidth="lg">
@@ -56,12 +56,12 @@ export const BlogDetailPage = () => {
               <Typography variant='h6' component='h6'>{ section }</Typography>
             </Grid>
             
-            <Grid item xs={3} align="left">
+            <Grid item xs={12} md={3} align="left">
               <Typography variant="subtitle1">
                 { hedingsT }
               </Typography>
             </Grid>
-            <Grid item xs={9} align="center" className={classes.imageContainer}>
+            <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
               <img
                 src={`/src/assets/imgs/skill-cards/detail-topics/${title}.png`}
                 alt={title}

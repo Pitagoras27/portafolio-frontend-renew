@@ -26,7 +26,7 @@ export const AllTopics = () => {
         backgroundColor: 'white',
         width: '100%',
         paddingTop: '100px',
-        paddingBottom: '140px'
+        paddingBottom: '100px'
       }}
     >
       <Container maxWidth="lg">

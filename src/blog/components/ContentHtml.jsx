@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 import { generateId } from "../../helpers";
@@ -33,7 +33,9 @@ const useStyles = makeStyles({
     },
     '& img': {
       display: 'flex',
-      margin: '35px auto'
+      margin: '35px auto',
+      maxWidth: '100%',
+      height: 'auto'
     },
     '& a': {
       textDecoration: 'none',
@@ -75,7 +77,7 @@ export const ContentHtml = ({ content }) => {
       />
     ),
     "code": ({ node }) => <div className={classes.codeFragment} key={generateId()}><code>{ node }</code></div>,
-    "img": ({ node }) => <img src={node} key={generateId()} alt="code image" />,
+    "img": ({ node }) => <Grid container key={generateId()}><Grid item xs={12}><img src={node} alt="code image" /></Grid></Grid>,
     "nested": ({ node, parent }) => {
       return (
         <Typography

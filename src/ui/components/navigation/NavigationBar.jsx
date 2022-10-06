@@ -95,7 +95,6 @@ export const NavigationBar = () => {
               </>
             ) : (
               <>
-                <Brand mobileDisplay="flex" deskDisplay="none" deviceAligment={1} />
                 <NavigationMobile
                   pages={pages}
                   classes={classes}
