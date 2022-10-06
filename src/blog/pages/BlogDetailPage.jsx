@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { useParams } from "react-router-dom";
 import { Link } from "react-scroll";
 import { ContentHtml } from "../";
-import { contentSection } from "../../helpers/utils";
+import { contentSection, pathSection } from "../../helpers/utils";
 import { useBlogStore } from "../../hooks";
 import { LayoutBlog } from "./LayoutBlog";
 
@@ -21,7 +21,19 @@ const useStyles = makeStyles({
   },
   imageContainer: {
     height: '300px',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    padding: '3%',
+    filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
+    '& span': {
+      position: 'absolute',
+      color: 'white',
+      fontSize: '40px',
+      padding: '3%',
+    }
   },
   articleIndex: {
     fontWeight: 700,
@@ -39,7 +51,7 @@ const useStyles = makeStyles({
     }
   },
   indexArticleMargin: {
-    marginBottom: '20px !important'
+    marginBottom: '20px !important',
   }
 });
 
@@ -56,7 +68,6 @@ export const BlogDetailPage = () => {
       return item.node
     }
   }).filter(Boolean)
-  
 
   return (
     <LayoutBlog>
@@ -92,6 +103,7 @@ export const BlogDetailPage = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
+              <span>{ pathSection(title) }</span>
               <img
                 src={`/src/assets/imgs/skill-cards/detail-topics/${title}.png`}
                 alt={title}

@@ -1,6 +1,5 @@
 import { Box, Container } from "@mui/material";
 import { makeStyles } from '@mui/styles/';
-
 import { generateId } from "../../helpers";
 import { useBlogStore } from "../../hooks";
 import { TopicCard } from "../components/TopicCard";
