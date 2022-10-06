@@ -91,8 +91,28 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "En cuanto a las partes duras o difíciles, aceptarlo y solventarlo nos hará a ser más resilentes y poderosos." 
-      }
+        "node": "En cuanto a las partes duras o difíciles, verlo como reto para solventarlo mejor, eso nos hará a ser más resilentes y al final dominar una herramienta cada vez más imprescindible." 
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Enlaces de interés</strong>"
+            
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://www.typescriptlang.org/docs/\">Documentación de typescript</a></li><li><a href=\"https://dev.to/hiro9108/javascript-vs-typescript-why-we-should-learn-typescript-4d5o\">Dev.io Communuty</a></li><li><a href=\"https://www.iamdeveloper.com/vscodetips/2022/may-2nd-2022-vs-code-tip-of-the-week-2l6m/\">Typescript resourse to VSC</a></li><li><a href=\"https://www.typescriptlang.org/cheatsheets\">Cheatsheets to typescript</a></li><li><a href=\"https://dev.to/nickytonline/learning-resources-for-typescript-4g1n\">Learning resources for Typescript</a></li>"
+            
+          }
+        ]
+      },
     ]
   },
   {
@@ -220,7 +240,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li><a href=\"https://in-your-saas.github.io/material-ui-theme-editor/#text-buttons\">IYS Theme Editor</a></li><li><a href=\"https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=17ad99&secondary.color=ffb300&primary.text.color=000000&secondary.text.color=000000\">Material Design Color Theme</a></li><li><a href=\"https://rossbulat.medium.com/theming-with-material-ui-in-react-49cc767dfc8\">Artículo</a></li>"
+            "node": "<li><a href=\"https://in-your-saas.github.io/material-ui-theme-editor/#text-buttons\">IYS Theme Editor</a></li><li><a href=\"https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=17ad99&secondary.color=ffb300&primary.text.color=000000&secondary.text.color=000000\">Material Design Color Theme</a></li><li><a href=\"https://rossbulat.medium.com/theming-with-material-ui-in-react-49cc767dfc86\">Theming with Material UI in Medium</a></li>"
           }
         ]
       },
@@ -895,8 +915,25 @@ export const cardsSkillsBlog = [
       {
         "type": "p",
         "node": "En mi reciente experiencia al trabajar con Vite, en lo que a pruebas unitarias se refiere puede ser costoso configurar desde cero el set, hay que tener en cuenta que esta aplicación de utilidad está realizada para ser personalizada a la medida y muchas configuraciones no vienen escritas por defecto; hay que investigar y muchas otras veces trabajar con prueba y error, por lo tanto, es menester contar con un post relacionado que nos ayude a realizar esta tarea de forma más clara y explícita. Sin más tengo que decir que este post regularmente lo estaré actualizando con nueva información relacionada a la configuración y optimización de las pruebas unitarias dentro de Vite."
-      }
-
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Algunos recursos útiles:</strong>"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://testing-library.com/\">Testing Library</a></li><li><a href=\"https://reactjs.org/docs/testing.html\">Testing overview from react</a></li><li><a href=\"https://www.freecodecamp.org/news/how-to-test-react-applications/\">How to test react apps. FreeCodeCamp Article.</a></li>"
+          }
+        ]
+      },
     ]
   },
   {
@@ -1208,7 +1245,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>La guía definitiva<a href=\"https://acompiler.com/git-best-practices/#tve-jump-17738882369\"></a></li><li><a href=\"https://github.com/\">Github Home</a></li><li><a href=\"http://yourfirstpr.github.io/\">Your First Pull Request</a></li><li><a href=\"http://yourfirstpr.github.io/\">Formateo básico según Github</a></li><li><a href=\"https://learngitbranching.js.org/?locale=es_ES\">Learn Git Branching</a></li>"
+            "node": "<li><a href=\"https://acompiler.com/git-best-practices/#tve-jump-17738882369\">La guía definitiva</a></li><li><a href=\"https://github.com/\">Github Home</a></li><li><a href=\"http://yourfirstpr.github.io/\">Your First Pull Request</a></li><li><a href=\"http://yourfirstpr.github.io/\">Formateo básico según Github</a></li><li><a href=\"https://learngitbranching.js.org/?locale=es_ES\">Learn Git Branching</a></li>"
           }
         ]
       },
@@ -1231,7 +1268,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Los principios SOLID nos indican cómo organizar nuestras funciones y estructuras de datos en componentes y cómo dichos componentes deben estar interconectados entre ellos. De igual manera abordaré su contraparte descrito con el acrónimo STUPID, sin más introducción consideremos primero como describir de forma general las malas prácticas"
+        "node": "Los principios SOLID nos indican cómo organizar nuestras funciones y estructuras de datos en componentes y cómo dichos componentes deben estar interconectados entre ellos. De igual manera abordaré su contraparte descrito con el acrónimo STUPID explicadas malas prácticas identificadas"
       },
       {
         "type": "h4",
@@ -1514,7 +1551,25 @@ export const cardsSkillsBlog = [
             "node": "<li>Una buena práctica es tener en cuenta las pruebas unitarias desde la creación del código, un buen código las hará más sencillas</li><li>En general un método con más de 10 líneas de código debe hacernos pensar en la existencia del mismo</li><li>Utilizar demasiados valores en datos primitivos, puede generar un código innecesariamente grande. Es importante analizar a que campo semántico pertenecerían los similares para agruparlos en objetos, clases, módulos, etc.</li><li>Tener una larga lista de parámetros también es una mala práctica</li><li>Hacer clases, funciones o módulos que sepan lo menos posible de otros métodos, módulos o elementos es una buena práctica y ayuda mucho al testing.</li><li>Si identificamos una cadena de mensajes (información que pasa de A a D pero pasando por B y C) estamos haciendo código acoplado. En la medida de lo posible debemos intentar las posibilidades de pasarlo de A a D sin intermediarios.</li>"
           }
         ]
-      }
+      },
+      {
+        "type": "p",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<strong>Algunos recursos útiles:</strong>"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "node": [
+          {
+            "type": "nested",
+            "node": "<li><a href=\"https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa\">S.O.L.I.D. Article from Medium</a></li><li><a href=\"https://hackernoon.com/understanding-solid-principles-in-javascript-w1cx3yrv\">Understanding SOLID Principles in JavaScript</a></li><li><a href=\"https://dev.to/denisveleaev/5-solid-principles-with-javascript-how-to-make-your-code-solid-1kl5\">How to make your code SOLID</a></li><li><a href=\"https://www.solidjs.com/guides/getting-started#aprende-solid\">SOLID JS</a></li>"
+          }
+        ]
+      },
     ]
   }
 ];

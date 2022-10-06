@@ -32,7 +32,8 @@ const useStyles = makeStyles({
     },
     '& > a': {
       padding: '8px 10px',
-      display: 'block !important'
+      display: 'block !important',
+      cursor: 'pointer',
     }
   },
   extraLink: {

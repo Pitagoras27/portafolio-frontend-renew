@@ -34,6 +34,11 @@ const useStyles = makeStyles({
     '& img': {
       display: 'flex',
       margin: '35px auto'
+    },
+    '& a': {
+      textDecoration: 'none',
+      fontWeight: '700',
+      color: "#0375b8"
     }
   },
   quoteContainer: {
@@ -49,7 +54,8 @@ const variant = {
 export const ContentHtml = ({ content }) => {
   const classes = useStyles();
   const htmlElements = {
-    "h4": ({ type, node }) => (
+    "h4": ({ type, node }) => {
+      return (
       <div key={generateId()}>
         <Box sx={{ mt: 7 }} />
         <Typography
@@ -59,7 +65,7 @@ export const ContentHtml = ({ content }) => {
           className={classes.aligmentElements}
         />
       </div>
-    ),
+    )},
     "p": ({ node }) => (
       <Typography
         key={generateId()}

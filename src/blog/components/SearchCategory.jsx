@@ -14,17 +14,17 @@ export const SearchCategory = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container>
-          <Grid item xs={6}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h5" component="h5"
               sx={{
                 margin: '10px 0',
                 textAlign: 'center' 
               }}>
-              This section is building now, some content is incomplete or link are disable
+              This section represents my last learning about my job how frontend developer
             </Typography>
           </Grid>
-          <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} md={6}>
             <CategorySelector label="Select a topic" options={categories} />
           </Grid>
         </Grid>

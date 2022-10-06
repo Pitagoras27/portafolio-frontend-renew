@@ -16,6 +16,7 @@ export const HeaderSection = ({ headerTitle, idScroll }) => {
     <Typography
       gutterBottom
       variant="h3"
+      component="h4"
       align="center"
       className={classes.marginHeaders}
       id={ idScroll }

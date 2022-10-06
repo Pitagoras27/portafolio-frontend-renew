@@ -24,6 +24,7 @@ const useStyles = makeStyles({
   }
 });
 
+const hedingsT = [1,2,3,4,5]
 export const BlogDetailPage = () => {
   const classes = useStyles();
   const { topics } = useBlogStore();
@@ -55,7 +56,12 @@ export const BlogDetailPage = () => {
               <Typography variant='h6' component='h6'>{ section }</Typography>
             </Grid>
             
-            <Grid item xs={12} align="center" className={classes.imageContainer}>
+            <Grid item xs={3} align="left">
+              <Typography variant="subtitle1">
+                { hedingsT }
+              </Typography>
+            </Grid>
+            <Grid item xs={9} align="center" className={classes.imageContainer}>
               <img
                 src={`/src/assets/imgs/skill-cards/detail-topics/${title}.png`}
                 alt={title}

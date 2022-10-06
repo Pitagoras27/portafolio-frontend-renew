@@ -20,6 +20,11 @@ const useStyles = makeStyles({
     '&:hover': {
       '-webkitTransform': 'translate3d(0,-3px,0)',
       transform: 'translate3d(0,-4px,0)'
+    },
+    '& a': {
+      textDecoration: 'none',
+      fontWeight: '700',
+      color: "#0375b8"
     }
   }
 })
