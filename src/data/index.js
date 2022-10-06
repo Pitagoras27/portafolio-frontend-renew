@@ -466,7 +466,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Qué problema resuelve:</strong> El poder gestionar el estado interno de nuestro componente desde el exterior. Generalmente desde el componente contenedor. Lo que también permite sobrescribir el estado por defecto que tenga el hijo."
+            "node": "<strong>Qué problema resuelve:</strong> <em>El poder gestionar el estado interno de nuestro componente desde el exterior. Generalmente desde el componente contenedor. Lo que también permite sobrescribir el estado por defecto que tenga el hijo.</em>"
           } 
         ]
       },
@@ -763,7 +763,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Importante:</strong> Los conceptos son generales y aplican para cualquier aplicación escrita en x lenguaje, sin embargo, las herramientas son particularmente utilizadas para testear una aplicación desarrollada con react.",
+            "node": "<strong>Importante:</strong> Los conceptos son generales y aplican para cualquier aplicación escrita en x lenguaje, sin embargo, los códigos aquí presentados son partícularmente utilizados para testear una aplicación desarrollada con react.",
           }
         ],
       },

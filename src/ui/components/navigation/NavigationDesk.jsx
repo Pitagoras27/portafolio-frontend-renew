@@ -22,7 +22,6 @@ export const NavigationDesk = ({ classes, pages }) => {
             >
               <Link
                 onClick={() => handleAnimationByScroll(section)}
-                activeClass='active'
                 to={section}
                 spy={true}
                 offset={-64}

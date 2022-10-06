@@ -64,6 +64,7 @@ export const ContentHtml = ({ content }) => {
           variant={type}
           component={type}
           children={node}
+          id={node}
           className={classes.aligmentElements}
         />
       </div>
@@ -77,7 +78,13 @@ export const ContentHtml = ({ content }) => {
       />
     ),
     "code": ({ node }) => <div className={classes.codeFragment} key={generateId()}><code>{ node }</code></div>,
-    "img": ({ node }) => <Grid container key={generateId()}><Grid item xs={12}><img src={node} alt="code image" /></Grid></Grid>,
+    "img": ({ node }) => (
+      <Grid container key={generateId()}>
+        <Grid item xs={12}>
+          <img src={node} alt="code image" />
+        </Grid>
+      </Grid>
+    ),
     "nested": ({ node, parent }) => {
       return (
         <Typography

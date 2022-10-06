@@ -1,9 +1,10 @@
 
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "react-scroll";
 import { ContentHtml } from "../";
-import { contentSection, pathSection } from "../../helpers/utils";
+import { contentSection } from "../../helpers/utils";
 import { useBlogStore } from "../../hooks";
 import { LayoutBlog } from "./LayoutBlog";
 
@@ -12,7 +13,7 @@ const useStyles = makeStyles({
     margin: '15px 0 40px !important',
   },
   marginIntroText: {
-    margin: '80px 0 40px !important',
+    margin: '40px 0 10px !important',
     textAlign: 'center !important'
   },
   mainImage: {
@@ -21,24 +22,41 @@ const useStyles = makeStyles({
   imageContainer: {
     height: '300px',
     overflow: 'hidden'
+  },
+  articleIndex: {
+    fontWeight: 700,
+    textAlign: 'center',
+    display: 'inline-block',
+    width: '100%',
+    marginBottom: '15px',
+  },
+  linkStyles: {
+    cursor: 'pointer',
+    '&:hover': {
+      textDecoration: 'underline',
+      fontStyle: 'italic',
+      color: '#0375b8'
+    }
+  },
+  indexArticleMargin: {
+    marginBottom: '20px !important'
   }
 });
 
-const hedingsT = [1,2,3,4,5]
 export const BlogDetailPage = () => {
   const classes = useStyles();
   const { topics } = useBlogStore();
 
-  const navigate = useLocation();
   const { section, title, id } = useParams();
 
-  const mainTitle = pathSection(title);
   const { intro, content } = contentSection(topics, id);
-
-  const onNavigateBack = () => {
-    // const lastPage = id.split("-")[0];
-    // navigate(`/${lastPage}`);
-  };
+  
+  const result = content.map(item => {
+    if(item.type === 'h4') {
+      return item.node
+    }
+  }).filter(Boolean)
+  
 
   return (
     <LayoutBlog>
@@ -57,8 +75,20 @@ export const BlogDetailPage = () => {
             </Grid>
             
             <Grid item xs={12} md={3} align="left">
-              <Typography variant="subtitle1">
-                { hedingsT }
+              <Typography variant="subtitle1" className={classes.indexArticleMargin}>
+                <span className={classes.articleIndex}>INDICE: </span>
+                { result.map(item => (
+                  <li key={item}>
+                    <Link
+                      activeClass='active'
+                      className={classes.linkStyles}
+                      to={item}
+                      offset={-64}
+                    >
+                      { item }
+                    </Link>
+                  </li>)
+                )}
               </Typography>
             </Grid>
             <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
