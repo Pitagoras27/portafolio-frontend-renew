@@ -157,11 +157,11 @@ export const Projects = React.memo(({ direction }) => {
             }}
           />
 
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             <img src={firstCompany} className="img-responsive" alt="last job" />
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <em> Work for huge cantity of information requires solutions modulars and scalars</em>
             
             <Typography variant="h6" sx={{ marginTop: '20px', fontWeight: '700'}}>

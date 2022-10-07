@@ -102,10 +102,10 @@ export const Footer = () => {
             <Link className={classes.socialMedia} href='https://github.com/Pitagoras27/'>
               <i className='icon-github-icon'></i>
             </Link>
-            <Link className={classes.socialMedia} href='https://github.com/Pitagoras27/'>
+            <Link className={classes.socialMedia} href='https://www.linkedin.com/in/carlos-guti%C3%A9rrez-39ab891a6/'>
               <i className='icon-linkeding-icon'></i>
             </Link>
-            <Link className={classes.socialMedia} href='https://github.com/Pitagoras27/'>
+            <Link className={classes.socialMedia} href='https://www.freecodecamp.org/learn'>
               <i className='icon-freecodecamp-icon'></i>
             </Link>
           </Grid>
