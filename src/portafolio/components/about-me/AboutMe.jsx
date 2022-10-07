@@ -11,8 +11,8 @@ import { HeaderSection } from '../../../ui';
 const section = 'about';
 
 export const AboutMe = React.memo(({ direction }) => {
-  const { animatedSection } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
+  const { animatedSection } = useAnimatedStore();
 
   const options = {
     root: null,

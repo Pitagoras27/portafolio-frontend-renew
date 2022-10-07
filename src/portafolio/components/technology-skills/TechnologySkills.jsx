@@ -1,45 +1,41 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link as LinkScroll } from "react-scroll";
-import { useAnimatedStore, useSectionOnScreen } from '../../../hooks';
+import { useAnimatedStore, useSetAnimationSection } from '../../../hooks';
 import { HeaderSection } from '../../../ui';
 import { SliderSkills } from './SliderSkills';
 
+const section = 'skills';
+
 export const TechnologySkills = React.memo(({ direction }) => {
-
-
   const [heightEl, setHeightEl] = useState('0');
-  const { fadeInUp, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+  const { animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+
   const options = {
     root: null,
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
-  
-  const [ containerRef, isVisible ] = useSectionOnScreen(options);
- 
+
+  const { 
+    containerRef,
+    animationType,
+    onSectionVisible
+  } = useSetAnimationSection(options, direction, animatedSection, section);
+
   useEffect(() => {
+    let timer = () => {};
+
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight)
+      // ? This timer allow read correct height
+      timer = setTimeout(() => {
+        setHeightEl(containerRef.current.clientHeight);
+      }, 500)
     }
+
+    return () => clearTimeout(timer);
+
   }, []);
-
-  useEffect(() => {
-    if(!isVisible) {
-      clearVisibleSection('skills');
-    } else {
-      startAnimated('skills');
-    }
-  }, [isVisible])
-
-  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
-
-  const animationType = useMemo(() => {
-    if (isVisible) {
-      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
-    }
-    }, [isVisible]
-  );
 
   return (
     <Box
@@ -51,12 +47,11 @@ export const TechnologySkills = React.memo(({ direction }) => {
     >
       <Container
         maxWidth="lg"
-        className={ `animate__animated ${onSectionVisible('skills') ? animationType : 'hideSection'}`}
-
+        className={ `animate__animated ${onSectionVisible ? animationType : 'hideSection'}`}
       >
         <Grid container>
           <Grid item xs={12}>
-          <HeaderSection headerTitle="Skills" idScroll="skills" />
+          <HeaderSection headerTitle="Skills" idScroll={section} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="body1" paragraph align="left">

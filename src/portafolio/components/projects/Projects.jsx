@@ -1,46 +1,46 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import lastCompany from "../../../assets/imgs/projects/finance.png";
 import prevCompany from "../../../assets/imgs/projects/gnp.jpg";
 import logoTelevisa from "../../../assets/imgs/projects/Logotipo_de_Televisa.png";
 import logoGnp from "../../../assets/imgs/projects/Logo_del_GNP.svg.png";
 import bankImage from "../../../assets/imgs/projects/Scotiabank_logo.svg";
 import firstCompany from "../../../assets/imgs/projects/televisas.png";
-import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
+import { useAnimatedStore, useSetAnimationSection } from "../../../hooks";
 import { HeaderSection } from '../../../ui';
 import { DateJob } from "./DateJob";
 
+const section = 'projects';
+
 export const Projects = React.memo(({ direction }) => {
-  const { fadeInUp, animatedSection, fadeInDown, clearVisibleSection, startAnimated } = useAnimatedStore();
   const [heightEl, setHeightEl] = useState('0');
+  const { animatedSection } = useAnimatedStore();
+
   const options = {
     root: null,
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
-  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+
+  const { 
+    containerRef,
+    animationType,
+    onSectionVisible 
+  } = useSetAnimationSection(options, direction, animatedSection, section);
+
   useEffect(() => {
+    let timer = () => {};
+
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight + 23)
+      // ? This timer allow read correct height
+      timer = setTimeout(() => {
+        setHeightEl(containerRef.current.clientHeight);
+      }, 500)
     }
+
+    return () => clearTimeout(timer);
+
   }, []);
-  
-  useEffect(() => {
-    if(!isVisible) {
-      clearVisibleSection('projects');
-    } else {
-      startAnimated('projects');
-    }
-  }, [isVisible])
-
-  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
-
-  const animationType = useMemo(() => {
-    if (isVisible) {
-      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
-    }
-    }, [isVisible]
-  );
 
   return (
     <Box
@@ -53,9 +53,9 @@ export const Projects = React.memo(({ direction }) => {
       <Container
         maxWidth="lg"
         fixed={false}
-        className={ `animate__animated ${onSectionVisible('projects') ? animationType : 'hideSection'}`}
+        className={ `animate__animated ${onSectionVisible ? animationType : 'hideSection'}`}
       >
-        <HeaderSection headerTitle="Companies I was work" idScroll="projects" />
+        <HeaderSection headerTitle="Companies I was work" idScroll={section} />
         <Grid container spacing={1}>
           <Grid item xs={12}>
             <DateJob

@@ -1,42 +1,39 @@
 import { Box, Container } from "@mui/material";
-import React, { useEffect, useMemo, useState } from "react";
-// import { animationType } from '../../../helpers';
-import { useAnimatedStore, useSectionOnScreen } from "../../../hooks";
+import React, { useEffect, useState } from "react";
+import { useAnimatedStore, useSetAnimationSection } from "../../../hooks";
 import { Contact, HeaderSection, LayoutContact } from "../../../ui";
 
-export const ContactFooter = React.memo(({ direction }) => {
+const section = 'contact';
 
-  const { fadeInUp, animatedSection, clearVisibleSection, startAnimated } = useAnimatedStore();
+export const ContactFooter = React.memo(({ direction }) => {
   const [heightEl, setHeightEl] = useState('0');
+  const { animatedSection } = useAnimatedStore();
+
   const options = {
     root: null,
     rootMargin: `${heightEl}px`,
     threshold:1.0
   }
- 
-  const [ containerRef, isVisible ] = useSectionOnScreen(options);
+
+  const { 
+    containerRef,
+    animationType,
+    onSectionVisible 
+  } = useSetAnimationSection(options, direction, animatedSection, section);
+
   useEffect(() => {
+    let timer = () => {};
+
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight)
+      // ? This timer allow read correct height
+      timer = setTimeout(() => {
+        setHeightEl(containerRef.current.clientHeight);
+      }, 500)
     }
+
+    return () => clearTimeout(timer);
+
   }, []);
-  
-  useEffect(() => {
-    if(!isVisible) {
-      clearVisibleSection('contact');
-    } else {
-      startAnimated('contact');
-    }
-  }, [isVisible])
-
-  const onSectionVisible = (section) => animatedSection.find((item) => item === section);
-
-  const animationType = useMemo(() => {
-    if (isVisible) {
-      return direction === 'up' ? 'animate__fadeInDown' : 'animate__fadeInUp'
-    }
-    }, [isVisible]
-  );
 
   return (
     <Box
@@ -49,9 +46,10 @@ export const ContactFooter = React.memo(({ direction }) => {
     >
       <Container
         maxWidth="sm"
-        className={ `animate__animated ${onSectionVisible('contact') ? animationType : 'hideSection'}`}
+        className={ `animate__animated ${onSectionVisible ? animationType : 'hideSection'}`}
+
       >
-        <HeaderSection headerTitle="Contact" idScroll="contact" />
+        <HeaderSection headerTitle="Contact" idScroll={section} />
         <LayoutContact
           mainTitle='Write a Message' 
           subtitle={['I\'m interested in all type of opportunities that make me grow professionally', <br/>,
