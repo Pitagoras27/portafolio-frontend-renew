@@ -9,7 +9,6 @@ export const useFetch = () => {
   useEffect(() => {
     const getDataRequest = async () => {
       try {
-
         const { data } = await axiosFetch.get('/quotes');
         setLoading(false);
         setData(data);

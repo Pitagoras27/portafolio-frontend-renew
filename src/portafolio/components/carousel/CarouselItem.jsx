@@ -1,4 +1,4 @@
-import { Box, Button, Container, Paper } from '@mui/material';
+import { Box, Button, Container, Paper, useMediaQuery } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   }
 });
 
-const styleBox = {
+const styleBox = (deviceMedia) => ({
   marginTop: 'auto',
   display: 'flex',
   flexDirection: 'column',
@@ -38,10 +38,10 @@ const styleBox = {
   },
   '& > :not(style)': {
     m: 1,
-    width: 428,
-    marginTop: '-30PX'
+    width: deviceMedia ? 428 : '100%',
+    marginTop: '-30px'
   }
-}
+})
 
 const stylePaper = (image, type) => ({
   color: `${(type === 1) ? '#2b5d73' : '#c3ddeb'}`,
@@ -52,6 +52,7 @@ const stylePaper = (image, type) => ({
 })
 
 export const CarouselItem = ({ item, image, handleOpen, type }) => {
+  const matches = useMediaQuery('(min-width:600px)');
   const classes = useStyles();
   return (
     <Paper
@@ -61,7 +62,7 @@ export const CarouselItem = ({ item, image, handleOpen, type }) => {
     >
       <Container maxWidth="xl">
         <Box
-          sx={styleBox}
+          sx={styleBox(matches)}
         > 
           <div className={ classes.fontColor }>
             <h1>{ item.name }</h1>

@@ -4,13 +4,15 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   mainContainer: {
     paddingLeft: '0 !important',
-    marginBottom: '20px' 
+    paddingRight: '12px !important',
+    marginBottom: '20px', 
+    paddingRight: '12px'
   },
   logoStyles: {
     padding: '21px 0 0'
   },
   dateContainer: {
-    width: '380px !important',
+    width: '360px !important',
     paddingLeft: '0 !important',
     display: 'flex !important',
     alignItems: 'right !important',

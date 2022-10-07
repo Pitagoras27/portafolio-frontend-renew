@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Link, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import React from 'react';
 import ornametFooter from "../../../assets/imgs/mycellaneous/ornamentFooter.svg";
 import { getQuote } from "../../../helpers";
 import { useFetch } from "../../../hooks";
@@ -38,16 +39,18 @@ const useStyles = makeStyles({
     },
   },
   initialQuote: {
-    left: '-40px',
+    left: '-25px',
     bottom: '-50px'
   },
   endQuote: {
-    top: '-28px',
-    right: '-20px' 
+    // top: '-28px',
+    // right: '-20px' 
+    top: '-25px',
+    right: '-5px' 
   }
 });
 
-export const Footer = () => {
+export const Footer = React.memo(() => {
   const classes = useStyles();
   const { loading, data } = useFetch();
   const { quotes } = data;
@@ -113,4 +116,4 @@ export const Footer = () => {
       </Box>
     </>
   )
-}
+})
