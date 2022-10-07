@@ -27,9 +27,17 @@ export const AboutMe = React.memo(({ direction }) => {
   } = useSetAnimationSection(options, direction, animatedSection, section);
 
   useEffect(() => {
+    let timer = () => {};
+
     if (containerRef.current) {
-      setHeightEl(containerRef.current.clientHeight);
+      // ? This timer allow read correct height
+      timer = setTimeout(() => {
+        setHeightEl(containerRef.current.clientHeight);
+      }, 500)
     }
+
+    return () => clearTimeout(timer);
+
   }, []);
 
   return (

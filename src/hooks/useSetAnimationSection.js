@@ -9,9 +9,9 @@ export const useSetAnimationSection = (options, direction, animatedSection, sect
 
   useEffect(() => {
     if(!isVisible) {
-      clearVisibleSection('about');
+      clearVisibleSection(sectionPage);
     } else {
-      startAnimated('about');
+      startAnimated(sectionPage);
     }
   }, [isVisible])
 
