@@ -69,6 +69,8 @@ export const BlogDetailPage = () => {
     }
   }).filter(Boolean)
 
+  const mainImage = topics.find(item => item.id === Number(id)).mainImage
+
   return (
     <LayoutBlog>
       <Box
@@ -105,7 +107,7 @@ export const BlogDetailPage = () => {
             <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
               <span>{ pathSection(title) }</span>
               <img
-                src={`/src/assets/imgs/skill-cards/detail-topics/${title}.png`}
+                src={mainImage}
                 alt={title}
                 className={classes.mainImage}
               />

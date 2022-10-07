@@ -42,8 +42,8 @@ const useStyles = makeStyles({
     bottom: '-50px'
   },
   endQuote: {
-    top: '-10px',
-    right: '-20px'
+    top: '-28px',
+    right: '-20px' 
   }
 });
 

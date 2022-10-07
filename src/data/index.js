@@ -1,3 +1,47 @@
+import modelBox1 from '../assets/imgs/skill-cards/css/model-box-1.png';
+import modelBox2 from '../assets/imgs/skill-cards/css/model-box-2.png';
+import modelBox3 from '../assets/imgs/skill-cards/css/model-box-3.png';
+import es6yjs from '../assets/imgs/skill-cards/es6yjs.png';
+import front1 from '../assets/imgs/skill-cards/front1.png';
+import fullstack from '../assets/imgs/skill-cards/fullstack.png';
+import restBack1 from '../assets/imgs/skill-cards/fullstack/rest-back-1.png';
+import git from '../assets/imgs/skill-cards/git.png';
+import git1 from '../assets/imgs/skill-cards/git/git-1.png';
+import git2 from '../assets/imgs/skill-cards/git/git-2.png';
+import mui1 from '../assets/imgs/skill-cards/mui-started/mui-1.png';
+import mui2 from '../assets/imgs/skill-cards/mui-started/mui-2.png';
+import mui3 from '../assets/imgs/skill-cards/mui-started/mui-3.png';
+import compoundComponentPattern1 from '../assets/imgs/skill-cards/react-patterns/compound-component-pattern-1.png';
+import compoundComponentPattern2 from '../assets/imgs/skill-cards/react-patterns/compound-component-pattern-2.png';
+import compoundComponentPattern3 from '../assets/imgs/skill-cards/react-patterns/compound-component-pattern-3.png';
+import controlProps1 from '../assets/imgs/skill-cards/react-patterns/control-props-1.png';
+import controlProps2 from '../assets/imgs/skill-cards/react-patterns/control-props-2.png';
+import hooksPattern1 from '../assets/imgs/skill-cards/react-patterns/hooks-pattern-1.png';
+import hooksPattern2 from '../assets/imgs/skill-cards/react-patterns/hooks-pattern-2.png';
+import reducerPattern1 from '../assets/imgs/skill-cards/react-patterns/reducer-pattern-1.png';
+import reducerPattern2 from '../assets/imgs/skill-cards/react-patterns/reducer-pattern-2.png';
+import reducerPattern3 from '../assets/imgs/skill-cards/react-patterns/reducer-pattern-3.png';
+import renderProps1 from '../assets/imgs/skill-cards/react-patterns/render-props-1.png';
+import renderProps2 from '../assets/imgs/skill-cards/react-patterns/render-props-2.png';
+import renderProps3 from '../assets/imgs/skill-cards/react-patterns/render-props-3.png';
+import sass from '../assets/imgs/skill-cards/sass.png';
+import solid from '../assets/imgs/skill-cards/solid.jpg';
+import liskovPrinciple1 from '../assets/imgs/skill-cards/solid/liskov-principle-1.png';
+import liskovPrinciple2 from '../assets/imgs/skill-cards/solid/liskov-principle-2.png';
+import segregation1 from '../assets/imgs/skill-cards/solid/segregation-1.png';
+import segregation2 from '../assets/imgs/skill-cards/solid/segregation-2.png';
+import thumbSection from '../assets/imgs/skill-cards/thumb-section.jpg';
+import isImage from '../assets/imgs/skill-cards/ts.png';
+
+import cssMainImg from '../assets/imgs/skill-cards/detail-topics/css-box-model.png';
+import gitMainImg from '../assets/imgs/skill-cards/detail-topics/git-best-practices.png';
+import backMainImg from '../assets/imgs/skill-cards/detail-topics/interact-with-backend.png';
+import muiMainImg from '../assets/imgs/skill-cards/detail-topics/material-ui-and-react.png';
+import reactMainImg from '../assets/imgs/skill-cards/detail-topics/patrones-en-react.png';
+import solidMainImg from '../assets/imgs/skill-cards/detail-topics/solid.png';
+import testingMainImg from '../assets/imgs/skill-cards/detail-topics/testing-front-with-testing-library-and-vite.png';
+import tsMainImg from '../assets/imgs/skill-cards/detail-topics/typescript-hard-to-learn-but-completely-neccesary.png';
+
 export const carouselData = [
   {
     name: "Front-end Programming",
@@ -18,12 +62,13 @@ export const cardsSkillsBlog = [
     "id": 1,
     "title": "Typescript, hard to learn, but completely neccesary",
     "section": "typescript",
+    "mainImage": tsMainImg,
     "badge": [
       "Secure",
       "Development"
     ],
     "intro": "Nowadays is more evident that technologic enterprices apply their efforts to create apps more secure and scalables, this is the main reason for implement and use Typescript ",
-    "image": "../src/assets/imgs/skill-cards/ts.png",
+    "image": isImage,
     "content": [
       {
         "type": "h4",
@@ -119,12 +164,13 @@ export const cardsSkillsBlog = [
     "id": 2,
     "title": "Material UI and React",
     "section": "react",
+    "mainImage": muiMainImg,
     "badge": [
       "Libraries",
       "Frontend"
     ],
     "intro": "In software development the priority is quality and speed, and the best way to reach this is learn Material UI, the best library of components for react",
-    "image": "../src/assets/imgs/skill-cards/front1.png",
+    "image": front1,
     "content": [
       {
         "type": "h4",
@@ -183,7 +229,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/mui-started/mui-2.png"
+        "node": mui2
       },
       {
         "type": "p",
@@ -196,7 +242,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/mui-started/mui-1.png"
+        "node": mui1,
       },
       {
         "type": "p",
@@ -216,7 +262,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/mui-started/mui-3.png"
+        "node": mui3,
       },
       {
         "type": "h4",
@@ -250,11 +296,12 @@ export const cardsSkillsBlog = [
     "id": 3,
     "title": "Patrones en react",
     "section": "react",
+    "mainImage": reactMainImg,
     "badge": [
       "React Library, patterns"
     ],
     "intro": "Design patterns are solution templates to common software development problems. In React, also provide solution to solve common problems.",
-    "image": "../src/assets/imgs/skill-cards/thumb-section.jpg",
+    "image": thumbSection,
     "content": [
       {
         "type": "h4",
@@ -312,11 +359,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/hooks-pattern-1.png"
+        "node": hooksPattern1,
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/hooks-pattern-2.png"
+        "node": hooksPattern2,
       },
 
 
@@ -340,7 +387,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-1.png"
+        "node": compoundComponentPattern1,
       },
       {
         "type": "p",
@@ -348,7 +395,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-3.png"
+        "node": compoundComponentPattern3,
       },
       {
         "type": "p",
@@ -361,7 +408,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/compound-component-pattern-2.png"
+        "node": compoundComponentPattern2,
       },
       {
         "type": "p",
@@ -422,7 +469,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-1.png"
+        "node": reducerPattern1,
       },
       {
         "type": "p",
@@ -444,11 +491,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-3.png"
+        "node": reducerPattern3,
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/reducer-pattern-2.png"
+        "node": reducerPattern2,
       },
       {
         "type": "p",
@@ -476,11 +523,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/control-props-1.png"
+        "node": controlProps1,
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/control-props-2.png"
+        "node": controlProps2,
       },
       {
         "type": "p",
@@ -517,7 +564,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-1.png"
+        "node": renderProps1,
       },
       {
         "type": "p",
@@ -525,7 +572,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-2.png"
+        "node": renderProps2,
       },
       {
         "type": "p",
@@ -533,7 +580,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/react-patterns/render-props-3.png"
+        "node": renderProps3,
       },
       
 
@@ -601,12 +648,13 @@ export const cardsSkillsBlog = [
     "id": 4,
     "title": "CSS Box Model",
     "section": "css",
+    "mainImage": cssMainImg,
     "badge": [
       "Design",
       "CSS"
     ],
     "intro": "The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. Learn how to apply it, is the first step to create usables and effective design apps",
-    "image": "../src/assets/imgs/skill-cards/es6yjs.png",
+    "image": es6yjs,
     "content": [
       {
         "type": "h4",
@@ -626,7 +674,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/css/model-box-1.png"
+        "node": modelBox1,
       },
       {
         "type": "p",
@@ -656,7 +704,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/css/model-box-2.png"
+        "node": modelBox2,
       },
       {
         "type": "p",
@@ -695,7 +743,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/css/model-box-3.png"
+        "node": modelBox3,
       },
       {
         "type": "p",
@@ -751,12 +799,13 @@ export const cardsSkillsBlog = [
     "id": 5,
     "title": "Testing front with testing library and Vite",
     "section": "testing",
+    "mainImage": testingMainImg,
     "badge": [
       "Testing Library",
       "React"
     ],
     "intro": "Vite is a great and amazing boilerplate to developing speed react apps, but is neccesary make some configurations, here will explore some strategies to start the suite test",
-    "image": "../src/assets/imgs/skill-cards/sass.png",
+    "image": sass,
     "content": [
       {
         "type": "p",
@@ -940,11 +989,12 @@ export const cardsSkillsBlog = [
     "id": 6,
     "title": "Interact with backend",
     "section": "fullstack",
+    "mainImage": backMainImg,
     "badge": [
       "Fullstack"
     ],
     "intro": "Create a rest api to consumes in front; create one module to authentication with JWT, validations fields, and CRUD to interact app in front-end",
-    "image": "../src/assets/imgs/skill-cards/fullstack.png",
+    "image": fullstack,
     "content": [
       {
         "type": "p",
@@ -985,7 +1035,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/fullstack/rest-back-1.png"
+        "node": restBack1,
       },
       {
         "type": "h4",
@@ -1054,11 +1104,12 @@ export const cardsSkillsBlog = [
     "id": 7,
     "title": "Git Best Practices",
     "section": "best practices",
+    "mainImage": gitMainImg,
     "badge": [
       "WorkFlow"
     ],
     "intro": "Here, we will explore some of the commands and use case to manage one of the most useful control version. For ohter hand will see how to work with better commits and another tips",
-    "image": "../src/assets/imgs/skill-cards/git.png",
+    "image": git,
     "content": [
       { 
         "type": "h4",
@@ -1191,11 +1242,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/git/git-1.png"
+        "node": git1,
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/git/git-2.png"
+        "node": git2,
       },
       {
         "type": "h4",
@@ -1255,12 +1306,13 @@ export const cardsSkillsBlog = [
     "id": 8,
     "title": "SOLID",
     "section": "best practices",
+    "mainImage": solidMainImg,
     "badge": [
       "Framework",
       "Desarrollo"
     ],
     "intro": "The SOLID principles tell us how to organize our functions and data structures into components and how those components should be interconnected.",
-    "image": "../src/assets/imgs/skill-cards/solid.jpg",
+    "image": solid,
     "content": [
       {
         "type": "p",
@@ -1435,11 +1487,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/solid/liskov-principle-1.png"
+        "node": liskovPrinciple1
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/solid/liskov-principle-2.png"
+        "node": liskovPrinciple2
       },
       {
         "type": "p",
@@ -1491,7 +1543,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/solid/segregation-1.png"
+        "node": segregation1
       },
       {
         "type": "p",
@@ -1504,7 +1556,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "img",
-        "node": "/src/assets/imgs/skill-cards/solid/segregation-2.png"
+        "node": segregation2
       },
       {
         "type": "p",
