@@ -1,7 +1,7 @@
 export const pathSectionFriendly = (titleTopic) => titleTopic.replace(/,?\s+/g, '-').toLowerCase();
 
-export const pathSection = (titleTopic) => {
-  const capitalize = titleTopic.at(0).toUpperCase();
+export const pathSection = (titleTopic = '') => {
+  const capitalize = titleTopic.substring(0,1)?.toUpperCase();
   const format = titleTopic.replace(/-/g, ' ').slice(1);
 
   return capitalize + format;

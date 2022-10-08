@@ -6,7 +6,6 @@ const useStyles = makeStyles({
     paddingLeft: '0 !important',
     paddingRight: '12px !important',
     marginBottom: '20px', 
-    paddingRight: '12px'
   },
   logoStyles: {
     padding: '21px 0 0'
@@ -30,7 +29,8 @@ export const DateJob = ({ startJob, endJob, settingLogo}) => {
       <img src={settingLogo.logo} alt="bank" height={settingLogo.size} className={classes.logoStyles} />
       <Container sx={{
         alignItems: 'center',
-        margin: 0
+        margin: 0,
+        paddingRight: '12px !important'
       }}
       className={ classes.dateContainer }
       >

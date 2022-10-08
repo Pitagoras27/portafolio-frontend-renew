@@ -6,7 +6,7 @@ import { getQuote } from "../../../helpers";
 import { useFetch } from "../../../hooks";
 import { Loader } from "../Loader";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   quoteStyle: {
     display: 'flex',
     flexDirection: 'column',
@@ -33,22 +33,33 @@ const useStyles = makeStyles({
   quote: {
     padding: '18px',
     paddingBottom: '14px',
+    display: 'inline-block',
     '& > span':{
       fontSize: '80px',
       position: 'absolute',
     },
   },
   initialQuote: {
-    left: '-25px',
-    bottom: '-50px'
+    [theme.breakpoints.up('xs')]: {
+      left: '-20px',
+      bottom: '-50px'
+    },
+    [theme.breakpoints.up('md')]: {
+      left: '-30px',
+      bottom: '-50px'
+    }
   },
   endQuote: {
-    // top: '-28px',
-    // right: '-20px' 
-    top: '-25px',
-    right: '-5px' 
+    [theme.breakpoints.up('xs')]: {
+      top: '-25px',
+      right: '-5px'
+    },
+    [theme.breakpoints.up('md')]: {
+      top: '-25px',
+      right: '-5px'
+    }
   }
-});
+}));
 
 export const Footer = React.memo(() => {
   const classes = useStyles();

@@ -112,11 +112,11 @@ export const Projects = React.memo(({ direction }) => {
               }}
             />
             <Typography>
-              <em> Lorem Dolore enim labore quis enim. Adipisicing et voluptate cillum ea anim elit ut. </em>
+              <em>Financial company in charge of providing all kinds of insurance to medium and large companies</em>
             </Typography>
               
             <Typography>
-              Adipisicing aliquip cupidatat sit aliquip enim officia.Enim anim id minim eu duis amet deserunt esse.Est laborum laborum Lorem amet consectetur dolor cupidatat adipisicing veniam Lorem.Nulla amet dolor enim laboris nostrud quis labore ullamco incididunt exercitation nisi.
+              My job here was to manage the exchange of information with potential clients interested in purchasing insurance for their company. The information was entered into the system through highly dynamic forms.
             </Typography>
           </Grid>
 

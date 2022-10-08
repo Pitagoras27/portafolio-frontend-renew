@@ -60,7 +60,8 @@ export const BlogDetailPage = () => {
   const { topics } = useBlogStore();
 
   const { section, title, id } = useParams();
-
+  const mainTitle = title || '';
+  
   const { intro, content } = contentSection(topics, id);
   
   const result = content.map(item => {
@@ -70,7 +71,6 @@ export const BlogDetailPage = () => {
   }).filter(Boolean)
 
   const mainImage = topics.find(item => item.id === Number(id)).mainImage
-
   return (
     <LayoutBlog>
       <Box
@@ -86,7 +86,7 @@ export const BlogDetailPage = () => {
             <Grid item xs={12} align="end" className={classes.marginSectionText}>
               <Typography variant='h6' component='h6'>{ section }</Typography>
             </Grid>
-            
+
             <Grid item xs={12} md={3} align="left">
               <Typography variant="subtitle1" className={classes.indexArticleMargin}>
                 <span className={classes.articleIndex}>INDICE: </span>
@@ -105,10 +105,10 @@ export const BlogDetailPage = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
-              <span>{ pathSection(title) }</span>
+              <span>{ pathSection(mainTitle) }</span>
               <img
                 src={mainImage}
-                alt={title}
+                alt={mainTitle}
                 className={classes.mainImage}
               />
             </Grid>
