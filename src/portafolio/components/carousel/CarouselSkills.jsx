@@ -15,6 +15,7 @@ export const CarouselSkills = ({ handleOpen }) => {
         fullHeightHover={true}
         animation='fade'
         indicators={false}
+        interval={11000}
         navButtonsProps={{
           style: { backgroundColor: "cornflowerblue", width: '50px', height: '50px'}
         }}

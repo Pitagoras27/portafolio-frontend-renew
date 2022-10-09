@@ -21,7 +21,7 @@ export const CategorySelector = ({ label, options }) => {
           label="Select"
         >
           <MenuItem value="">
-            <em>None</em>
+            <em>All categories</em>
           </MenuItem>
           {
             options.map((item) => {

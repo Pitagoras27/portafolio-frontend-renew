@@ -5,13 +5,19 @@ import { useBlogStore } from "../../hooks";
 import { TopicCard } from "../components/TopicCard";
 
 const useStyles = makeStyles({
+  mainContainer: {
+    backgroundColor: 'white',
+    width: '100%',
+    paddingTop: '100px',
+    paddingBottom: '100px',
+  },
   cardsContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '50px',
     justifyContent: 'center'
   }
-})
+});
 
 export const AllTopics = () => {
   const classes = useStyles();
@@ -20,14 +26,7 @@ export const AllTopics = () => {
   const allTopics = filterList.length < 1 ? topics : filterList;
 
   return (
-    <Box
-      sx={{
-        backgroundColor: 'white',
-        width: '100%',
-        paddingTop: '100px',
-        paddingBottom: '100px'
-      }}
-    >
+    <Box className={classes.mainContainer}>
       <Container maxWidth="lg">
 
         <Box className={classes.cardsContainer}>

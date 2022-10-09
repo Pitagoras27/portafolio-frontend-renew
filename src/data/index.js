@@ -40,7 +40,7 @@ import muiMainImg from '../assets/imgs/skill-cards/detail-topics/material-ui-and
 import reactMainImg from '../assets/imgs/skill-cards/detail-topics/patrones-en-react.png';
 import solidMainImg from '../assets/imgs/skill-cards/detail-topics/solid.png';
 import testingMainImg from '../assets/imgs/skill-cards/detail-topics/testing-front-with-testing-library-and-vite.png';
-import tsMainImg from '../assets/imgs/skill-cards/detail-topics/typescript-hard-to-learn-but-completely-neccesary.png';
+import tsMainImg from '../assets/imgs/skill-cards/detail-topics/typescript-overview.png';
 
 export const carouselData = [
   {
@@ -60,7 +60,7 @@ export const carouselData = [
 export const cardsSkillsBlog = [
   {
     "id": 1,
-    "title": "Typescript, hard to learn, but completely neccesary",
+    "title": "Typescript overview",
     "section": "typescript",
     "mainImage": tsMainImg,
     "badge": [

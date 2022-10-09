@@ -8,52 +8,67 @@ import { contentSection, pathSection } from "../../helpers/utils";
 import { useBlogStore } from "../../hooks";
 import { LayoutBlog } from "./LayoutBlog";
 
-const useStyles = makeStyles({
-  marginSectionText: {
-    margin: '15px 0 40px !important',
-  },
-  marginIntroText: {
-    margin: '40px 0 10px !important',
-    textAlign: 'center !important'
-  },
-  mainImage: {
-    background: 'cover',
-  },
-  imageContainer: {
-    height: '300px',
-    overflow: 'hidden',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative',
-    padding: '3%',
-    filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
-    '& span': {
-      position: 'absolute',
-      color: 'white',
-      fontSize: '40px',
+const useStyles = makeStyles(( theme ) => ({
+    mainContainer: {
+      backgroundColor: 'white',
+      width: '100%',
+      paddingBottom: '100px !important',
+      [theme.breakpoints.up('xs')]: {
+        paddingTop: '65px !important',
+      },
+      [theme.breakpoints.up('md')]: {
+        paddingTop: '100px !important',
+      },
+    },
+    marginSectionText: {
+      margin: '15px 0 40px !important',
+      [theme.breakpoints.up('xs')]: {
+        margin: '15px 0 !important',
+      }
+    },
+    marginIntroText: {
+      margin: '40px 0 10px !important',
+      textAlign: 'center !important',
+    },
+    mainImage: {
+      backgroundSize: 'cover',
+    },
+    imageContainer: {
+      height: '300px',
+      overflow: 'hidden',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'relative',
       padding: '3%',
+      filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
+      '& span': {
+        position: 'absolute',
+        color: 'white',
+        fontSize: '40px',
+        padding: '3%',
+      }
+    },
+    articleIndex: {
+      fontWeight: 700,
+      textAlign: 'center',
+      display: 'inline-block',
+      width: '100%',
+      marginBottom: '15px',
+    },
+    linkStyles: {
+      cursor: 'pointer',
+      '&:hover': {
+        textDecoration: 'underline',
+        fontStyle: 'italic',
+        color: '#0375b8'
+      }
+    },
+    indexArticleMargin: {
+      marginBottom: '20px !important',
     }
-  },
-  articleIndex: {
-    fontWeight: 700,
-    textAlign: 'center',
-    display: 'inline-block',
-    width: '100%',
-    marginBottom: '15px',
-  },
-  linkStyles: {
-    cursor: 'pointer',
-    '&:hover': {
-      textDecoration: 'underline',
-      fontStyle: 'italic',
-      color: '#0375b8'
-    }
-  },
-  indexArticleMargin: {
-    marginBottom: '20px !important',
   }
-});
+));
 
 export const BlogDetailPage = () => {
   const classes = useStyles();
@@ -74,12 +89,7 @@ export const BlogDetailPage = () => {
   return (
     <LayoutBlog>
       <Box
-        sx={{
-          backgroundColor: 'white',
-          width: '100%',
-          paddingTop: '100px',
-          paddingBottom: '100px'
-        }}
+        className={classes.mainContainer}
       >
         <Container maxWidth="lg">
           <Grid container>

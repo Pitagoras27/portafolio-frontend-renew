@@ -42,11 +42,10 @@ const useStyles = makeStyles((theme) => ({
   initialQuote: {
     [theme.breakpoints.up('xs')]: {
       left: '-20px',
-      bottom: '-50px'
+      bottom: '-25px'
     },
     [theme.breakpoints.up('md')]: {
       left: '-30px',
-      bottom: '-50px'
     }
   },
   endQuote: {
