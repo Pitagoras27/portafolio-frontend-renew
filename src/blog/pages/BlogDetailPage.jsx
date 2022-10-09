@@ -83,7 +83,6 @@ const styleHeadingImage = (image) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative',
     padding: '3%',
     filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
     borderRadius: '8px',
