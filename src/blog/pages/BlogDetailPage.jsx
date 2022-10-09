@@ -32,6 +32,9 @@ const useStyles = makeStyles(( theme ) => ({
     },
     mainImage: {
       backgroundSize: 'cover',
+      '&:before': {
+        content: '"prodigy"'
+      }
     },
     imageContainer: {
       height: '300px',
@@ -70,22 +73,55 @@ const useStyles = makeStyles(( theme ) => ({
   }
 ));
 
+const styleHeadingImage = (image) => ({
+  '&:before': {
+    content: '""',
+    position: 'relative',
+    backgroundImage: `url(${image})`,
+    height: '300px',
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    padding: '3%',
+    filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
+    borderRadius: '8px',
+    '-webkit-box-shadow':' 0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)',
+    'box-shadow': '0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)'
+  },
+  '&:hover': {
+    filter: 'brightness(1.5) contrast(1.2) hue-rotate(15deg) blur(0.3px)',
+    '-webkit-font-smoothing': 'antialiased',
+    '-moz-osx-font-smoothing': 'grayscale'
+  },
+  '& span': {
+    position: 'relative',
+    top: '-180px',
+    color: 'white',
+    fontSize: '40px',
+    padding: '3%',
+  }
+})
+
 export const BlogDetailPage = () => {
   const classes = useStyles();
   const { topics } = useBlogStore();
-
+  
   const { section, title, id } = useParams();
   const mainTitle = title || '';
   
   const { intro, content } = contentSection(topics, id);
-  
+
+  const mainImage = topics.find(item => item.id === Number(id)).mainImage
+  const imageHeading = styleHeadingImage(mainImage);
+
   const result = content.map(item => {
     if(item.type === 'h4') {
       return item.node
     }
   }).filter(Boolean)
-
-  const mainImage = topics.find(item => item.id === Number(id)).mainImage
+  
   return (
     <LayoutBlog>
       <Box
@@ -114,13 +150,14 @@ export const BlogDetailPage = () => {
                 )}
               </Typography>
             </Grid>
-            <Grid item xs={12} md={9} align="center" className={classes.imageContainer}>
+            {/* <Grid item xs={12} md={9} align="center" className={classes.imageContainer}> */}
+            <Grid item xs={12} md={9} align="center" sx={imageHeading}>
               <span>{ pathSection(mainTitle) }</span>
-              <img
+              {/* <img
                 src={mainImage}
                 alt={mainTitle}
                 className={classes.mainImage}
-              />
+              /> */}
             </Grid>
 
             <Grid item xs={12}>
