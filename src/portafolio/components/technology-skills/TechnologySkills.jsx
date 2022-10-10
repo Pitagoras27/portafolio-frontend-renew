@@ -55,11 +55,11 @@ export const TechnologySkills = React.memo(({ direction }) => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="body1" paragraph align="left">
-              I started as a webmaster, my main interest was a design UI interfaces and graphs, but the way or fate, got me here develop UI interfaces and doing every time of things related with web, that is a very huge and interesant. I’ve done remote work for colleges,  and collaborated with very talented people to create web products for both business and consumer use.
+              I started as a webmaster, my main interest was a design UI interfaces and graphs, but the way or fate, got me here develop UI interfaces and doing every time of things related with web, that is a very huge and interesant. I’ve done remote work for colleagues,  and collaborated with very talented people to create web products for both business and consumer use.
             </Typography>
 
             <Typography variant="body1" paragraph align="left">
-              I create successful websites and webapps, always with colleges and coworkers. Always improve my work and upgrade as a person, my focuses is built software with best practices and performance, resposive and usefull. The main area of my expertise is front-end development, but also I have work as a Fullstack developer with CMS wordpress, brighspot and customs systems.
+              I create successful websites and webapps, always with colleagues and coworkers. Always improve my work and upgrade as a person, my focuses is built software with best practices and performance, resposive and usefull. The main area of my expertise is front-end development, but also I have work as a Fullstack developer with CMS wordpress, brighspot and customs systems.
             </Typography>
 
             <Typography variant="body1" paragraph align="left">

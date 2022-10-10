@@ -1,5 +1,5 @@
 
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useParams } from "react-router-dom";
 import { Link } from "react-scroll";
@@ -73,12 +73,12 @@ const useStyles = makeStyles(( theme ) => ({
   }
 ));
 
-const styleHeadingImage = (image) => ({
+const styleHeadingImage = (image, deviceMedia) => ({
   '&:before': {
     content: '""',
     position: 'relative',
     backgroundImage: `url(${image})`,
-    height: '300px',
+    height: '280px',
     overflow: 'hidden',
     display: 'flex',
     justifyContent: 'center',
@@ -86,25 +86,28 @@ const styleHeadingImage = (image) => ({
     padding: '3%',
     filter: 'brightness(0.7) contrast(1.2) invert(0.03) saturate(1.2) !important',
     borderRadius: '8px',
-    '-webkit-box-shadow':' 0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)',
-    'box-shadow': '0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)'
+    webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)',
+    boxShadow: '0px 10px 13px -7px #000000, -1px 14px 11px -15px rgba(0,0,0,0.56)'
   },
   '&:hover': {
     filter: 'brightness(1.5) contrast(1.2) hue-rotate(15deg) blur(0.3px)',
-    '-webkit-font-smoothing': 'antialiased',
-    '-moz-osx-font-smoothing': 'grayscale'
+    webkitFontSmoothing: 'antialiased',
+    mozOsxFontSmoothing: 'grayscale'
   },
   '& span': {
     position: 'relative',
-    top: '-180px',
+    top: '-160px',
+    height: 0,
     color: 'white',
-    fontSize: '40px',
-    padding: '3%',
+    fontSize: deviceMedia ? '2.175rem' : '1.725rem',
+    display: 'flex',
+    justifyContent: 'center'
   }
 })
 
 export const BlogDetailPage = () => {
   const classes = useStyles();
+  const matches = useMediaQuery('(min-width:600px)');
   const { topics } = useBlogStore();
   
   const { section, title, id } = useParams();
@@ -113,7 +116,7 @@ export const BlogDetailPage = () => {
   const { intro, content } = contentSection(topics, id);
 
   const mainImage = topics.find(item => item.id === Number(id)).mainImage
-  const imageHeading = styleHeadingImage(mainImage);
+  const imageHeading = styleHeadingImage(mainImage, matches);
 
   const result = content.map(item => {
     if(item.type === 'h4') {
@@ -149,14 +152,8 @@ export const BlogDetailPage = () => {
                 )}
               </Typography>
             </Grid>
-            {/* <Grid item xs={12} md={9} align="center" className={classes.imageContainer}> */}
             <Grid item xs={12} md={9} align="center" sx={imageHeading}>
               <span>{ pathSection(mainTitle) }</span>
-              {/* <img
-                src={mainImage}
-                alt={mainTitle}
-                className={classes.mainImage}
-              /> */}
             </Grid>
 
             <Grid item xs={12}>

@@ -3,51 +3,61 @@ import { makeStyles } from "@mui/styles";
 
 import { generateId } from "../../helpers";
 
-const useStyles = makeStyles({
-  aligmentElements: {
-    margin: '20px 0 !important'
-  },
-  codeFragment: {
-    display: 'flex',
-    justifyContent: 'center',
-    '& code': {
-      padding: '16px',
-      backgroundColor:"#292d3e",
-      color: "#ffffff",
-      borderRadius: '5px'
-    }
-  },
-  container: {
-    '& li': {
-      marginBottom: '15px'
+const useStyles = makeStyles(( theme ) => (
+  {
+    aligmentElements: {
+      margin: '20px 0 !important'
     },
-    '& blockquote': {
+    codeFragment: {
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-end',
-      fontWeight: '700',
-      '& span': {
-        fontWeight: '500',
-        fontStyle: 'italic',
+      justifyContent: 'center',
+      '& code': {
+        padding: '16px',
+        backgroundColor:"#292d3e",
+        color: "#ffffff",
+        borderRadius: '5px'
       }
     },
-    '& img': {
-      display: 'flex',
-      margin: '35px auto',
-      maxWidth: '100%',
-      height: 'auto'
+    container: {
+      '& li': {
+        marginBottom: '15px'
+      },
+      '& blockquote': {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        fontWeight: '700',
+        '& span': {
+          fontWeight: '500',
+          fontStyle: 'italic',
+        }
+      },
+      '& img': {
+        display: 'flex',
+        margin: '35px auto',
+        maxWidth: '100%',
+        height: 'auto'
+      },
+      '& a': {
+        textDecoration: 'none',
+        fontWeight: '700',
+        color: "#0375b8"
+      },
+      '& h4': {
+        [theme.breakpoints.up('xs')]: {
+          fontSize: '1.725rem;'
+        },
+        [theme.breakpoints.up('md')]: {
+          fontSize: '2.025rem;'
+        }
+      }
     },
-    '& a': {
-      textDecoration: 'none',
-      fontWeight: '700',
-      color: "#0375b8"
+    quoteContainer: {
+      display: 'flex',
+      justifyContent: 'column'
     }
-  },
-  quoteContainer: {
-    display: 'flex',
-    justifyContent: 'column'
-  }
-})
+  })
+)
 
 const variant = {
   'p': 'body1'
@@ -59,7 +69,7 @@ export const ContentHtml = ({ content }) => {
     "h4": ({ type, node }) => {
       return (
       <div key={generateId()}>
-        <Box sx={{ mt: 7 }} />
+        <Box sx={{ mt: 5 }} />
         <Typography
           variant={type}
           component={type}
