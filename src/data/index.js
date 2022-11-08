@@ -28,6 +28,7 @@ import sass from '../assets/imgs/skill-cards/sass.png';
 import solid from '../assets/imgs/skill-cards/solid.jpg';
 import liskovPrinciple1 from '../assets/imgs/skill-cards/solid/liskov-principle-1.png';
 import liskovPrinciple2 from '../assets/imgs/skill-cards/solid/liskov-principle-2.png';
+import liskovPrinciple3 from '../assets/imgs/skill-cards/solid/liskov-principle-3.png';
 import segregation1 from '../assets/imgs/skill-cards/solid/segregation-1.png';
 import segregation2 from '../assets/imgs/skill-cards/solid/segregation-2.png';
 import thumbSection from '../assets/imgs/skill-cards/thumb-section.jpg';
@@ -76,11 +77,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Para algunos, me incluyo, implementar Typescript puede resultar difícil; más si es que la mayor parte de nuestro desarrollos han estado gestionados con el Javascript de toda la vida, es decir dinámico y no tipado. Pero como buenos desarrolladores debemos saber que nuestro camino es la mejora constante y sabemos que somos mejores cuando nuestro flujo de trabajo es beneficioso en cuanto a tiempo, escalabilidad, legibilidad y mantenimiento."
+        "node": "Para algunos, me incluyo, implementar Typescript puede resultar difícil; sobre todo si la mayor parte de nuestros desarrollos han estado gestionados con el Javascript de toda la vida, es decir dinámico. Pero como buenos desarrolladores debemos saber que nuestro camino es la mejora constante y sabemos que somos mejores cuando nuestro flujo de trabajo es beneficioso en cuanto a tiempo, escalabilidad, legibilidad y mantenimiento."
       },
       {
         "type": "p",
-        "node": "A continuación, voy a tratar de abordar el panorama general al que nos iremos enfrentando al decidir trabajar con TS. Y por ello empezaré hablando de las ventajas, aunque tampoco dejaré de hablar de las dificultades y dolores de cabeza a los que nos enfrentaremos."
+        "node": "A continuación, voy a tratar de abordar el panorama general al que nos iremos enfrentando al decidir trabajar con Typescript, a partir de ahora TS. Y por ello empezaré hablando de las ventajas, aunque tampoco dejaré de hablar de las dificultades y dolores de cabeza a los que nos enfrentaremos."
       },
       {
         "type": "h4",
@@ -92,11 +93,11 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Y hablando de popularidad no hay que dejar de mencionar que es precisamente la amplia difusión lo que deja ver signos de éxito. En el desarrollo tecnológico no será la regla, pero si una ventaja en cuanto a soporte se refiere. El punto es que la popularidad proporciona soporte por una comunidad cada vez más amplia, lo que a su vez nos da acceso a herramientas cada vez más poderosas, como lo es el ventajoso uso del intellisense."
+        "node": "Y hablando de popularidad no hay que dejar de mencionar que es precisamente la amplia difusión lo que deja ver signos de éxito. En el desarrollo tecnológico no será la regla, pero si una ventaja en cuanto a soporte se refiere. El punto es que la popularidad proporciona soporte por una comunidad cada vez más amplia, lo que a su vez nos da acceso a herramientas cada vez más eficientes, como lo es el ventajoso uso del intellisense."
       },
       {
         "type": "p",
-        "node": "Los desarrollos son entes orgánicos digitales. Podemos pensar en ellos como entidades con un ciclo de vida propio, desde el desarrollo de las ideas hasta la entrega del producto, con un rendimiento adecuado a las necesidades de cliente. En este sentido tenemos que ver la refactorización de código como una etapa más del desarrollo y que las herramientas que nos ayuden a facilitar esta tarea siempre serán bien recibidad. Así es como encontramos una ventaja más al utilizar TS, ya que este es especialmente relevante en cuanto al acceso a tipos de las variables que utilizamos."
+        "node": "Los desarrollos son entes orgánicos digitales. Podemos pensar en ellos como entidades con un ciclo de vida propio, desde el desarrollo de las ideas hasta la entrega del producto, con un rendimiento adecuado a las necesidades de cliente. En este sentido tenemos que ver la refactorización de código como una etapa más del desarrollo, como un código más tolerante a cambios y que las herramientas que nos ayudan a facilitar esta tarea siempre serán bien recibidas. Así es como encontramos una ventaja más al utilizar TS, ya que este es especialmente relevante en cuanto al acceso a los tipos de las variables que utilizamos."
       },
       {
         "type": "p",
@@ -115,14 +116,14 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Curva de aprendizaje</strong> Aparentemente su aprendizaje puede ser sencillo, pero nada más lejos de la realidad. El set de herramientas de TS es amplio y en muchas ocasiones los mensajes de error son crípticos y difíciles de leer. Hay que tener paciencia y perceverancia, practicar lo fácil pero despejar las dudas. Si evidentemente estamos en desarrollo de una aplicación, basada en tiempos, como lo es con todas, la curva de aprendizaje será la principal desventaja."
+            "node": "<strong>Curva de aprendizaje</strong> Aparentemente su aprendizaje puede ser sencillo, pero nada más lejos de la realidad. El set de herramientas de TS es amplio y en muchas ocasiones los mensajes de error son crípticos o lo que es lo mismo: difíciles de leer. Hay que tener paciencia y perseverancia, practicar lo fácil pero despejar las dudas. Si evidentemente estamos en el desarrollo de una aplicación, basada en tiempos, como lo es con todos los desarrollos, la curva de aprendizaje será la principal desventaja."
           }
         ],
         "type": "p",
         "node": [
           {
             "type": "nested",
-            "node": "<strong>Pruebas unitarias:</strong> Por si mismas las pruebas unitarias tienen una curva de aprendizaje, su desarrollo también es particular y acatado a ciertas normas. Hacerlo con TS implica mayor atención al detalle. Sin embargo, desde mi punto de vista representa un problema cuando tenemos que acatar cierto porcentaje de cobertura, trabajarlas desde TS puede aumentar la complejidad de implementarlas."
+            "node": "<strong>Pruebas unitarias:</strong> Por si mismas las pruebas unitarias tienen una curva de aprendizaje, su desarrollo también es particular y acatado a ciertas normas. Hacerlo con TS implica mayor atención al detalle. Sin embargo, desde mi punto de vista representa un problema cuando tenemos que acatar cierto porcentaje de cobertura, trabajarlas desde TS puede aumentar la complejidad a la hora de implementar las pruebas."
           }
         ],
       },
@@ -136,7 +137,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "En cuanto a las partes duras o difíciles, verlo como reto para solventarlo mejor, eso nos hará a ser más resilentes y al final dominar una herramienta cada vez más imprescindible." 
+        "node": "En cuanto a las partes duras o difíciles, hay que verlo como reto, así lo solventaremos mejor, y eso nos hará resilentes y al final lograremos obtener una preciada herramienta cada vez más imprescindible." 
       },
       {
         "type": "p",
@@ -1414,9 +1415,13 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Nombres de clases o módulos demasiado genéricos</li><li>La clase involucra múltiples capas, la de representación de datos en la UI; la consumo y guardado de información a una base de datos, la de gestión del estado global, etc.</li><li>Excesivo número de líneas</li>"
+            "node": "<li>Nombres de clases o módulos demasiado genéricos</li><li>La clase involucra múltiples capas, la de representación de datos en la UI; la consumo y guardado de información a una base de datos, la de gestión del estado global o local, etc.</li><li>Excesivo número de líneas</li><li>Una buena indicación de que un componente ha superado su propósito original (SPR) es que requiere un montón de declaraciones <code>if</code> que cambian el renderizado o comportamiento original.</li><li>Esto también aplica a funciones generales no asociadas a JSX. Si se requiere agregar constantemente argumentos para controlar el flujo de la aplicación posiblemente esta función esté haciendo demasiado.</li>"
           }
         ]
+      },
+      {
+        "type": "p",
+        "node": "Para resumir, el principio de responsabilidad única tiene que ver con mantener nuestros componentes pequeños y con un sólo propósito. Dichos componentes son más legibles, más fáciles de probar y modificar, y es menos probable que introduzcamos la duplicación de código no intencional."
       },
       {
         "type": "h4",
@@ -1483,7 +1488,7 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
-        "node": "Si decimos que una clase hija debe poder funcionar como implementamos la clase padre, significa que la clase hija contiene los mismos métodos de la clase padre. Como hacemos que se respete esto y no rompa la aplicación en el momento que un metodo que no exista.., solución: con las clases abstractas de TS."
+        "node": "Si decimos que una clase hija debe poder funcionar como implementamos la clase padre, significa que la clase hija contiene los mismos métodos de la clase padre. Como hacemos que se respete esto y no rompa la aplicación en el momento que un metodo que no exista: con las clases abstractas de TS."
       },
       {
         "type": "img",
@@ -1499,6 +1504,14 @@ export const cardsSkillsBlog = [
       },
       {
         "type": "p",
+        "node": "Ahora cualquier otra clase o función que requiera utilizar cualquier subclase de Vehicle, debe poder ser capaz de manejarla, solo lo indicamos en su contrato"
+      },
+      {
+        "type": "img",
+        "node": liskovPrinciple3
+      },
+      {
+        "type": "p",
         "node": "Detectar violaciones al Sustitución de Liskov"
       },
       {
@@ -1506,7 +1519,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Utilizando la técnica de definir la firma de una clase con una clase abstracta, prácticamente no podrás violar este principio porque TS de impedirá la transpilación del código en tiempo de desarrollo</li><li>Si prescindes del uso de TS, y optas por heredar en lugar de componer sabrás que violas este principio si tienes métodos sobrantes que las clases hijas.</li>",
+            "node": "<li>Utilizando la técnica de definir la firma de una clase con una clase abstracta, prácticamente no podrás violar este principio porque TS de impedirá la transpilación del código en tiempo de desarrollo</li><li>Si prescindes del uso de TS, y optas por heredar en lugar de componer sabrás que violas este principio si tienes métodos sobrantes en las clases hijas.</li>",
 
           }
         ]
@@ -1600,7 +1613,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "<li>Una buena práctica es tener en cuenta las pruebas unitarias desde la creación del código, un buen código las hará más sencillas</li><li>En general un método con más de 10 líneas de código debe hacernos pensar en la existencia del mismo</li><li>Utilizar demasiados valores en datos primitivos, puede generar un código innecesariamente grande. Es importante analizar a que campo semántico pertenecerían los similares para agruparlos en objetos, clases, módulos, etc.</li><li>Tener una larga lista de parámetros también es una mala práctica</li><li>Hacer clases, funciones o módulos que sepan lo menos posible de otros métodos, módulos o elementos es una buena práctica y ayuda mucho al testing.</li><li>Si identificamos una cadena de mensajes (información que pasa de A a D pero pasando por B y C) estamos haciendo código acoplado. En la medida de lo posible debemos intentar las posibilidades de pasarlo de A a D sin intermediarios.</li>"
+            "node": "<li>Una buena práctica es tener en cuenta las pruebas unitarias desde la creación del código, un buen código las hará más sencillas</li><li>En general un método con más de 10 líneas de código debe hacernos pensar en la existencia del mismo</li><li>Utilizar demasiados valores en datos primitivos, puede generar un código innecesariamente grande. Es importante analizar a que campo semántico pertenecerían los datos similares para agruparlos en objetos, clases, módulos, etc.</li><li>Tener una larga lista de parámetros también es una mala práctica</li><li>Hacer clases, funciones o módulos que sepan lo menos posible de otros métodos, módulos o elementos es una buena práctica y ayuda mucho al testing.</li><li>Si identificamos una cadena de mensajes (información que pasa de A a D pero pasando por B y C) estamos haciendo código acoplado. En la medida de lo posible debemos intentar las posibilidades de pasarlo de A a D sin intermediarios.</li><li>Utilizar correctamente los principios SOLID mejora considerablemente el tiempo de desarrollo del testing</li><li>Un cambio en un módulo por lo general provoca un efecto dominó de los cambios en otros módulos</li>"
           }
         ]
       },

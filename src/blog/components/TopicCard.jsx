@@ -12,6 +12,9 @@ const useStyles = makeStyles({
   lift: {
     '-webkit-transition': 'box-shadow .25s ease,-webkit-transform .25s ease',
     transition: 'box-shadow .25s ease, transform .25s ease',
+    'border-radius': '8px !important',
+    background: '#ffffff91 !important',
+    'box-shadow': '4px 4px 8px #c8c8c8, -4px -4px 8px #ffffff !important',
     '& img': {
       backgroundPosition: 'right',
       width: '60% !important',
