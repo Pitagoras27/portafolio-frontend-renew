@@ -451,7 +451,7 @@ export const cardsSkillsBlog = [
         "node": [
           {
             "type": "nested",
-            "node": "La actualización de estado se delega a una función reductora pura.  Como se menciona en el párrafo anterior react proporciona el hook incorporado: <code>useReduce()</code> que recibe como primer argumento la función reductora y como segundo el estado actual. Esta función devuelve un array de 2 posiciones, siendo el primero una variable con los últimos cambios realizados en el estado y en la segunda posición una función dispatch para actualizar ese estado:" 
+            "node": "La actualización de estado se delega a una función reductora pura.  Como se menciona en el párrafo anterior react proporciona el hook incorporado: <code>useReduce()</code> que recibe como primer argumento la función reductora y como segundo el estado actual:" 
           }
         ]
       },
